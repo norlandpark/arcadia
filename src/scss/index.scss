@@ -1,0 +1,48 @@
+@import "properties";
+@import "colors";
+@import "fonts";
+
+@mixin pl-mode-light {
+  @at-root body.pl-mode-light & {
+    @content;
+  }
+}
+
+@mixin pl-mode-dark {
+  @at-root body.pl-mode-dark & {
+    @content;
+  }
+}
+
+@mixin pl-body {
+  &.pl-mode-light {
+    background: $pl-color-body-light-text-bg;
+    color: $pl-color-body-light-text-fg;
+  }
+
+  &.pl-mode-dark {
+    background: $pl-color-body-dark-text-bg;
+    color: $pl-color-body-dark-text-fg;
+  }
+
+  font-size: $pl-font-size-body;
+  font-family: $pl-font-family-body;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@mixin pl-main {
+  @at-root {
+    body, html {
+      @include pl-body;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+  }
+}

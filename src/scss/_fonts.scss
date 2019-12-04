@@ -1,0 +1,55 @@
+$pl-font-family-title: 'Josefin Sans', sans-serif !default;
+$pl-font-family-body: 'Nunito', sans-serif !default;
+$pl-font-family-mono: 'Ubuntu Mono', monospace !default;
+$pl-font-size-body: 14px !default;
+
+@mixin pl-font-body-light {
+  font-family: $pl-font-family-body;
+  font-weight: 300;
+}
+
+@mixin pl-font-body-regular {
+  font-family: $pl-font-family-body;
+  font-weight: 400;
+}
+
+@mixin pl-font-body-semi-bold {
+  font-family: $pl-font-family-body;
+  font-weight: 600;
+}
+
+@mixin pl-font-body-bold {
+  font-family: $pl-font-family-body;
+  font-weight: 700;
+}
+
+@mixin pl-font-body-extra-bold {
+  font-family: $pl-font-family-body;
+  font-weight: 800;
+}
+
+
+@mixin pl-font-title-light {
+  font-family: $pl-font-family-title;
+  font-weight: 300;
+}
+
+@mixin pl-font-title-regular {
+  font-family: $pl-font-family-title;
+  font-weight: 400;
+}
+
+@mixin pl-font-title-semi-bold {
+  font-family: $pl-font-family-title;
+  font-weight: 600;
+}
+
+@mixin pl-font-title-bold {
+  font-family: $pl-font-family-title;
+  font-weight: 700;
+}
+
+@mixin pl-font-title-extra-bold {
+  font-family: $pl-font-family-title;
+  font-weight: 800;
+}

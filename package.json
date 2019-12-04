@@ -1,0 +1,15 @@
+{
+  "name": "@norlandpark/parkland",
+  "version": "0.1.0",
+  "description": "Parkland design system",
+  "keywords": [],
+  "homepage": "https://github.com/norlandpark/parkland",
+  "author": "Norland Park <hello@norlandpark.com>",
+  "license": "Apache-2.0",
+  "files": [
+    "/src",
+    "/LICENSE_CODE",
+    "/LICENSE_ART",
+    "/README.md"
+  ]
+}
