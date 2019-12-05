@@ -1,0 +1,314 @@
+@import "typography";
+@import "colors";
+
+@mixin buttons {
+  /**
+    TODO:
+      - Button sizing
+      - Temporarily disabled buttons (loading)
+   */
+  button.pl-button, a.pl-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.75rem 3rem;
+    font-size: 1rem;
+    text-decoration: none;
+    background: $pl-color-moon-tint-500;
+    color: $pl-color-moon-tint-500-ctr;
+    border: 1px solid transparent;
+
+    transition: background-color 120ms linear,
+    outline-offset 120ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    &:hover {
+      text-decoration: none;
+      background: $pl-color-moon-tint-400;
+      color: $pl-color-moon-tint-400-ctr;
+    }
+
+    &:active, &:focus {
+      outline: 1px solid $pl-color-moon-tint-400-ctr;
+      outline-offset: -4px;
+    }
+
+    &.block {
+      width: 100%;
+      display: flex;
+    }
+
+    &.primary {
+      background: $pl-color-neptune;
+      color: $pl-color-neptune-ctr;
+
+      &:hover {
+        background: $pl-color-neptune-shade-400;
+        color: $pl-color-neptune-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-neptune-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.secondary {
+      background: $pl-color-fjord;
+      color: $pl-color-fjord-ctr;
+
+      &:hover {
+        background: $pl-color-fjord-shade-400;
+        color: $pl-color-fjord-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-fjord-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.disabled, &:disabled {
+      background: $pl-color-moon-tint-400;
+      color: $pl-color-moon-tint-400-ctr;
+
+      &:hover {
+        background: $pl-color-moon-tint-400;
+        color: $pl-color-moon-tint-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: none;
+      }
+
+      &:active, &:focus, &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &.success {
+      background: $pl-color-gaia;
+      color: $pl-color-gaia-ctr;
+
+      &:hover {
+        background: $pl-color-gaia-shade-400;
+        color: $pl-color-gaia-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-gaia-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.warning {
+      background: $pl-color-apricot;
+      color: $pl-color-apricot-ctr;
+
+      &:hover {
+        background: $pl-color-apricot-shade-400;
+        color: $pl-color-apricot-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-apricot-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.danger {
+      background: $pl-color-wolf;
+      color: $pl-color-wolf-ctr;
+
+      &:hover {
+        background: $pl-color-wolf-shade-400;
+        color: $pl-color-wolf-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-wolf-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.crimson {
+      background: $pl-color-crimson;
+      color: $pl-color-crimson-ctr;
+
+      &:hover {
+        background: $pl-color-crimson-shade-400;
+        color: $pl-color-crimson-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-crimson-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.cornflower {
+      background: $pl-color-cornflower;
+      color: $pl-color-cornflower-ctr;
+
+      &:hover {
+        background: $pl-color-cornflower-shade-400;
+        color: $pl-color-cornflower-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-cornflower-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.tangerine {
+      background: $pl-color-tangerine;
+      color: $pl-color-tangerine-ctr;
+
+      &:hover {
+        background: $pl-color-tangerine-shade-400;
+        color: $pl-color-tangerine-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-tangerine-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.eve {
+      background: $pl-color-eve;
+      color: $pl-color-eve-ctr;
+
+      &:hover {
+        background: $pl-color-eve-shade-400;
+        color: $pl-color-eve-shade-400-ctr;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid $pl-color-eve-shade-400-ctr;
+        outline-offset: -4px;
+      }
+    }
+
+    &.link {
+      color: $pl-color-neptune; // TODO
+      padding: 0;
+      margin: 0;
+      border: 0;
+      display: inline-block;
+      background: transparent;
+      font-size: 15px;
+      outline: none;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        background: transparent;
+        color: $pl-color-neptune-shade-400; // TODO
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &.success {
+        color: $pl-color-gaia;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pl-color-gaia-shade-400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &.warning {
+        color: $pl-color-apricot;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pl-color-apricot-shade-400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &.danger {
+        color: $pl-color-wolf;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pl-color-wolf-shade-400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &.crimson {
+        color: $pl-color-crimson;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pl-color-crimson-shade-400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &.cornflower {
+        color: $pl-color-cornflower;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pl-color-cornflower-shade-400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &.tangerine {
+        color: $pl-color-tangerine;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pl-color-tangerine-shade-400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &.eve {
+        color: $pl-color-eve;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pl-color-eve-shade-400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 @import "properties";
 @import "colors";
-@import "fonts";
+@import "typography";
+@import "buttons";
 
 @mixin pl-mode-light {
   @at-root body.pl-mode-light & {
@@ -37,6 +38,7 @@
   @at-root {
     body, html {
       @include pl-body;
+
       position: relative;
       box-sizing: border-box;
     }
@@ -44,5 +46,8 @@
     *, *:before, *:after {
       box-sizing: inherit;
     }
+
+    @include typography();
+    @include buttons();
   }
 }
