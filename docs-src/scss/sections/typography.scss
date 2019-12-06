@@ -1,0 +1,17 @@
+@import "../../../src/scss/colors";
+
+section#typography {
+  & > div.font-panel {
+    font-size: 16px;
+
+    &> div.name {
+
+    }
+
+    &> div.content {
+      font-size: 1.25em;
+      font-weight: normal;
+      letter-spacing: 0.1em;
+    }
+  }
+}

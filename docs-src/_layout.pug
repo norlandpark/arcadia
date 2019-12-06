@@ -1,9 +1,53 @@
 html
   head
-    title Parkland Design System
+    title: block title
+    link(href='//fonts.googleapis.com/css?family=Noto+Sans:400,700|Muli:600|Prompt:400,500|Source+Code+Pro:400,500&display=swap&subset=latin-ext', rel='stylesheet')
+    link(href='//cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css', rel='stylesheet')
     link(href="./app.css", rel="stylesheet")
-    link(href='https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,500|Nunito:300,400,500,700|Material+Icons&display=swap', rel='stylesheet')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    meta(property='og:type', content='website')
+    meta(property='og:title', content='Parkland Design System - Norland Park')
+    meta(property='og:description', content='Parkland is a design system by Norland Park')
+    meta(property='og:image', content='https://norlandpark.com/assets/ograph_np.png')
+    // Twitter
+    meta(property='twitter:card', content='summary_large_image')
+    meta(property='twitter:title', content='Parkland Design System - Norland Park')
+    meta(property='twitter:description', content='Parkland is a design system by Norland Park')
+    meta(property='twitter:image', content='//norlandpark.com/assets/ograph_np.png')
+
+    link(rel='apple-touch-icon', sizes='180x180', href='//norlandpark.com/assets/fav/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='//norlandpark.com/assets/fav/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='//norlandpark.com/assets/fav/favicon-16x16.png')
+    link(rel='mask-icon', color='#edeff3', href='//norlandpark.com/assets/fav/safari-pinned-tab.svg')
+    link(rel='shortcut icon', href='//norlandpark.com/assets/fav/favicon.ico')
+    meta(name='msapplication-TileColor', content='#eeeff0')
+    meta(name='msapplication-config', content='//norlandpark.com/assets/fav/browserconfig.xml')
+    meta(name='theme-color', content='#333333')
+    meta(name='robots', content='index, follow')
+    meta(name='description', content='Parkland is a design system by Norland Park')
+
     block stylesheets
   body
-    block content
+    section#head.pl-panel-container.pl-pad-t-sm.pl-pad-b-xs
+      a(href="./index.html")
+        img.only-light(src="https://norlandpark.com/assets/logo.svg", style="height: 22px")
+        img.only-dark(src="https://norlandpark.com/assets/logo-light.svg", style="height: 22px")
+
+    div.pl-panel-container.pl-pad-t-md
+      button.pl-button.sm.eve#toggle-dark-mode Toggle dark mode
+    div.pl-pad-y-xxs
+      block content
     block scripts
+    script(src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/pug/pug.min.js")
+    script(src="./app.js")
+    section#footer.pl-panel-container.pl-pad-t-xl.pl-pad-b-3xl
+      | &copy; 2019
+      |
+      a(href="https://norlandpark.com") Norland Park
+      | .
+      | Norland Park, Parkland Design System, copyright &copy; 2019 Norland Park
+      | .
+      |
+      a(href="./license.html") Legal information

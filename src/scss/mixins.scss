@@ -1,0 +1,13 @@
+@mixin pl-mode-dark {
+  @at-root body.pl-mode-dark & {
+    @content;
+  }
+
+  @at-root {
+    @media (prefers-color-scheme: dark) {
+      & {
+        @content;
+      }
+    }
+  }
+}

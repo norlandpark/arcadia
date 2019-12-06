@@ -1,0 +1,110 @@
+@import "properties";
+@import "colors";
+@import "mixins";
+
+@mixin pl-containers {
+  .pl-panel-container {
+    margin: auto 1rem;
+
+    &.page {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      &.screen-height {
+        min-height: calc(100vh - 2rem);
+      }
+    }
+  }
+
+  @media only screen and (min-width: $pl-grid-size-sm-min) {
+    .pl-panel-container {
+      margin: auto 2rem;
+
+      &.page {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        &.screen-height {
+          min-height: calc(100vh - 2rem);
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: $pl-grid-size-md-min) {
+    .pl-panel-container {
+      margin: auto 4rem;
+
+      &.page {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        &.screen-height {
+          min-height: calc(100vh - 4rem);
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: $pl-grid-size-lg-min) {
+    .pl-panel-container {
+      margin: auto;
+      max-width: $pl-panel-container-wrap-at;
+
+      &.page {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        &.screen-height {
+          min-height: calc(100vh - 4rem);
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: $pl-grid-size-xl-min) {
+    .pl-panel-container {
+      margin: auto;
+      max-width: $pl-panel-container-wrap-at;
+
+      &.page {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        &.screen-height {
+          min-height: calc(100vh - 4rem);
+        }
+      }
+    }
+  }
+
+  .pl-panel {
+    background: $pl-color-body-light-bg-panel-primary;
+    border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+
+    @include pl-mode-dark {
+      background: $pl-color-body-dark-bg-panel-primary;
+      border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+    }
+
+    &.secondary {
+      background: $pl-color-body-light-bg-panel-secondary;
+      border: 1px solid $pl-color-body-light-bg-panel-secondary-border;
+
+      @include pl-mode-dark {
+        background: $pl-color-body-dark-bg-panel-secondary;
+        border: 1px solid $pl-color-body-dark-bg-panel-secondary-border;
+      }
+    }
+
+    &.tertiary {
+      background: $pl-color-body-light-bg-panel-tertiary;
+      border: 1px solid $pl-color-body-light-bg-panel-tertiary-border;
+
+      @include pl-mode-dark {
+        background: $pl-color-body-dark-bg-panel-tertiary;
+        border: 1px solid $pl-color-body-dark-bg-panel-tertiary-border;
+      }
+    }
+  }
+}

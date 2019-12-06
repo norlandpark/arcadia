@@ -1,0 +1,167 @@
+@import "typography";
+@import "mixins";
+@import "properties";
+@import "colors";
+@import "utilities";
+
+@mixin pl-table {
+  table.pl-table {
+    table-layout: auto;
+    font-size: $pl-font-size-body;
+    border-collapse: collapse;
+    border: 0;
+
+    &.block {
+      width: 100%;
+    }
+
+    &.borders {
+      border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+
+      @include pl-mode-dark {
+        border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+      }
+
+      & > tbody, & > tfoot, & > thead {
+        & > tr {
+          & > th, & > td {
+            border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+
+            @include pl-mode-dark {
+              border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+            }
+          }
+        }
+      }
+    }
+
+    &.sm > tbody > tr > th,
+    &.sm > thead > tr > th,
+    &.sm > tfoot > tr > th,
+    &.sm > tbody > tr > td,
+    &.sm > thead > tr > td,
+    &.sm > tfoot > tr > td {
+      @include pl-pad-xy($pl-spacing-xs, $pl-spacing-3xs);
+    }
+
+    &.md > tbody > tr > th,
+    &.md > thead > tr > th,
+    &.md > tfoot > tr > th,
+    &.md > tbody > tr > td,
+    &.md > thead > tr > td,
+    &.md > tfoot > tr > td {
+      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xxs);
+    }
+
+    &.lg > tbody > tr > th,
+    &.lg > thead > tr > th,
+    &.lg > tfoot > tr > th,
+    &.lg > tbody > tr > td,
+    &.lg > thead > tr > td,
+    &.lg > tfoot > tr > td {
+      @include pl-pad-xy($pl-spacing-md, $pl-spacing-xs);
+    }
+
+    &.xl > tbody > tr > th,
+    &.xl > thead > tr > th,
+    &.xl > tfoot > tr > th,
+    &.xl > tbody > tr > td,
+    &.xl > thead > tr > td,
+    &.xl > tfoot > tr > td {
+      @include pl-pad-xy($pl-spacing-lg, $pl-spacing-sm);
+    }
+
+    & > tbody, & > tfoot, & > thead {
+      & > tr {
+        & > th, & > td {
+          &.top {
+            vertical-align: top;
+          }
+
+          &.bottom {
+            vertical-align: bottom;
+          }
+
+          &.middle {
+            vertical-align: middle;
+          }
+
+          &.text-top {
+            vertical-align: text-top;
+          }
+
+          &.text-bottom {
+            vertical-align: text-bottom;
+          }
+        }
+
+        & > th {
+          text-align: center;
+          font-size: $pl-font-size-body - 1px;
+          font-weight: bold;
+
+          background: $pl-color-body-light-bg-panel-tertiary;
+
+          @include pl-mode-dark {
+            background: $pl-color-body-dark-bg-panel-tertiary;
+          }
+        }
+
+        & > td {
+          & > code, & > pre {
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    & > tbody {
+      & > tr {
+        & > th {
+          text-align: left;
+
+          &.fit {
+            width: 1%;
+            white-space: nowrap;
+          }
+        }
+
+        & > td {
+        }
+      }
+    }
+
+    & > tfoot {
+      & > th, & > tr {
+        background: $pl-color-body-light-bg-panel-tertiary;
+
+        @include pl-mode-dark {
+          background: $pl-color-body-dark-bg-panel-tertiary;
+        }
+      }
+
+      & > tr {
+        & > th {
+
+        }
+
+        & > td {
+
+        }
+      }
+    }
+
+    & > thead {
+      & > tr {
+        & > th, & > tr {
+        }
+
+        & > th {
+        }
+
+        & > td {
+        }
+      }
+    }
+  }
+}

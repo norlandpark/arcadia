@@ -8,14 +8,15 @@
   "license": "Apache-2.0",
   "files": [
     "/src",
-    "/LICENSE_CODE",
-    "/LICENSE_ART",
+    "/LICENSE_CODE.txt",
+    "/LICENSE_ART.txt",
     "/README.md"
   ],
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-pug": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-node-sass": "^1.0.1"
   },

@@ -1,53 +1,67 @@
+@import "mixins";
 @import "properties";
 @import "colors";
 @import "typography";
 @import "buttons";
-
-@mixin pl-mode-light {
-  @at-root body.pl-mode-light & {
-    @content;
-  }
-}
-
-@mixin pl-mode-dark {
-  @at-root body.pl-mode-dark & {
-    @content;
-  }
-}
-
-@mixin pl-body {
-  &.pl-mode-light {
-    background: $pl-color-body-light-text-bg;
-    color: $pl-color-body-light-text-fg;
-  }
-
-  &.pl-mode-dark {
-    background: $pl-color-body-dark-text-bg;
-    color: $pl-color-body-dark-text-fg;
-  }
-
-  font-size: $pl-font-size-body;
-  font-family: $pl-font-family-body;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+@import "form";
+@import "table";
+@import "grid";
+@import "containers";
+@import "utilities";
+@import "elevation";
 
 @mixin pl-main {
   @at-root {
     body, html {
-      @include pl-body;
-
+      font-size: $pl-font-size-body;
+      font-family: $pl-font-family-body;
+      font-weight: normal;
+      font-style: normal;
+      -webkit-font-smoothing: subpixel-antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: auto;
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-transform: none;
+      text-shadow: none;
       position: relative;
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: $pl-color-body-light-text-bg;
+      color: $pl-color-body-light-text-fg;
+
+      .only-dark {
+        display: none;
+      }
+
+      &.pl-mode-dark {
+        background: $pl-color-body-dark-text-bg;
+        color: $pl-color-body-dark-text-fg;
+
+        .only-dark {
+          display: initial;
+        }
+
+        .only-light {
+          display: none;
+        }
+      }
     }
 
     *, *:before, *:after {
       box-sizing: inherit;
     }
 
-    @include typography();
-    @include buttons();
+    @include pl-typography();
+    @include pl-buttons();
+    @include pl-form();
+    @include pl-table();
+    @include pl-grid();
+    @include pl-containers();
+    @include pl-utilities();
   }
 }

@@ -1,90 +1,238 @@
-$pl-font-family-title: 'Josefin Sans', sans-serif !default;
-$pl-font-family-body: 'Nunito', sans-serif !default;
-$pl-font-family-mono: 'Ubuntu Mono', monospace !default;
+@import "mixins";
+@import "colors";
+@import "utilities";
+
+$pl-font-family-title-primary: 'muli', 'noto sans', arial, sans-serif !default;
+$pl-font-family-title-secondary: 'prompt', 'noto sans', arial, sans-serif !default;
+$pl-font-family-body: 'noto sans ui', 'noto sans', arial, sans-serif !default;
+$pl-font-family-mono: 'source code pro', monospace !default;
 $pl-font-size-body: 14px !default;
+$pl-font-size-body-line-height: 22px !default;
+$pl-heading-title-margin-mul: 1.5 !default;
+$pl-heading-title-padding-mul: 0.25 !default;
 
-@mixin pl-font-body-light {
-  font-family: $pl-font-family-body;
-  font-weight: 300;
-}
+@mixin pl-typography {
+  .pl-font-title-primary {
+    font-family: $pl-font-family-title-primary;
+  }
 
-@mixin pl-font-body-regular {
-  font-family: $pl-font-family-body;
-  font-weight: 400;
-}
+  .pl-font-title-secondary {
+    font-family: $pl-font-family-title-secondary;
+  }
 
-@mixin pl-font-body-semi-bold {
-  font-family: $pl-font-family-body;
-  font-weight: 600;
-}
+  .pl-font-body {
+    font-family: $pl-font-family-body;
+  }
 
-@mixin pl-font-body-bold {
-  font-family: $pl-font-family-body;
-  font-weight: 700;
-}
+  .pl-font-mono {
+    font-family: $pl-font-family-mono;
+  }
 
-@mixin pl-font-body-extra-bold {
-  font-family: $pl-font-family-body;
-  font-weight: 800;
-}
-
-@mixin pl-font-title-light {
-  font-family: $pl-font-family-title;
-  font-weight: 300;
-}
-
-@mixin pl-font-title-regular {
-  font-family: $pl-font-family-title;
-  font-weight: 400;
-}
-
-@mixin pl-font-title-semi-bold {
-  font-family: $pl-font-family-title;
-  font-weight: 600;
-}
-
-@mixin pl-font-title-bold {
-  font-family: $pl-font-family-title;
-  font-weight: 700;
-}
-
-@mixin pl-font-title-extra-bold {
-  font-family: $pl-font-family-title;
-  font-weight: 800;
-}
-
-@mixin typography {
   h1, h2, h3, h4, h5, h6 {
-    @include pl-font-title-regular;
+    font-weight: normal;
     margin: 0;
     padding: 0;
+    color: $pl-color-body-light-heading-text-fg;
+
+    @include pl-mode-dark {
+      color: $pl-color-body-dark-heading-text-fg;
+    }
 
     & > small {
-      font-size: 0.8em;
+      font-size: 0.6em;
+    }
+
+    &.pl-title {
+      border-bottom: 1px solid $pl-color-body-light-bg-panel-primary-border;
+
+      @include pl-mode-dark {
+        border-bottom: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+      }
     }
   }
 
   h1 {
-    font-size: 2.986em;
+    font-family: $pl-font-family-title-primary;
+    font-weight: 600;
+  }
+
+  h2, h3 {
+    font-family: $pl-font-family-title-secondary;
+    font-weight: 500;
+  }
+
+  h4, h5, h6 {
+    font-weight: 400;
+    font-family: $pl-font-family-body;
+  }
+
+  h1 {
+    font-size: 3.42921em;
+    line-height: 4.04317rem;
+    letter-spacing: -0.023em; // TODO extract
+    @include pl-mrg-y(0.75em);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.pl-title {
+      margin-bottom: 0.75em * $pl-heading-title-margin-mul;
+      padding-bottom: 0.75em * $pl-heading-title-padding-mul;
+    }
   }
 
   h2 {
-    font-size: 2.488em;
+    font-size: 2.28571em;
+    line-height: 3.03113rem;
+    @include pl-mrg-y(0.5em);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.pl-title {
+      margin-bottom: 0.5em * $pl-heading-title-margin-mul;
+      padding-bottom: 0.5em * $pl-heading-title-padding-mul;
+    }
   }
 
   h3 {
-    font-size: 2.074em;
+    font-size: 1.71428em;
+    line-height: 2.42857rem;
+    @include pl-mrg-y(0.5em);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.pl-title {
+      margin-bottom: 0.5em * $pl-heading-title-margin-mul;
+      padding-bottom: 0.5em * $pl-heading-title-padding-mul;
+    }
   }
 
   h4 {
-    font-size: 1.728em;
+    font-size: 1.57142em;
+    line-height: 2.14285rem;
+    @include pl-mrg-y(0.5em);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.pl-title {
+      margin-bottom: 0.5em * $pl-heading-title-margin-mul;
+      padding-bottom: 0.5em * $pl-heading-title-padding-mul;
+    }
   }
 
   h5 {
-    font-size: 1.44em;
+    font-size: 1.42857em;
+    line-height: 2.11285rem;
+    @include pl-mrg-y(0.25em);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.pl-title {
+      margin-bottom: 0.25em * $pl-heading-title-margin-mul;
+      padding-bottom: 0.25em * $pl-heading-title-padding-mul;
+    }
   }
 
   h6 {
-    font-size: 1.2em;
+    font-size: 1.14285em;
+    line-height: 1.57142rem;
+    @include pl-mrg-y(0.25em);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.pl-title {
+      margin-bottom: 0.25em * $pl-heading-title-margin-mul;
+      padding-bottom: 0.25em * $pl-heading-title-padding-mul;
+    }
+  }
+
+  a {
+    color: $pl-color-neptune;
+
+    @include pl-mode-dark {
+      color: $pl-color-neptune-tint-200;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: $pl-color-neptune-shade-300;
+
+      @include pl-mode-dark {
+        color: $pl-color-neptune;
+      }
+    }
+  }
+
+  p {
+    font-size: $pl-font-size-body;
+    line-height: $pl-font-size-body-line-height;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  code, pre {
+    font-size: 1em;
+    font-family: $pl-font-family-mono;
+    font-weight: normal;
+
+    &.wrap {
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+
+  code {
+    color: $pl-color-crimson;
+    background: $pl-color-body-light-bg-panel-primary;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    @include pl-mode-dark() {
+      color: $pl-color-crimson-tint-100;
+      background: $pl-color-body-dark-bg-panel-primary;
+    }
+
+    &.block {
+      display: block;
+      padding: 0.8em;
+    }
+  }
+
+  .pl-text-micro {
+    &.heading {
+      font-size: 0.929em;
+      line-height: 1.429em;
+      text-transform: uppercase;
+    }
+
+    &.copy {
+      font-size: 0.857em;
+      line-height: 1.429em;
+    }
+  }
+
+  .pl-text-body {
+    font-size: $pl-font-size-body;
+    font-family: $pl-font-family-body;
+    line-height: $pl-font-size-body-line-height;
   }
 }

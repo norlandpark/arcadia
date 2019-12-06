@@ -1,6 +1,8 @@
 // Utility colors //
 $pl-color-body-light-text-bg: #ffffff !default;
-$pl-color-body-light-text-fg: #333333 !default;
+$pl-color-body-light-text-fg: #222222 !default;
+
+$pl-color-body-light-heading-text-fg: #444444 !default;
 
 $pl-color-body-light-bg-panel-primary: #f6f6f6 !default;
 $pl-color-body-light-bg-panel-primary-border: #e6e6e6 !default;
@@ -13,9 +15,11 @@ $pl-color-body-light-bg-panel-tertiary-border: #dbdbdb !default;
 
 // TODO: verify dark color scheme composition
 $pl-color-body-dark-text-bg: #333333 !default;
-$pl-color-body-dark-text-fg: #fefefe !default;
+$pl-color-body-dark-text-fg: #e2e2e2 !default;
 
-$pl-color-body-dark-bg-panel-primary: #393939 !default;
+$pl-color-body-dark-heading-text-fg: #cccccc !default;
+
+$pl-color-body-dark-bg-panel-primary: #3e3e3e !default;
 $pl-color-body-dark-bg-panel-primary-border: #494949 !default;
 
 $pl-color-body-dark-bg-panel-secondary: #3b3b3b !default;

@@ -3,6 +3,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-node-sass');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.initConfig({
     pug: {
@@ -13,7 +14,8 @@ module.exports = function (grunt) {
           }
         },
         files: {
-          './docs/index.html': ['docs-src/index.pug']
+          './docs/index.html': ['docs-src/index.pug'],
+          './docs/license.html': ['docs-src/license.pug']
         }
       }
     },
@@ -21,6 +23,16 @@ module.exports = function (grunt) {
       dist: {
         dest: './docs/app.css',
         src: './docs-src/scss/index.scss'
+      }
+    },
+    uglify: {
+      options: {
+        mangleProperties: false
+      },
+      js: {
+        files: {
+          './docs/app.js': ['docs-src/js/index.js']
+        }
       }
     },
     watch: {
@@ -32,12 +44,16 @@ module.exports = function (grunt) {
         tasks: ['sass'],
       },
       docs_src_scss: {
-        files: ['docs-src/scss/*.scss'],
+        files: ['docs-src/scss/*.scss', 'docs-src/scss/**/*.scss'],
         tasks: ['sass'],
       },
       docs_src_pug: {
         files: ['docs-src/*.pug', 'docs-src/**/*.pug'],
         tasks: ['pug'],
+      },
+      docs_src_js: {
+        files: ['docs-src/js/*.js', 'docs-src/js/**/*.js'],
+        tasks: ['uglify'],
       },
     },
     connect: {
@@ -54,6 +70,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', 'Build', function () {
     grunt.task.run('pug');
     grunt.task.run('sass');
+    grunt.task.run('uglify');
   });
 
   grunt.registerTask('serve', 'Serve and watch', [

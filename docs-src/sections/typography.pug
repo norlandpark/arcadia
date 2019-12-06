@@ -1,0 +1,98 @@
+section#typography
+  h2.pl-title Typography
+
+  h3.pl-title Fonts
+
+  div.font-panel.pl-mrg-b-md
+    div.purpose
+      h6 Body font
+    table.pl-table.block.lg.borders.pl-mrg-y-sm
+      tr
+        th.fit Font family property
+        td: code.pl-user-select-all font-family: 'noto sans ui', 'noto sans', arial, sans-serif;
+    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-body
+      div ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      div abcdefghijklmnopqrstuvwxyz
+      div 0123456789
+
+  div.font-panel.pl-mrg-b-md
+    div.purpose
+      h6 Primary title font
+    table.pl-table.block.lg.borders.pl-mrg-y-sm
+      tr
+        th.fit Font family property
+        td: code.pl-user-select-all font-family: 'muli', 'noto sans', arial, sans-serif;
+    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-title-primary
+      div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
+      div.pl-word-break-all 0123456789
+
+  div.font-panel.pl-mrg-b-md
+    div.purpose
+      h6 Secondary title font
+    table.pl-table.block.lg.borders.pl-mrg-y-sm
+      tr
+        th.fit Font family property
+        td: code.pl-user-select-all font-family: 'prompt', 'noto sans', arial, sans-serif;
+    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-title-secondary
+      div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
+      div.pl-word-break-all 0123456789
+
+  div.font-panel.pl-mrg-b-md
+    div.purpose
+      h6 Monospace font
+    table.pl-table.block.lg.borders.pl-mrg-y-sm
+      tr
+        th.fit Font family property
+        td: code.pl-user-select-all font-family: 'source code pro', monospace;
+    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-mono
+      div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
+      div.pl-word-break-all 0123456789
+
+  h3.pl-title Headings
+
+  div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-mrg-b-sm
+    h1 h1. The quick brown fox jumps over the lazy dog
+    h2 h2. The quick brown fox jumps over the lazy dog
+    h3 h3. The quick brown fox jumps over the lazy dog
+    h4 h4. The quick brown fox jumps over the lazy dog
+    h5 h5. The quick brown fox jumps over the lazy dog
+    h6 h6. The quick brown fox jumps over the lazy dog
+
+  div.pl-mrg-b-md
+    p
+      | Headings allow for
+      code .title
+      |  modifier to display bottom border for headings.
+
+  h3.pl-title Text copy
+
+  h4 Body copy
+  table.pl-table.block.lg.borders.pl-mrg-b-sm
+    tr
+      th.fit Class
+      td: code.pl-user-select-all pl-text-body
+  div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
+    div
+      p: include ../lorem/average.txt
+      p: include ../lorem/long.txt
+      p: include ../lorem/average.txt
+
+  h4 Micro copy heading
+  table.pl-table.block.lg.borders.pl-mrg-b-sm
+    tr
+      th.fit Class
+      td: code.pl-user-select-all pl-text-micro heading
+  div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
+    div.pl-text-micro.heading: include ../lorem/short.txt
+
+  h4 Micro copy text
+  table.pl-table.block.lg.borders.pl-mrg-b-sm
+    tr
+      th.fit Class
+      td: code.pl-user-select-all pl-text-micro copy
+  div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
+    p.pl-text-micro.copy: include ../lorem/average.txt
+
