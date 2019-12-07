@@ -13,6 +13,10 @@ $pl-color-body-light-bg-panel-secondary-border: #ebebeb !default;
 $pl-color-body-light-bg-panel-tertiary: #eeeff0 !default;
 $pl-color-body-light-bg-panel-tertiary-border: #dbdbdb !default;
 
+$pl-color-body-light-bg-input-bg: #fbfbfb !default;
+$pl-color-body-light-bg-input-fg: $pl-color-body-light-text-fg !default;
+$pl-color-body-light-bg-input-border: #cccccc !default;
+
 // TODO: verify dark color scheme composition
 $pl-color-body-dark-text-bg: #333333 !default;
 $pl-color-body-dark-text-fg: #e2e2e2 !default;
@@ -27,6 +31,10 @@ $pl-color-body-dark-bg-panel-secondary-border: #4b4b4b !default;
 
 $pl-color-body-dark-bg-panel-tertiary: #4b4b4b !default;
 $pl-color-body-dark-bg-panel-tertiary-border: #5b5b5b !default;
+
+$pl-color-body-dark-bg-input-bg: #464646 !default;
+$pl-color-body-dark-bg-input-fg: $pl-color-body-dark-text-fg !default;
+$pl-color-body-dark-bg-input-border: #767676 !default;
 
 // Brand colors //
 $pl-color-brand-crimson: #dd2e44 !default;

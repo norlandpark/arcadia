@@ -81,6 +81,8 @@
   .pl-panel {
     background: $pl-color-body-light-bg-panel-primary;
     border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+    width: 100%;
+    position: relative;
 
     @include pl-mode-dark {
       background: $pl-color-body-dark-bg-panel-primary;

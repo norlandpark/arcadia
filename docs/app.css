@@ -148,9 +148,39 @@
 .pl-word-break-word {
   word-break: break-word; }
 
+.pl-user-select-none {
+  user-select: none; }
+
+.pl-user-select-auto {
+  user-select: auto; }
+
+.pl-user-select-text {
+  user-select: text; }
+
+.pl-user-select-contain {
+  user-select: contain; }
+
+.pl-user-select-all {
+  user-select: all; }
+
+.pl-text-left {
+  text-align: left; }
+
+.pl-text-center {
+  text-align: center; }
+
+.pl-text-right {
+  text-align: right; }
+
+.pl-word-break-all {
+  word-break: break-all; }
+
+.pl-word-break-word {
+  word-break: break-word; }
+
 body, html {
   font-size: 14px;
-  font-family: "noto sans ui", "noto sans", arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
   font-weight: normal;
   font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -182,16 +212,16 @@ body {
   box-sizing: inherit; }
 
 .pl-font-title-primary {
-  font-family: "muli", "noto sans", arial, sans-serif; }
+  font-family: "muli", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
 
 .pl-font-title-secondary {
-  font-family: "prompt", "noto sans", arial, sans-serif; }
+  font-family: "prompt", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
 
 .pl-font-body {
-  font-family: "noto sans ui", "noto sans", arial, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
 
 .pl-font-mono {
-  font-family: "source code pro", monospace; }
+  font-family: "source code pro", consolas, "courier new", courier, monospace; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -214,16 +244,16 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom: 1px solid #494949; } }
 
 h1 {
-  font-family: "muli", "noto sans", arial, sans-serif;
+  font-family: "muli", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
   font-weight: 600; }
 
 h2, h3 {
-  font-family: "prompt", "noto sans", arial, sans-serif;
+  font-family: "prompt", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
   font-weight: 500; }
 
 h4, h5, h6 {
   font-weight: 400;
-  font-family: "noto sans ui", "noto sans", arial, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
 
 h1 {
   font-size: 3.42921em;
@@ -317,9 +347,12 @@ p {
   p:last-child {
     margin-bottom: 0; }
 
+label {
+  user-select: none; }
+
 code, pre {
   font-size: 1em;
-  font-family: "source code pro", monospace;
+  font-family: "source code pro", consolas, "courier new", courier, monospace;
   font-weight: normal; }
   code.wrap, pre.wrap {
     white-space: pre-wrap;
@@ -355,10 +388,12 @@ code {
 
 .pl-text-body {
   font-size: 14px;
-  font-family: "noto sans ui", "noto sans", arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
   line-height: 22px; }
 
-button.pl-button, a.pl-button {
+button.pl-button, a.pl-button, input[type=submit], input[type=button], input[type=reset] {
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -369,200 +404,223 @@ button.pl-button, a.pl-button {
   background: #2a4e93;
   color: #ffffff;
   border: 1px solid transparent;
-  font-weight: 600;
+  font-weight: 500;
   transition-property: background-color, box-shadow, outline-offset;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 120ms;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.13), 0px 1px 1px 0px rgba(0, 0, 0, 0.091), 0px 1px 3px 0px rgba(0, 0, 0, 0.078); }
-  body.pl-mode-dark button.pl-button, body.pl-mode-dark a.pl-button {
+  body.pl-mode-dark button.pl-button, body.pl-mode-dark a.pl-button, body.pl-mode-dark input[type=submit], body.pl-mode-dark input[type=button], body.pl-mode-dark input[type=reset] {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
   @media (prefers-color-scheme: dark) {
-    button.pl-button, a.pl-button {
+    button.pl-button, a.pl-button, input[type=submit], input[type=button], input[type=reset] {
       box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); } }
-  button.pl-button.sm, a.pl-button.sm {
+  button.pl-button.sm, a.pl-button.sm, input[type=submit].sm, input[type=button].sm, input[type=reset].sm {
     padding: 0.4em 1.286em; }
-  button.pl-button.lg, a.pl-button.lg {
+  button.pl-button.lg, a.pl-button.lg, input[type=submit].lg, input[type=button].lg, input[type=reset].lg {
     padding: 0.75em 2.557em;
-    font-size: 1.2em; }
-  button.pl-button:hover, a.pl-button:hover {
+    font-size: 1em; }
+  button.pl-button.with-icon, button.pl-button.only-icon, a.pl-button.with-icon, a.pl-button.only-icon, input[type=submit].with-icon, input[type=submit].only-icon, input[type=button].with-icon, input[type=button].only-icon, input[type=reset].with-icon, input[type=reset].only-icon {
+    padding: 0.357em 2.5em; }
+    button.pl-button.with-icon > svg, button.pl-button.with-icon > img, button.pl-button.only-icon > svg, button.pl-button.only-icon > img, a.pl-button.with-icon > svg, a.pl-button.with-icon > img, a.pl-button.only-icon > svg, a.pl-button.only-icon > img, input[type=submit].with-icon > svg, input[type=submit].with-icon > img, input[type=submit].only-icon > svg, input[type=submit].only-icon > img, input[type=button].with-icon > svg, input[type=button].with-icon > img, input[type=button].only-icon > svg, input[type=button].only-icon > img, input[type=reset].with-icon > svg, input[type=reset].with-icon > img, input[type=reset].only-icon > svg, input[type=reset].only-icon > img {
+      shape-rendering: crispEdges;
+      position: relative;
+      margin-right: 0.3em;
+      height: 2em; }
+    button.pl-button.with-icon.sm, button.pl-button.only-icon.sm, a.pl-button.with-icon.sm, a.pl-button.only-icon.sm, input[type=submit].with-icon.sm, input[type=submit].only-icon.sm, input[type=button].with-icon.sm, input[type=button].only-icon.sm, input[type=reset].with-icon.sm, input[type=reset].only-icon.sm {
+      padding: 0.2em 1.286em; }
+      button.pl-button.with-icon.sm > svg, button.pl-button.with-icon.sm > img, button.pl-button.only-icon.sm > svg, button.pl-button.only-icon.sm > img, a.pl-button.with-icon.sm > svg, a.pl-button.with-icon.sm > img, a.pl-button.only-icon.sm > svg, a.pl-button.only-icon.sm > img, input[type=submit].with-icon.sm > svg, input[type=submit].with-icon.sm > img, input[type=submit].only-icon.sm > svg, input[type=submit].only-icon.sm > img, input[type=button].with-icon.sm > svg, input[type=button].with-icon.sm > img, input[type=button].only-icon.sm > svg, input[type=button].only-icon.sm > img, input[type=reset].with-icon.sm > svg, input[type=reset].with-icon.sm > img, input[type=reset].only-icon.sm > svg, input[type=reset].only-icon.sm > img {
+        height: 1em; }
+    button.pl-button.with-icon.lg, button.pl-button.only-icon.lg, a.pl-button.with-icon.lg, a.pl-button.only-icon.lg, input[type=submit].with-icon.lg, input[type=submit].only-icon.lg, input[type=button].with-icon.lg, input[type=button].only-icon.lg, input[type=reset].with-icon.lg, input[type=reset].only-icon.lg {
+      padding: 0.375em 2.557em; }
+      button.pl-button.with-icon.lg > svg, button.pl-button.with-icon.lg > img, button.pl-button.only-icon.lg > svg, button.pl-button.only-icon.lg > img, a.pl-button.with-icon.lg > svg, a.pl-button.with-icon.lg > img, a.pl-button.only-icon.lg > svg, a.pl-button.only-icon.lg > img, input[type=submit].with-icon.lg > svg, input[type=submit].with-icon.lg > img, input[type=submit].only-icon.lg > svg, input[type=submit].only-icon.lg > img, input[type=button].with-icon.lg > svg, input[type=button].with-icon.lg > img, input[type=button].only-icon.lg > svg, input[type=button].only-icon.lg > img, input[type=reset].with-icon.lg > svg, input[type=reset].with-icon.lg > img, input[type=reset].only-icon.lg > svg, input[type=reset].only-icon.lg > img {
+        height: 3em; }
+    button.pl-button.with-icon.only-icon, button.pl-button.only-icon.only-icon, a.pl-button.with-icon.only-icon, a.pl-button.only-icon.only-icon, input[type=submit].with-icon.only-icon, input[type=submit].only-icon.only-icon, input[type=button].with-icon.only-icon, input[type=button].only-icon.only-icon, input[type=reset].with-icon.only-icon, input[type=reset].only-icon.only-icon {
+      padding: 0.357em; }
+      button.pl-button.with-icon.only-icon > svg, button.pl-button.with-icon.only-icon > img, button.pl-button.only-icon.only-icon > svg, button.pl-button.only-icon.only-icon > img, a.pl-button.with-icon.only-icon > svg, a.pl-button.with-icon.only-icon > img, a.pl-button.only-icon.only-icon > svg, a.pl-button.only-icon.only-icon > img, input[type=submit].with-icon.only-icon > svg, input[type=submit].with-icon.only-icon > img, input[type=submit].only-icon.only-icon > svg, input[type=submit].only-icon.only-icon > img, input[type=button].with-icon.only-icon > svg, input[type=button].with-icon.only-icon > img, input[type=button].only-icon.only-icon > svg, input[type=button].only-icon.only-icon > img, input[type=reset].with-icon.only-icon > svg, input[type=reset].with-icon.only-icon > img, input[type=reset].only-icon.only-icon > svg, input[type=reset].only-icon.only-icon > img {
+        margin-right: 0; }
+      button.pl-button.with-icon.only-icon.sm, button.pl-button.only-icon.only-icon.sm, a.pl-button.with-icon.only-icon.sm, a.pl-button.only-icon.only-icon.sm, input[type=submit].with-icon.only-icon.sm, input[type=submit].only-icon.only-icon.sm, input[type=button].with-icon.only-icon.sm, input[type=button].only-icon.only-icon.sm, input[type=reset].with-icon.only-icon.sm, input[type=reset].only-icon.only-icon.sm {
+        padding: 0.2em; }
+      button.pl-button.with-icon.only-icon.lg, button.pl-button.only-icon.only-icon.lg, a.pl-button.with-icon.only-icon.lg, a.pl-button.only-icon.only-icon.lg, input[type=submit].with-icon.only-icon.lg, input[type=submit].only-icon.only-icon.lg, input[type=button].with-icon.only-icon.lg, input[type=button].only-icon.only-icon.lg, input[type=reset].with-icon.only-icon.lg, input[type=reset].only-icon.only-icon.lg {
+        padding: 0.375em; }
+  button.pl-button:hover, a.pl-button:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover {
     text-decoration: none;
     background: #1c3462;
     color: #ffffff;
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.13), 0px 8px 10px 1px rgba(0, 0, 0, 0.091), 0px 3px 14px 2px rgba(0, 0, 0, 0.078); }
-    body.pl-mode-dark button.pl-button:hover, body.pl-mode-dark a.pl-button:hover {
+    body.pl-mode-dark button.pl-button:hover, body.pl-mode-dark a.pl-button:hover, body.pl-mode-dark input[type=submit]:hover, body.pl-mode-dark input[type=button]:hover, body.pl-mode-dark input[type=reset]:hover {
       box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
     @media (prefers-color-scheme: dark) {
-      button.pl-button:hover, a.pl-button:hover {
+      button.pl-button:hover, a.pl-button:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover {
         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); } }
-  button.pl-button:active, a.pl-button:active {
+  button.pl-button:active, a.pl-button:active, input[type=submit]:active, input[type=button]:active, input[type=reset]:active {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.13), 0px 1px 1px 0px rgba(0, 0, 0, 0.091), 0px 1px 3px 0px rgba(0, 0, 0, 0.078); }
-    body.pl-mode-dark button.pl-button:active, body.pl-mode-dark a.pl-button:active {
+    body.pl-mode-dark button.pl-button:active, body.pl-mode-dark a.pl-button:active, body.pl-mode-dark input[type=submit]:active, body.pl-mode-dark input[type=button]:active, body.pl-mode-dark input[type=reset]:active {
       box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
     @media (prefers-color-scheme: dark) {
-      button.pl-button:active, a.pl-button:active {
+      button.pl-button:active, a.pl-button:active, input[type=submit]:active, input[type=button]:active, input[type=reset]:active {
         box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); } }
-  button.pl-button:focus, a.pl-button:focus {
+  button.pl-button:focus, a.pl-button:focus, input[type=submit]:focus, input[type=button]:focus, input[type=reset]:focus {
     outline: none; }
-  button.pl-button:focus:not(:hover), a.pl-button:focus:not(:hover) {
+  button.pl-button:focus:not(:hover), a.pl-button:focus:not(:hover), input[type=submit]:focus:not(:hover), input[type=button]:focus:not(:hover), input[type=reset]:focus:not(:hover) {
     outline: 1px solid #ffffff;
     outline-offset: -5px; }
-  button.pl-button.block, a.pl-button.block {
+  button.pl-button.block, a.pl-button.block, input[type=submit].block, input[type=button].block, input[type=reset].block {
     width: 100%;
     display: flex; }
-  button.pl-button.secondary, a.pl-button.secondary {
+  button.pl-button.secondary, a.pl-button.secondary, input[type=submit].secondary, input[type=button].secondary, input[type=reset].secondary {
     background: #dfe4e8;
     border: 1px solid #3f5b77;
     color: #2a3d4f; }
-    button.pl-button.secondary:hover, a.pl-button.secondary:hover {
+    button.pl-button.secondary:hover, a.pl-button.secondary:hover, input[type=submit].secondary:hover, input[type=button].secondary:hover, input[type=reset].secondary:hover {
       background: #2a3d4f;
       color: #ffffff; }
-    button.pl-button.secondary:focus:not(:hover), a.pl-button.secondary:focus:not(:hover) {
+    button.pl-button.secondary:focus:not(:hover), a.pl-button.secondary:focus:not(:hover), input[type=submit].secondary:focus:not(:hover), input[type=button].secondary:focus:not(:hover), input[type=reset].secondary:focus:not(:hover) {
       outline: 1px solid #3f5b77; }
-    body.pl-mode-dark button.pl-button.secondary, body.pl-mode-dark a.pl-button.secondary {
+    body.pl-mode-dark button.pl-button.secondary, body.pl-mode-dark a.pl-button.secondary, body.pl-mode-dark input[type=submit].secondary, body.pl-mode-dark input[type=button].secondary, body.pl-mode-dark input[type=reset].secondary {
       background: #9fadbb;
       color: #151e28; }
-      body.pl-mode-dark button.pl-button.secondary:hover, body.pl-mode-dark a.pl-button.secondary:hover {
+      body.pl-mode-dark button.pl-button.secondary:hover, body.pl-mode-dark a.pl-button.secondary:hover, body.pl-mode-dark input[type=submit].secondary:hover, body.pl-mode-dark input[type=button].secondary:hover, body.pl-mode-dark input[type=reset].secondary:hover {
         background: #2a3d4f;
         color: #ffffff; }
-      body.pl-mode-dark button.pl-button.secondary:focus:not(:hover), body.pl-mode-dark a.pl-button.secondary:focus:not(:hover) {
+      body.pl-mode-dark button.pl-button.secondary:focus:not(:hover), body.pl-mode-dark a.pl-button.secondary:focus:not(:hover), body.pl-mode-dark input[type=submit].secondary:focus:not(:hover), body.pl-mode-dark input[type=button].secondary:focus:not(:hover), body.pl-mode-dark input[type=reset].secondary:focus:not(:hover) {
         outline: 1px solid #151e28; }
     @media (prefers-color-scheme: dark) {
-      button.pl-button.secondary, a.pl-button.secondary {
+      button.pl-button.secondary, a.pl-button.secondary, input[type=submit].secondary, input[type=button].secondary, input[type=reset].secondary {
         background: #9fadbb;
         color: #151e28; }
-        button.pl-button.secondary:hover, a.pl-button.secondary:hover {
+        button.pl-button.secondary:hover, a.pl-button.secondary:hover, input[type=submit].secondary:hover, input[type=button].secondary:hover, input[type=reset].secondary:hover {
           background: #2a3d4f;
           color: #ffffff; }
-        button.pl-button.secondary:focus:not(:hover), a.pl-button.secondary:focus:not(:hover) {
+        button.pl-button.secondary:focus:not(:hover), a.pl-button.secondary:focus:not(:hover), input[type=submit].secondary:focus:not(:hover), input[type=button].secondary:focus:not(:hover), input[type=reset].secondary:focus:not(:hover) {
           outline: 1px solid #151e28; } }
-  button.pl-button.disabled, button.pl-button:disabled, a.pl-button.disabled, a.pl-button:disabled {
+  button.pl-button.disabled, button.pl-button:disabled, a.pl-button.disabled, a.pl-button:disabled, input[type=submit].disabled, input[type=submit]:disabled, input[type=button].disabled, input[type=button]:disabled, input[type=reset].disabled, input[type=reset]:disabled {
     background: #3c434b;
     color: #8592a1; }
-    button.pl-button.disabled:hover, button.pl-button:disabled:hover, a.pl-button.disabled:hover, a.pl-button:disabled:hover {
+    button.pl-button.disabled:hover, button.pl-button:disabled:hover, a.pl-button.disabled:hover, a.pl-button:disabled:hover, input[type=submit].disabled:hover, input[type=submit]:disabled:hover, input[type=button].disabled:hover, input[type=button]:disabled:hover, input[type=reset].disabled:hover, input[type=reset]:disabled:hover {
       background: #3c434b;
       color: #8592a1;
       box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.13), 0px 1px 1px 0px rgba(0, 0, 0, 0.091), 0px 1px 3px 0px rgba(0, 0, 0, 0.078); }
-      body.pl-mode-dark button.pl-button.disabled:hover, body.pl-mode-dark button.pl-button:disabled:hover, body.pl-mode-dark a.pl-button.disabled:hover, body.pl-mode-dark a.pl-button:disabled:hover {
+      body.pl-mode-dark button.pl-button.disabled:hover, body.pl-mode-dark button.pl-button:disabled:hover, body.pl-mode-dark a.pl-button.disabled:hover, body.pl-mode-dark a.pl-button:disabled:hover, body.pl-mode-dark input[type=submit].disabled:hover, body.pl-mode-dark input[type=submit]:disabled:hover, body.pl-mode-dark input[type=button].disabled:hover, body.pl-mode-dark input[type=button]:disabled:hover, body.pl-mode-dark input[type=reset].disabled:hover, body.pl-mode-dark input[type=reset]:disabled:hover {
         box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.disabled:hover, button.pl-button:disabled:hover, a.pl-button.disabled:hover, a.pl-button:disabled:hover {
+        button.pl-button.disabled:hover, button.pl-button:disabled:hover, a.pl-button.disabled:hover, a.pl-button:disabled:hover, input[type=submit].disabled:hover, input[type=submit]:disabled:hover, input[type=button].disabled:hover, input[type=button]:disabled:hover, input[type=reset].disabled:hover, input[type=reset]:disabled:hover {
           box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); } }
-    button.pl-button.disabled:active, button.pl-button.disabled:focus, button.pl-button:disabled:active, button.pl-button:disabled:focus, a.pl-button.disabled:active, a.pl-button.disabled:focus, a.pl-button:disabled:active, a.pl-button:disabled:focus {
+    button.pl-button.disabled:active, button.pl-button.disabled:focus, button.pl-button:disabled:active, button.pl-button:disabled:focus, a.pl-button.disabled:active, a.pl-button.disabled:focus, a.pl-button:disabled:active, a.pl-button:disabled:focus, input[type=submit].disabled:active, input[type=submit].disabled:focus, input[type=submit]:disabled:active, input[type=submit]:disabled:focus, input[type=button].disabled:active, input[type=button].disabled:focus, input[type=button]:disabled:active, input[type=button]:disabled:focus, input[type=reset].disabled:active, input[type=reset].disabled:focus, input[type=reset]:disabled:active, input[type=reset]:disabled:focus {
       outline: none;
       transform: none; }
-    button.pl-button.disabled:active, button.pl-button.disabled:focus, button.pl-button.disabled:hover, button.pl-button:disabled:active, button.pl-button:disabled:focus, button.pl-button:disabled:hover, a.pl-button.disabled:active, a.pl-button.disabled:focus, a.pl-button.disabled:hover, a.pl-button:disabled:active, a.pl-button:disabled:focus, a.pl-button:disabled:hover {
+    button.pl-button.disabled:active, button.pl-button.disabled:focus, button.pl-button.disabled:hover, button.pl-button:disabled:active, button.pl-button:disabled:focus, button.pl-button:disabled:hover, a.pl-button.disabled:active, a.pl-button.disabled:focus, a.pl-button.disabled:hover, a.pl-button:disabled:active, a.pl-button:disabled:focus, a.pl-button:disabled:hover, input[type=submit].disabled:active, input[type=submit].disabled:focus, input[type=submit].disabled:hover, input[type=submit]:disabled:active, input[type=submit]:disabled:focus, input[type=submit]:disabled:hover, input[type=button].disabled:active, input[type=button].disabled:focus, input[type=button].disabled:hover, input[type=button]:disabled:active, input[type=button]:disabled:focus, input[type=button]:disabled:hover, input[type=reset].disabled:active, input[type=reset].disabled:focus, input[type=reset].disabled:hover, input[type=reset]:disabled:active, input[type=reset]:disabled:focus, input[type=reset]:disabled:hover {
       cursor: not-allowed; }
-  button.pl-button.success, a.pl-button.success {
+  button.pl-button.success, a.pl-button.success, input[type=submit].success, input[type=button].success, input[type=reset].success {
     background: #dce5de;
     border: 1px solid #2e633a;
     color: #2e633a; }
-    button.pl-button.success:hover, a.pl-button.success:hover {
+    button.pl-button.success:hover, a.pl-button.success:hover, input[type=submit].success:hover, input[type=button].success:hover, input[type=reset].success:hover {
       background: #1f4227;
       color: #ffffff; }
-    button.pl-button.success:focus:not(:hover), a.pl-button.success:focus:not(:hover) {
+    button.pl-button.success:focus:not(:hover), a.pl-button.success:focus:not(:hover), input[type=submit].success:focus:not(:hover), input[type=button].success:focus:not(:hover), input[type=reset].success:focus:not(:hover) {
       outline: 1px solid #3f5b77; }
-    body.pl-mode-dark button.pl-button.success, body.pl-mode-dark a.pl-button.success {
+    body.pl-mode-dark button.pl-button.success, body.pl-mode-dark a.pl-button.success, body.pl-mode-dark input[type=submit].success, body.pl-mode-dark input[type=button].success, body.pl-mode-dark input[type=reset].success {
       background: #97b19d;
       color: #0f2113; }
-      body.pl-mode-dark button.pl-button.success:hover, body.pl-mode-dark a.pl-button.success:hover {
+      body.pl-mode-dark button.pl-button.success:hover, body.pl-mode-dark a.pl-button.success:hover, body.pl-mode-dark input[type=submit].success:hover, body.pl-mode-dark input[type=button].success:hover, body.pl-mode-dark input[type=reset].success:hover {
         background: #1f4227;
         color: #ffffff; }
-      body.pl-mode-dark button.pl-button.success:focus:not(:hover), body.pl-mode-dark a.pl-button.success:focus:not(:hover) {
+      body.pl-mode-dark button.pl-button.success:focus:not(:hover), body.pl-mode-dark a.pl-button.success:focus:not(:hover), body.pl-mode-dark input[type=submit].success:focus:not(:hover), body.pl-mode-dark input[type=button].success:focus:not(:hover), body.pl-mode-dark input[type=reset].success:focus:not(:hover) {
         outline: 1px solid #0f2113; }
     @media (prefers-color-scheme: dark) {
-      button.pl-button.success, a.pl-button.success {
+      button.pl-button.success, a.pl-button.success, input[type=submit].success, input[type=button].success, input[type=reset].success {
         background: #97b19d;
         color: #0f2113; }
-        button.pl-button.success:hover, a.pl-button.success:hover {
+        button.pl-button.success:hover, a.pl-button.success:hover, input[type=submit].success:hover, input[type=button].success:hover, input[type=reset].success:hover {
           background: #1f4227;
           color: #ffffff; }
-        button.pl-button.success:focus:not(:hover), a.pl-button.success:focus:not(:hover) {
+        button.pl-button.success:focus:not(:hover), a.pl-button.success:focus:not(:hover), input[type=submit].success:focus:not(:hover), input[type=button].success:focus:not(:hover), input[type=reset].success:focus:not(:hover) {
           outline: 1px solid #0f2113; } }
-  button.pl-button.warning, a.pl-button.warning {
+  button.pl-button.warning, a.pl-button.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning {
     background: #ffe7d5;
     border: 1px solid #ff6d05;
     color: #ff6d05; }
-    button.pl-button.warning:hover, a.pl-button.warning:hover {
+    button.pl-button.warning:hover, a.pl-button.warning:hover, input[type=submit].warning:hover, input[type=button].warning:hover, input[type=reset].warning:hover {
       background: #aa4903;
       color: #ffffff; }
-    button.pl-button.warning:focus:not(:hover), a.pl-button.warning:focus:not(:hover) {
+    button.pl-button.warning:focus:not(:hover), a.pl-button.warning:focus:not(:hover), input[type=submit].warning:focus:not(:hover), input[type=button].warning:focus:not(:hover), input[type=reset].warning:focus:not(:hover) {
       outline: 1px solid #ff6d05; }
-    body.pl-mode-dark button.pl-button.warning, body.pl-mode-dark a.pl-button.warning {
+    body.pl-mode-dark button.pl-button.warning, body.pl-mode-dark a.pl-button.warning, body.pl-mode-dark input[type=submit].warning, body.pl-mode-dark input[type=button].warning, body.pl-mode-dark input[type=reset].warning {
       background: #ffb682;
       color: #552402; }
-      body.pl-mode-dark button.pl-button.warning:hover, body.pl-mode-dark a.pl-button.warning:hover {
+      body.pl-mode-dark button.pl-button.warning:hover, body.pl-mode-dark a.pl-button.warning:hover, body.pl-mode-dark input[type=submit].warning:hover, body.pl-mode-dark input[type=button].warning:hover, body.pl-mode-dark input[type=reset].warning:hover {
         background: #aa4903;
         color: #ffffff; }
-      body.pl-mode-dark button.pl-button.warning:focus:not(:hover), body.pl-mode-dark a.pl-button.warning:focus:not(:hover) {
+      body.pl-mode-dark button.pl-button.warning:focus:not(:hover), body.pl-mode-dark a.pl-button.warning:focus:not(:hover), body.pl-mode-dark input[type=submit].warning:focus:not(:hover), body.pl-mode-dark input[type=button].warning:focus:not(:hover), body.pl-mode-dark input[type=reset].warning:focus:not(:hover) {
         outline: 1px solid #552402; }
     @media (prefers-color-scheme: dark) {
-      button.pl-button.warning, a.pl-button.warning {
+      button.pl-button.warning, a.pl-button.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning {
         background: #ffb682;
         color: #552402; }
-        button.pl-button.warning:hover, a.pl-button.warning:hover {
+        button.pl-button.warning:hover, a.pl-button.warning:hover, input[type=submit].warning:hover, input[type=button].warning:hover, input[type=reset].warning:hover {
           background: #aa4903;
           color: #ffffff; }
-        button.pl-button.warning:focus:not(:hover), a.pl-button.warning:focus:not(:hover) {
+        button.pl-button.warning:focus:not(:hover), a.pl-button.warning:focus:not(:hover), input[type=submit].warning:focus:not(:hover), input[type=button].warning:focus:not(:hover), input[type=reset].warning:focus:not(:hover) {
           outline: 1px solid #552402; } }
-  button.pl-button.danger, a.pl-button.danger {
+  button.pl-button.danger, a.pl-button.danger, input[type=submit].danger, input[type=button].danger, input[type=reset].danger {
     background: #f3d5d5;
     border: 1px solid #b60000;
     color: #b60000; }
-    button.pl-button.danger:hover, a.pl-button.danger:hover {
+    button.pl-button.danger:hover, a.pl-button.danger:hover, input[type=submit].danger:hover, input[type=button].danger:hover, input[type=reset].danger:hover {
       background: #790000;
       color: #ffffff; }
-    button.pl-button.danger:focus:not(:hover), a.pl-button.danger:focus:not(:hover) {
+    button.pl-button.danger:focus:not(:hover), a.pl-button.danger:focus:not(:hover), input[type=submit].danger:focus:not(:hover), input[type=button].danger:focus:not(:hover), input[type=reset].danger:focus:not(:hover) {
       outline: 1px solid #b60000; }
-    body.pl-mode-dark button.pl-button.danger, body.pl-mode-dark a.pl-button.danger {
+    body.pl-mode-dark button.pl-button.danger, body.pl-mode-dark a.pl-button.danger, body.pl-mode-dark input[type=submit].danger, body.pl-mode-dark input[type=button].danger, body.pl-mode-dark input[type=reset].danger {
       background: #db8080;
       color: #3d0000; }
-      body.pl-mode-dark button.pl-button.danger:hover, body.pl-mode-dark a.pl-button.danger:hover {
+      body.pl-mode-dark button.pl-button.danger:hover, body.pl-mode-dark a.pl-button.danger:hover, body.pl-mode-dark input[type=submit].danger:hover, body.pl-mode-dark input[type=button].danger:hover, body.pl-mode-dark input[type=reset].danger:hover {
         background: #790000;
         color: #ffffff; }
-      body.pl-mode-dark button.pl-button.danger:focus:not(:hover), body.pl-mode-dark a.pl-button.danger:focus:not(:hover) {
+      body.pl-mode-dark button.pl-button.danger:focus:not(:hover), body.pl-mode-dark a.pl-button.danger:focus:not(:hover), body.pl-mode-dark input[type=submit].danger:focus:not(:hover), body.pl-mode-dark input[type=button].danger:focus:not(:hover), body.pl-mode-dark input[type=reset].danger:focus:not(:hover) {
         outline: 1px solid #3d0000; }
     @media (prefers-color-scheme: dark) {
-      button.pl-button.danger, a.pl-button.danger {
+      button.pl-button.danger, a.pl-button.danger, input[type=submit].danger, input[type=button].danger, input[type=reset].danger {
         background: #db8080;
         color: #3d0000; }
-        button.pl-button.danger:hover, a.pl-button.danger:hover {
+        button.pl-button.danger:hover, a.pl-button.danger:hover, input[type=submit].danger:hover, input[type=button].danger:hover, input[type=reset].danger:hover {
           background: #790000;
           color: #ffffff; }
-        button.pl-button.danger:focus:not(:hover), a.pl-button.danger:focus:not(:hover) {
+        button.pl-button.danger:focus:not(:hover), a.pl-button.danger:focus:not(:hover), input[type=submit].danger:focus:not(:hover), input[type=button].danger:focus:not(:hover), input[type=reset].danger:focus:not(:hover) {
           outline: 1px solid #3d0000; } }
-  button.pl-button.crimson, a.pl-button.crimson {
+  button.pl-button.crimson, a.pl-button.crimson, input[type=submit].crimson, input[type=button].crimson, input[type=reset].crimson {
     background: #dd2e44;
     color: #ffffff; }
-    button.pl-button.crimson:hover, a.pl-button.crimson:hover {
+    button.pl-button.crimson:hover, a.pl-button.crimson:hover, input[type=submit].crimson:hover, input[type=button].crimson:hover, input[type=reset].crimson:hover {
       background: #931f2d;
       color: #ffffff; }
-    button.pl-button.crimson:focus:not(:hover), a.pl-button.crimson:focus:not(:hover) {
+    button.pl-button.crimson:focus:not(:hover), a.pl-button.crimson:focus:not(:hover), input[type=submit].crimson:focus:not(:hover), input[type=button].crimson:focus:not(:hover), input[type=reset].crimson:focus:not(:hover) {
       outline: 1px solid #ffffff; }
-  button.pl-button.cornflower, a.pl-button.cornflower {
+  button.pl-button.cornflower, a.pl-button.cornflower, input[type=submit].cornflower, input[type=button].cornflower, input[type=reset].cornflower {
     background: #5f7aff;
     color: #ffffff; }
-    button.pl-button.cornflower:hover, a.pl-button.cornflower:hover {
+    button.pl-button.cornflower:hover, a.pl-button.cornflower:hover, input[type=submit].cornflower:hover, input[type=button].cornflower:hover, input[type=reset].cornflower:hover {
       background: #3f51aa;
       color: #ffffff; }
-    button.pl-button.cornflower:focus:not(:hover), a.pl-button.cornflower:focus:not(:hover) {
+    button.pl-button.cornflower:focus:not(:hover), a.pl-button.cornflower:focus:not(:hover), input[type=submit].cornflower:focus:not(:hover), input[type=button].cornflower:focus:not(:hover), input[type=reset].cornflower:focus:not(:hover) {
       outline: 1px solid #ffffff; }
-  button.pl-button.tangerine, a.pl-button.tangerine {
+  button.pl-button.tangerine, button.pl-button[type=reset], a.pl-button.tangerine, a.pl-button[type=reset], input[type=submit].tangerine, input[type=submit][type=reset], input[type=button].tangerine, input[type=button][type=reset], input[type=reset].tangerine, input[type=reset][type=reset] {
     background: #eb8e00;
     color: #000000; }
-    button.pl-button.tangerine:hover, a.pl-button.tangerine:hover {
+    button.pl-button.tangerine:hover, button.pl-button[type=reset]:hover, a.pl-button.tangerine:hover, a.pl-button[type=reset]:hover, input[type=submit].tangerine:hover, input[type=submit][type=reset]:hover, input[type=button].tangerine:hover, input[type=button][type=reset]:hover, input[type=reset].tangerine:hover, input[type=reset][type=reset]:hover {
       background: #9d5f00;
       color: #ffffff; }
-    button.pl-button.tangerine:focus:not(:hover), a.pl-button.tangerine:focus:not(:hover) {
+    button.pl-button.tangerine:focus:not(:hover), button.pl-button[type=reset]:focus:not(:hover), a.pl-button.tangerine:focus:not(:hover), a.pl-button[type=reset]:focus:not(:hover), input[type=submit].tangerine:focus:not(:hover), input[type=submit][type=reset]:focus:not(:hover), input[type=button].tangerine:focus:not(:hover), input[type=button][type=reset]:focus:not(:hover), input[type=reset].tangerine:focus:not(:hover), input[type=reset][type=reset]:focus:not(:hover) {
       outline: 1px solid #000000; }
-  button.pl-button.eve, a.pl-button.eve {
+  button.pl-button.eve, a.pl-button.eve, input[type=submit].eve, input[type=button].eve, input[type=reset].eve {
     background: #3b4dbf;
     color: #ffffff; }
-    button.pl-button.eve:hover, a.pl-button.eve:hover {
+    button.pl-button.eve:hover, a.pl-button.eve:hover, input[type=submit].eve:hover, input[type=button].eve:hover, input[type=reset].eve:hover {
       background: #27337f;
       color: #ffffff; }
-    button.pl-button.eve:focus:not(:hover), a.pl-button.eve:focus:not(:hover) {
+    button.pl-button.eve:focus:not(:hover), a.pl-button.eve:focus:not(:hover), input[type=submit].eve:focus:not(:hover), input[type=button].eve:focus:not(:hover), input[type=reset].eve:focus:not(:hover) {
       outline: 1px solid #ffffff; }
-  button.pl-button.link, a.pl-button.link {
+  button.pl-button.link, a.pl-button.link, input[type=submit].link, input[type=button].link, input[type=reset].link {
     color: #2a4e93;
     padding: 0;
     margin: 0;
@@ -573,208 +631,558 @@ button.pl-button, a.pl-button {
     outline: none;
     font-weight: normal;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13), 0px 0px 0px 0px rgba(0, 0, 0, 0.091), 0px 0px 0px 0px rgba(0, 0, 0, 0.078); }
-    body.pl-mode-dark button.pl-button.link, body.pl-mode-dark a.pl-button.link {
+    body.pl-mode-dark button.pl-button.link, body.pl-mode-dark a.pl-button.link, body.pl-mode-dark input[type=submit].link, body.pl-mode-dark input[type=button].link, body.pl-mode-dark input[type=reset].link {
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
     @media (prefers-color-scheme: dark) {
-      button.pl-button.link, a.pl-button.link {
+      button.pl-button.link, a.pl-button.link, input[type=submit].link, input[type=button].link, input[type=reset].link {
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); } }
-    body.pl-mode-dark button.pl-button.link, body.pl-mode-dark a.pl-button.link {
+    body.pl-mode-dark button.pl-button.link, body.pl-mode-dark a.pl-button.link, body.pl-mode-dark input[type=submit].link, body.pl-mode-dark input[type=button].link, body.pl-mode-dark input[type=reset].link {
       color: #7189b7; }
     @media (prefers-color-scheme: dark) {
-      button.pl-button.link, a.pl-button.link {
+      button.pl-button.link, a.pl-button.link, input[type=submit].link, input[type=button].link, input[type=reset].link {
         color: #7189b7; } }
-    button.pl-button.link:hover, a.pl-button.link:hover {
+    button.pl-button.link:hover, a.pl-button.link:hover, input[type=submit].link:hover, input[type=button].link:hover, input[type=reset].link:hover {
       cursor: pointer;
       background: transparent;
       text-decoration: underline;
       color: #15274a;
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13), 0px 0px 0px 0px rgba(0, 0, 0, 0.091), 0px 0px 0px 0px rgba(0, 0, 0, 0.078); }
-      body.pl-mode-dark button.pl-button.link:hover, body.pl-mode-dark a.pl-button.link:hover {
+      body.pl-mode-dark button.pl-button.link:hover, body.pl-mode-dark a.pl-button.link:hover, body.pl-mode-dark input[type=submit].link:hover, body.pl-mode-dark input[type=button].link:hover, body.pl-mode-dark input[type=reset].link:hover {
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link:hover, a.pl-button.link:hover {
+        button.pl-button.link:hover, a.pl-button.link:hover, input[type=submit].link:hover, input[type=button].link:hover, input[type=reset].link:hover {
           box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); } }
-      body.pl-mode-dark button.pl-button.link:hover, body.pl-mode-dark a.pl-button.link:hover {
+      body.pl-mode-dark button.pl-button.link:hover, body.pl-mode-dark a.pl-button.link:hover, body.pl-mode-dark input[type=submit].link:hover, body.pl-mode-dark input[type=button].link:hover, body.pl-mode-dark input[type=reset].link:hover {
         color: #2a4e93; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link:hover, a.pl-button.link:hover {
+        button.pl-button.link:hover, a.pl-button.link:hover, input[type=submit].link:hover, input[type=button].link:hover, input[type=reset].link:hover {
           color: #2a4e93; } }
-    button.pl-button.link:focus, a.pl-button.link:focus {
+    button.pl-button.link:focus, a.pl-button.link:focus, input[type=submit].link:focus, input[type=button].link:focus, input[type=reset].link:focus {
       outline: none; }
-    button.pl-button.link.success, a.pl-button.link.success {
+    button.pl-button.link.success, a.pl-button.link.success, input[type=submit].link.success, input[type=button].link.success, input[type=reset].link.success {
       color: #2e633a;
       background: transparent; }
-      button.pl-button.link.success:hover, a.pl-button.link.success:hover {
+      button.pl-button.link.success:hover, a.pl-button.link.success:hover, input[type=submit].link.success:hover, input[type=button].link.success:hover, input[type=reset].link.success:hover {
         text-decoration: underline;
         color: #1f4227; }
-      button.pl-button.link.success:focus, a.pl-button.link.success:focus {
+      button.pl-button.link.success:focus, a.pl-button.link.success:focus, input[type=submit].link.success:focus, input[type=button].link.success:focus, input[type=reset].link.success:focus {
         outline: none; }
-    button.pl-button.link.secondary, a.pl-button.link.secondary {
+    button.pl-button.link.secondary, a.pl-button.link.secondary, input[type=submit].link.secondary, input[type=button].link.secondary, input[type=reset].link.secondary {
       color: #3f5b77;
       background: transparent; }
-      body.pl-mode-dark button.pl-button.link.secondary, body.pl-mode-dark a.pl-button.link.secondary {
+      body.pl-mode-dark button.pl-button.link.secondary, body.pl-mode-dark a.pl-button.link.secondary, body.pl-mode-dark input[type=submit].link.secondary, body.pl-mode-dark input[type=button].link.secondary, body.pl-mode-dark input[type=reset].link.secondary {
         background: transparent; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.secondary, a.pl-button.link.secondary {
+        button.pl-button.link.secondary, a.pl-button.link.secondary, input[type=submit].link.secondary, input[type=button].link.secondary, input[type=reset].link.secondary {
           background: transparent; } }
-      button.pl-button.link.secondary:hover, a.pl-button.link.secondary:hover {
+      button.pl-button.link.secondary:hover, a.pl-button.link.secondary:hover, input[type=submit].link.secondary:hover, input[type=button].link.secondary:hover, input[type=reset].link.secondary:hover {
         text-decoration: underline;
         color: #2a3d4f; }
-      button.pl-button.link.secondary:focus, a.pl-button.link.secondary:focus {
+      button.pl-button.link.secondary:focus, a.pl-button.link.secondary:focus, input[type=submit].link.secondary:focus, input[type=button].link.secondary:focus, input[type=reset].link.secondary:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.secondary, body.pl-mode-dark a.pl-button.link.secondary {
+      body.pl-mode-dark button.pl-button.link.secondary, body.pl-mode-dark a.pl-button.link.secondary, body.pl-mode-dark input[type=submit].link.secondary, body.pl-mode-dark input[type=button].link.secondary, body.pl-mode-dark input[type=reset].link.secondary {
         color: #9fadbb;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.secondary:hover, body.pl-mode-dark a.pl-button.link.secondary:hover {
+        body.pl-mode-dark button.pl-button.link.secondary:hover, body.pl-mode-dark a.pl-button.link.secondary:hover, body.pl-mode-dark input[type=submit].link.secondary:hover, body.pl-mode-dark input[type=button].link.secondary:hover, body.pl-mode-dark input[type=reset].link.secondary:hover {
           color: #7f92a4; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.secondary, a.pl-button.link.secondary {
+        button.pl-button.link.secondary, a.pl-button.link.secondary, input[type=submit].link.secondary, input[type=button].link.secondary, input[type=reset].link.secondary {
           color: #9fadbb;
           background: transparent; }
-          button.pl-button.link.secondary:hover, a.pl-button.link.secondary:hover {
+          button.pl-button.link.secondary:hover, a.pl-button.link.secondary:hover, input[type=submit].link.secondary:hover, input[type=button].link.secondary:hover, input[type=reset].link.secondary:hover {
             color: #7f92a4; } }
-    button.pl-button.link.disabled, button.pl-button.link:disabled, a.pl-button.link.disabled, a.pl-button.link:disabled {
+    button.pl-button.link.disabled, button.pl-button.link:disabled, a.pl-button.link.disabled, a.pl-button.link:disabled, input[type=submit].link.disabled, input[type=submit].link:disabled, input[type=button].link.disabled, input[type=button].link:disabled, input[type=reset].link.disabled, input[type=reset].link:disabled {
       color: #8592a1;
       background: transparent; }
-      button.pl-button.link.disabled:hover, button.pl-button.link:disabled:hover, a.pl-button.link.disabled:hover, a.pl-button.link:disabled:hover {
+      button.pl-button.link.disabled:hover, button.pl-button.link:disabled:hover, a.pl-button.link.disabled:hover, a.pl-button.link:disabled:hover, input[type=submit].link.disabled:hover, input[type=submit].link:disabled:hover, input[type=button].link.disabled:hover, input[type=button].link:disabled:hover, input[type=reset].link.disabled:hover, input[type=reset].link:disabled:hover {
         text-decoration: underline;
         color: #8592a1;
         cursor: not-allowed; }
-      button.pl-button.link.disabled:focus, button.pl-button.link:disabled:focus, a.pl-button.link.disabled:focus, a.pl-button.link:disabled:focus {
+      button.pl-button.link.disabled:focus, button.pl-button.link:disabled:focus, a.pl-button.link.disabled:focus, a.pl-button.link:disabled:focus, input[type=submit].link.disabled:focus, input[type=submit].link:disabled:focus, input[type=button].link.disabled:focus, input[type=button].link:disabled:focus, input[type=reset].link.disabled:focus, input[type=reset].link:disabled:focus {
         outline: none; }
-    button.pl-button.link.success, a.pl-button.link.success {
+    button.pl-button.link.success, a.pl-button.link.success, input[type=submit].link.success, input[type=button].link.success, input[type=reset].link.success {
       color: #2e633a;
       background: transparent; }
-      button.pl-button.link.success:hover, a.pl-button.link.success:hover {
+      button.pl-button.link.success:hover, a.pl-button.link.success:hover, input[type=submit].link.success:hover, input[type=button].link.success:hover, input[type=reset].link.success:hover {
         text-decoration: underline;
         color: #1f4227; }
-      button.pl-button.link.success:focus, a.pl-button.link.success:focus {
+      button.pl-button.link.success:focus, a.pl-button.link.success:focus, input[type=submit].link.success:focus, input[type=button].link.success:focus, input[type=reset].link.success:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.success, body.pl-mode-dark a.pl-button.link.success {
+      body.pl-mode-dark button.pl-button.link.success, body.pl-mode-dark a.pl-button.link.success, body.pl-mode-dark input[type=submit].link.success, body.pl-mode-dark input[type=button].link.success, body.pl-mode-dark input[type=reset].link.success {
         color: #97b19d;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.success:hover, body.pl-mode-dark a.pl-button.link.success:hover {
+        body.pl-mode-dark button.pl-button.link.success:hover, body.pl-mode-dark a.pl-button.link.success:hover, body.pl-mode-dark input[type=submit].link.success:hover, body.pl-mode-dark input[type=button].link.success:hover, body.pl-mode-dark input[type=reset].link.success:hover {
           color: #74977c; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.success, a.pl-button.link.success {
+        button.pl-button.link.success, a.pl-button.link.success, input[type=submit].link.success, input[type=button].link.success, input[type=reset].link.success {
           color: #97b19d;
           background: transparent; }
-          button.pl-button.link.success:hover, a.pl-button.link.success:hover {
+          button.pl-button.link.success:hover, a.pl-button.link.success:hover, input[type=submit].link.success:hover, input[type=button].link.success:hover, input[type=reset].link.success:hover {
             color: #74977c; } }
-    button.pl-button.link.warning, a.pl-button.link.warning {
+    button.pl-button.link.warning, a.pl-button.link.warning, input[type=submit].link.warning, input[type=button].link.warning, input[type=reset].link.warning {
       color: #ff6d05;
       background: transparent; }
-      button.pl-button.link.warning:hover, a.pl-button.link.warning:hover {
+      button.pl-button.link.warning:hover, a.pl-button.link.warning:hover, input[type=submit].link.warning:hover, input[type=button].link.warning:hover, input[type=reset].link.warning:hover {
         text-decoration: underline;
         color: #aa4903; }
-      button.pl-button.link.warning:focus, a.pl-button.link.warning:focus {
+      button.pl-button.link.warning:focus, a.pl-button.link.warning:focus, input[type=submit].link.warning:focus, input[type=button].link.warning:focus, input[type=reset].link.warning:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.warning, body.pl-mode-dark a.pl-button.link.warning {
+      body.pl-mode-dark button.pl-button.link.warning, body.pl-mode-dark a.pl-button.link.warning, body.pl-mode-dark input[type=submit].link.warning, body.pl-mode-dark input[type=button].link.warning, body.pl-mode-dark input[type=reset].link.warning {
         color: #ffb682;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.warning:hover, body.pl-mode-dark a.pl-button.link.warning:hover {
+        body.pl-mode-dark button.pl-button.link.warning:hover, body.pl-mode-dark a.pl-button.link.warning:hover, body.pl-mode-dark input[type=submit].link.warning:hover, body.pl-mode-dark input[type=button].link.warning:hover, body.pl-mode-dark input[type=reset].link.warning:hover {
           color: #ff9e58; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.warning, a.pl-button.link.warning {
+        button.pl-button.link.warning, a.pl-button.link.warning, input[type=submit].link.warning, input[type=button].link.warning, input[type=reset].link.warning {
           color: #ffb682;
           background: transparent; }
-          button.pl-button.link.warning:hover, a.pl-button.link.warning:hover {
+          button.pl-button.link.warning:hover, a.pl-button.link.warning:hover, input[type=submit].link.warning:hover, input[type=button].link.warning:hover, input[type=reset].link.warning:hover {
             color: #ff9e58; } }
-    button.pl-button.link.danger, a.pl-button.link.danger {
+    button.pl-button.link.danger, a.pl-button.link.danger, input[type=submit].link.danger, input[type=button].link.danger, input[type=reset].link.danger {
       color: #b60000;
       background: transparent; }
-      button.pl-button.link.danger:hover, a.pl-button.link.danger:hover {
+      button.pl-button.link.danger:hover, a.pl-button.link.danger:hover, input[type=submit].link.danger:hover, input[type=button].link.danger:hover, input[type=reset].link.danger:hover {
         text-decoration: underline;
         color: #790000; }
-      button.pl-button.link.danger:focus, a.pl-button.link.danger:focus {
+      button.pl-button.link.danger:focus, a.pl-button.link.danger:focus, input[type=submit].link.danger:focus, input[type=button].link.danger:focus, input[type=reset].link.danger:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.danger, body.pl-mode-dark a.pl-button.link.danger {
+      body.pl-mode-dark button.pl-button.link.danger, body.pl-mode-dark a.pl-button.link.danger, body.pl-mode-dark input[type=submit].link.danger, body.pl-mode-dark input[type=button].link.danger, body.pl-mode-dark input[type=reset].link.danger {
         color: #db8080;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.danger:hover, body.pl-mode-dark a.pl-button.link.danger:hover {
+        body.pl-mode-dark button.pl-button.link.danger:hover, body.pl-mode-dark a.pl-button.link.danger:hover, body.pl-mode-dark input[type=submit].link.danger:hover, body.pl-mode-dark input[type=button].link.danger:hover, body.pl-mode-dark input[type=reset].link.danger:hover {
           color: #ce5555; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.danger, a.pl-button.link.danger {
+        button.pl-button.link.danger, a.pl-button.link.danger, input[type=submit].link.danger, input[type=button].link.danger, input[type=reset].link.danger {
           color: #db8080;
           background: transparent; }
-          button.pl-button.link.danger:hover, a.pl-button.link.danger:hover {
+          button.pl-button.link.danger:hover, a.pl-button.link.danger:hover, input[type=submit].link.danger:hover, input[type=button].link.danger:hover, input[type=reset].link.danger:hover {
             color: #ce5555; } }
-    button.pl-button.link.crimson, a.pl-button.link.crimson {
+    button.pl-button.link.crimson, a.pl-button.link.crimson, input[type=submit].link.crimson, input[type=button].link.crimson, input[type=reset].link.crimson {
       color: #dd2e44;
       background: transparent; }
-      button.pl-button.link.crimson:hover, a.pl-button.link.crimson:hover {
+      button.pl-button.link.crimson:hover, a.pl-button.link.crimson:hover, input[type=submit].link.crimson:hover, input[type=button].link.crimson:hover, input[type=reset].link.crimson:hover {
         text-decoration: underline;
         color: #931f2d; }
-      button.pl-button.link.crimson:focus, a.pl-button.link.crimson:focus {
+      button.pl-button.link.crimson:focus, a.pl-button.link.crimson:focus, input[type=submit].link.crimson:focus, input[type=button].link.crimson:focus, input[type=reset].link.crimson:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.crimson, body.pl-mode-dark a.pl-button.link.crimson {
+      body.pl-mode-dark button.pl-button.link.crimson, body.pl-mode-dark a.pl-button.link.crimson, body.pl-mode-dark input[type=submit].link.crimson, body.pl-mode-dark input[type=button].link.crimson, body.pl-mode-dark input[type=reset].link.crimson {
         color: #e35163;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.crimson:hover, body.pl-mode-dark a.pl-button.link.crimson:hover {
+        body.pl-mode-dark button.pl-button.link.crimson:hover, body.pl-mode-dark a.pl-button.link.crimson:hover, body.pl-mode-dark input[type=submit].link.crimson:hover, body.pl-mode-dark input[type=button].link.crimson:hover, body.pl-mode-dark input[type=reset].link.crimson:hover {
           color: #dd2e44; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.crimson, a.pl-button.link.crimson {
+        button.pl-button.link.crimson, a.pl-button.link.crimson, input[type=submit].link.crimson, input[type=button].link.crimson, input[type=reset].link.crimson {
           color: #e35163;
           background: transparent; }
-          button.pl-button.link.crimson:hover, a.pl-button.link.crimson:hover {
+          button.pl-button.link.crimson:hover, a.pl-button.link.crimson:hover, input[type=submit].link.crimson:hover, input[type=button].link.crimson:hover, input[type=reset].link.crimson:hover {
             color: #dd2e44; } }
-    button.pl-button.link.cornflower, a.pl-button.link.cornflower {
+    button.pl-button.link.cornflower, a.pl-button.link.cornflower, input[type=submit].link.cornflower, input[type=button].link.cornflower, input[type=reset].link.cornflower {
       color: #5f7aff;
       background: transparent; }
-      button.pl-button.link.cornflower:hover, a.pl-button.link.cornflower:hover {
+      button.pl-button.link.cornflower:hover, a.pl-button.link.cornflower:hover, input[type=submit].link.cornflower:hover, input[type=button].link.cornflower:hover, input[type=reset].link.cornflower:hover {
         text-decoration: underline;
         color: #3f51aa; }
-      button.pl-button.link.cornflower:focus, a.pl-button.link.cornflower:focus {
+      button.pl-button.link.cornflower:focus, a.pl-button.link.cornflower:focus, input[type=submit].link.cornflower:focus, input[type=button].link.cornflower:focus, input[type=reset].link.cornflower:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.cornflower, body.pl-mode-dark a.pl-button.link.cornflower {
+      body.pl-mode-dark button.pl-button.link.cornflower, body.pl-mode-dark a.pl-button.link.cornflower, body.pl-mode-dark input[type=submit].link.cornflower, body.pl-mode-dark input[type=button].link.cornflower, body.pl-mode-dark input[type=reset].link.cornflower {
         color: #7a90ff;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.cornflower:hover, body.pl-mode-dark a.pl-button.link.cornflower:hover {
+        body.pl-mode-dark button.pl-button.link.cornflower:hover, body.pl-mode-dark a.pl-button.link.cornflower:hover, body.pl-mode-dark input[type=submit].link.cornflower:hover, body.pl-mode-dark input[type=button].link.cornflower:hover, body.pl-mode-dark input[type=reset].link.cornflower:hover {
           color: #5f7aff; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.cornflower, a.pl-button.link.cornflower {
+        button.pl-button.link.cornflower, a.pl-button.link.cornflower, input[type=submit].link.cornflower, input[type=button].link.cornflower, input[type=reset].link.cornflower {
           color: #7a90ff;
           background: transparent; }
-          button.pl-button.link.cornflower:hover, a.pl-button.link.cornflower:hover {
+          button.pl-button.link.cornflower:hover, a.pl-button.link.cornflower:hover, input[type=submit].link.cornflower:hover, input[type=button].link.cornflower:hover, input[type=reset].link.cornflower:hover {
             color: #5f7aff; } }
-    button.pl-button.link.tangerine, a.pl-button.link.tangerine {
+    button.pl-button.link.tangerine, a.pl-button.link.tangerine, input[type=submit].link.tangerine, input[type=button].link.tangerine, input[type=reset].link.tangerine {
       color: #eb8e00;
       background: transparent; }
-      button.pl-button.link.tangerine:hover, a.pl-button.link.tangerine:hover {
+      button.pl-button.link.tangerine:hover, a.pl-button.link.tangerine:hover, input[type=submit].link.tangerine:hover, input[type=button].link.tangerine:hover, input[type=reset].link.tangerine:hover {
         text-decoration: underline;
         color: #9d5f00; }
-      button.pl-button.link.tangerine:focus, a.pl-button.link.tangerine:focus {
+      button.pl-button.link.tangerine:focus, a.pl-button.link.tangerine:focus, input[type=submit].link.tangerine:focus, input[type=button].link.tangerine:focus, input[type=reset].link.tangerine:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.tangerine, body.pl-mode-dark a.pl-button.link.tangerine {
+      body.pl-mode-dark button.pl-button.link.tangerine, body.pl-mode-dark a.pl-button.link.tangerine, body.pl-mode-dark input[type=submit].link.tangerine, body.pl-mode-dark input[type=button].link.tangerine, body.pl-mode-dark input[type=reset].link.tangerine {
         color: #eea12b;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.tangerine:hover, body.pl-mode-dark a.pl-button.link.tangerine:hover {
+        body.pl-mode-dark button.pl-button.link.tangerine:hover, body.pl-mode-dark a.pl-button.link.tangerine:hover, body.pl-mode-dark input[type=submit].link.tangerine:hover, body.pl-mode-dark input[type=button].link.tangerine:hover, body.pl-mode-dark input[type=reset].link.tangerine:hover {
           color: #eb8e00; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.tangerine, a.pl-button.link.tangerine {
+        button.pl-button.link.tangerine, a.pl-button.link.tangerine, input[type=submit].link.tangerine, input[type=button].link.tangerine, input[type=reset].link.tangerine {
           color: #eea12b;
           background: transparent; }
-          button.pl-button.link.tangerine:hover, a.pl-button.link.tangerine:hover {
+          button.pl-button.link.tangerine:hover, a.pl-button.link.tangerine:hover, input[type=submit].link.tangerine:hover, input[type=button].link.tangerine:hover, input[type=reset].link.tangerine:hover {
             color: #eb8e00; } }
-    button.pl-button.link.eve, a.pl-button.link.eve {
+    button.pl-button.link.eve, a.pl-button.link.eve, input[type=submit].link.eve, input[type=button].link.eve, input[type=reset].link.eve {
       color: #3b4dbf;
       background: transparent; }
-      button.pl-button.link.eve:hover, a.pl-button.link.eve:hover {
+      button.pl-button.link.eve:hover, a.pl-button.link.eve:hover, input[type=submit].link.eve:hover, input[type=button].link.eve:hover, input[type=reset].link.eve:hover {
         text-decoration: underline;
         color: #27337f; }
-      button.pl-button.link.eve:focus, a.pl-button.link.eve:focus {
+      button.pl-button.link.eve:focus, a.pl-button.link.eve:focus, input[type=submit].link.eve:focus, input[type=button].link.eve:focus, input[type=reset].link.eve:focus {
         outline: none; }
-      body.pl-mode-dark button.pl-button.link.eve, body.pl-mode-dark a.pl-button.link.eve {
+      body.pl-mode-dark button.pl-button.link.eve, body.pl-mode-dark a.pl-button.link.eve, body.pl-mode-dark input[type=submit].link.eve, body.pl-mode-dark input[type=button].link.eve, body.pl-mode-dark input[type=reset].link.eve {
         color: #5c6bca;
         background: transparent; }
-        body.pl-mode-dark button.pl-button.link.eve:hover, body.pl-mode-dark a.pl-button.link.eve:hover {
+        body.pl-mode-dark button.pl-button.link.eve:hover, body.pl-mode-dark a.pl-button.link.eve:hover, body.pl-mode-dark input[type=submit].link.eve:hover, body.pl-mode-dark input[type=button].link.eve:hover, body.pl-mode-dark input[type=reset].link.eve:hover {
           color: #3b4dbf; }
       @media (prefers-color-scheme: dark) {
-        button.pl-button.link.eve, a.pl-button.link.eve {
+        button.pl-button.link.eve, a.pl-button.link.eve, input[type=submit].link.eve, input[type=button].link.eve, input[type=reset].link.eve {
           color: #5c6bca;
           background: transparent; }
-          button.pl-button.link.eve:hover, a.pl-button.link.eve:hover {
+          button.pl-button.link.eve:hover, a.pl-button.link.eve:hover, input[type=submit].link.eve:hover, input[type=button].link.eve:hover, input[type=reset].link.eve:hover {
             color: #3b4dbf; } }
+
+input.pl-input:not([type]),
+input.pl-input[type=date],
+input.pl-input[type=datetime-local],
+input.pl-input[type=email],
+input.pl-input[type=month],
+input.pl-input[type=number],
+input.pl-input[type=password],
+input.pl-input[type=search],
+input.pl-input[type=tel],
+input.pl-input[type=text],
+input.pl-input[type=time],
+input.pl-input[type=url],
+input.pl-input[type=week],
+textarea {
+  background: #fbfbfb;
+  border: 1px solid #cccccc;
+  color: #222222;
+  outline-color: #3b4dbf;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+  font-size: 1em;
+  padding: 0.714em 1.428em;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.13), 0px 1px 1px 0px rgba(0, 0, 0, 0.091), 0px 1px 3px 0px rgba(0, 0, 0, 0.078); }
+  body.pl-mode-dark input.pl-input:not([type]), body.pl-mode-dark
+  input.pl-input[type=date], body.pl-mode-dark
+  input.pl-input[type=datetime-local], body.pl-mode-dark
+  input.pl-input[type=email], body.pl-mode-dark
+  input.pl-input[type=month], body.pl-mode-dark
+  input.pl-input[type=number], body.pl-mode-dark
+  input.pl-input[type=password], body.pl-mode-dark
+  input.pl-input[type=search], body.pl-mode-dark
+  input.pl-input[type=tel], body.pl-mode-dark
+  input.pl-input[type=text], body.pl-mode-dark
+  input.pl-input[type=time], body.pl-mode-dark
+  input.pl-input[type=url], body.pl-mode-dark
+  input.pl-input[type=week], body.pl-mode-dark
+  textarea {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
+  @media (prefers-color-scheme: dark) {
+    input.pl-input:not([type]),
+    input.pl-input[type=date],
+    input.pl-input[type=datetime-local],
+    input.pl-input[type=email],
+    input.pl-input[type=month],
+    input.pl-input[type=number],
+    input.pl-input[type=password],
+    input.pl-input[type=search],
+    input.pl-input[type=tel],
+    input.pl-input[type=text],
+    input.pl-input[type=time],
+    input.pl-input[type=url],
+    input.pl-input[type=week],
+    textarea {
+      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); } }
+  input.pl-input:not([type]):focus,
+  input.pl-input[type=date]:focus,
+  input.pl-input[type=datetime-local]:focus,
+  input.pl-input[type=email]:focus,
+  input.pl-input[type=month]:focus,
+  input.pl-input[type=number]:focus,
+  input.pl-input[type=password]:focus,
+  input.pl-input[type=search]:focus,
+  input.pl-input[type=tel]:focus,
+  input.pl-input[type=text]:focus,
+  input.pl-input[type=time]:focus,
+  input.pl-input[type=url]:focus,
+  input.pl-input[type=week]:focus,
+  textarea:focus {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.13), 0px 8px 10px 1px rgba(0, 0, 0, 0.091), 0px 3px 14px 2px rgba(0, 0, 0, 0.078); }
+    body.pl-mode-dark input.pl-input:not([type]):focus, body.pl-mode-dark
+    input.pl-input[type=date]:focus, body.pl-mode-dark
+    input.pl-input[type=datetime-local]:focus, body.pl-mode-dark
+    input.pl-input[type=email]:focus, body.pl-mode-dark
+    input.pl-input[type=month]:focus, body.pl-mode-dark
+    input.pl-input[type=number]:focus, body.pl-mode-dark
+    input.pl-input[type=password]:focus, body.pl-mode-dark
+    input.pl-input[type=search]:focus, body.pl-mode-dark
+    input.pl-input[type=tel]:focus, body.pl-mode-dark
+    input.pl-input[type=text]:focus, body.pl-mode-dark
+    input.pl-input[type=time]:focus, body.pl-mode-dark
+    input.pl-input[type=url]:focus, body.pl-mode-dark
+    input.pl-input[type=week]:focus, body.pl-mode-dark
+    textarea:focus {
+      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
+    @media (prefers-color-scheme: dark) {
+      input.pl-input:not([type]):focus,
+      input.pl-input[type=date]:focus,
+      input.pl-input[type=datetime-local]:focus,
+      input.pl-input[type=email]:focus,
+      input.pl-input[type=month]:focus,
+      input.pl-input[type=number]:focus,
+      input.pl-input[type=password]:focus,
+      input.pl-input[type=search]:focus,
+      input.pl-input[type=tel]:focus,
+      input.pl-input[type=text]:focus,
+      input.pl-input[type=time]:focus,
+      input.pl-input[type=url]:focus,
+      input.pl-input[type=week]:focus,
+      textarea:focus {
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); } }
+  body.pl-mode-dark input.pl-input:not([type]), body.pl-mode-dark
+  input.pl-input[type=date], body.pl-mode-dark
+  input.pl-input[type=datetime-local], body.pl-mode-dark
+  input.pl-input[type=email], body.pl-mode-dark
+  input.pl-input[type=month], body.pl-mode-dark
+  input.pl-input[type=number], body.pl-mode-dark
+  input.pl-input[type=password], body.pl-mode-dark
+  input.pl-input[type=search], body.pl-mode-dark
+  input.pl-input[type=tel], body.pl-mode-dark
+  input.pl-input[type=text], body.pl-mode-dark
+  input.pl-input[type=time], body.pl-mode-dark
+  input.pl-input[type=url], body.pl-mode-dark
+  input.pl-input[type=week], body.pl-mode-dark
+  textarea {
+    background: #464646;
+    border: 1px solid #767676;
+    color: #e2e2e2;
+    outline-color: #5f7aff; }
+    body.pl-mode-dark input.pl-input:not([type])::placeholder, body.pl-mode-dark
+    input.pl-input[type=date]::placeholder, body.pl-mode-dark
+    input.pl-input[type=datetime-local]::placeholder, body.pl-mode-dark
+    input.pl-input[type=email]::placeholder, body.pl-mode-dark
+    input.pl-input[type=month]::placeholder, body.pl-mode-dark
+    input.pl-input[type=number]::placeholder, body.pl-mode-dark
+    input.pl-input[type=password]::placeholder, body.pl-mode-dark
+    input.pl-input[type=search]::placeholder, body.pl-mode-dark
+    input.pl-input[type=tel]::placeholder, body.pl-mode-dark
+    input.pl-input[type=text]::placeholder, body.pl-mode-dark
+    input.pl-input[type=time]::placeholder, body.pl-mode-dark
+    input.pl-input[type=url]::placeholder, body.pl-mode-dark
+    input.pl-input[type=week]::placeholder, body.pl-mode-dark
+    textarea::placeholder {
+      color: #afafaf;
+      opacity: 1; }
+  @media (prefers-color-scheme: dark) {
+    input.pl-input:not([type]),
+    input.pl-input[type=date],
+    input.pl-input[type=datetime-local],
+    input.pl-input[type=email],
+    input.pl-input[type=month],
+    input.pl-input[type=number],
+    input.pl-input[type=password],
+    input.pl-input[type=search],
+    input.pl-input[type=tel],
+    input.pl-input[type=text],
+    input.pl-input[type=time],
+    input.pl-input[type=url],
+    input.pl-input[type=week],
+    textarea {
+      background: #464646;
+      border: 1px solid #767676;
+      color: #e2e2e2;
+      outline-color: #5f7aff; }
+      input.pl-input:not([type])::placeholder,
+      input.pl-input[type=date]::placeholder,
+      input.pl-input[type=datetime-local]::placeholder,
+      input.pl-input[type=email]::placeholder,
+      input.pl-input[type=month]::placeholder,
+      input.pl-input[type=number]::placeholder,
+      input.pl-input[type=password]::placeholder,
+      input.pl-input[type=search]::placeholder,
+      input.pl-input[type=tel]::placeholder,
+      input.pl-input[type=text]::placeholder,
+      input.pl-input[type=time]::placeholder,
+      input.pl-input[type=url]::placeholder,
+      input.pl-input[type=week]::placeholder,
+      textarea::placeholder {
+        color: #afafaf;
+        opacity: 1; } }
+  input.pl-input:not([type]).sm,
+  input.pl-input[type=date].sm,
+  input.pl-input[type=datetime-local].sm,
+  input.pl-input[type=email].sm,
+  input.pl-input[type=month].sm,
+  input.pl-input[type=number].sm,
+  input.pl-input[type=password].sm,
+  input.pl-input[type=search].sm,
+  input.pl-input[type=tel].sm,
+  input.pl-input[type=text].sm,
+  input.pl-input[type=time].sm,
+  input.pl-input[type=url].sm,
+  input.pl-input[type=week].sm,
+  textarea.sm {
+    padding: 0.4em 0.8em; }
+  input.pl-input:not([type]).lg,
+  input.pl-input[type=date].lg,
+  input.pl-input[type=datetime-local].lg,
+  input.pl-input[type=email].lg,
+  input.pl-input[type=month].lg,
+  input.pl-input[type=number].lg,
+  input.pl-input[type=password].lg,
+  input.pl-input[type=search].lg,
+  input.pl-input[type=tel].lg,
+  input.pl-input[type=text].lg,
+  input.pl-input[type=time].lg,
+  input.pl-input[type=url].lg,
+  input.pl-input[type=week].lg,
+  textarea.lg {
+    padding: 0.95em 2em; }
+
+input[type=checkbox].pl-input, input[type=radio].pl-input {
+  cursor: pointer; }
+
+textarea.pl-input {
+  padding: 0.714em;
+  min-height: 7em; }
+  textarea.pl-input.block {
+    width: 100%; }
+  textarea.pl-input.sm {
+    padding: 0.4em; }
+  textarea.pl-input.lg {
+    padding: 0.95em; }
+
+input[type=range].pl-input {
+  -webkit-appearance: none; }
+  input[type=range].pl-input:focus {
+    outline: none; }
+  input[type=range].pl-input::-webkit-slider-runnable-track {
+    height: 13.6px;
+    cursor: pointer;
+    background: #adb6c0;
+    border: 0; }
+  input[type=range].pl-input::-webkit-slider-thumb {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.13), 0px 2px 2px 0px rgba(0, 0, 0, 0.091), 0px 1px 5px 0px rgba(0, 0, 0, 0.078);
+    border: 0;
+    height: 26px;
+    width: 13px;
+    background: #2a4e93;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.2px; }
+    body.pl-mode-dark input[type=range].pl-input::-webkit-slider-thumb {
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
+    @media (prefers-color-scheme: dark) {
+      input[type=range].pl-input::-webkit-slider-thumb {
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); } }
+  input[type=range].pl-input:focus::-webkit-slider-runnable-track {
+    background: #c9cfd5; }
+  input[type=range].pl-input::-moz-range-track {
+    height: 13.6px;
+    cursor: pointer;
+    background: #adb6c0;
+    border: 0; }
+  input[type=range].pl-input::-moz-range-thumb {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.13), 0px 2px 2px 0px rgba(0, 0, 0, 0.091), 0px 1px 5px 0px rgba(0, 0, 0, 0.078);
+    border: 0;
+    height: 26px;
+    width: 13px;
+    background: #2a4e93;
+    cursor: pointer; }
+    body.pl-mode-dark input[type=range].pl-input::-moz-range-thumb {
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
+    @media (prefers-color-scheme: dark) {
+      input[type=range].pl-input::-moz-range-thumb {
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); } }
+  input[type=range].pl-input::-ms-track {
+    height: 13.6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent; }
+  input[type=range].pl-input::-ms-fill-lower {
+    background: #c9cfd5;
+    border: 0; }
+  input[type=range].pl-input::-ms-fill-upper {
+    background: #adb6c0;
+    border: 0; }
+  input[type=range].pl-input::-ms-thumb {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.13), 0px 2px 2px 0px rgba(0, 0, 0, 0.091), 0px 1px 5px 0px rgba(0, 0, 0, 0.078);
+    border: 0;
+    width: 13px;
+    background: #2a4e93;
+    cursor: pointer;
+    height: 13.6px; }
+    body.pl-mode-dark input[type=range].pl-input::-ms-thumb {
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
+    @media (prefers-color-scheme: dark) {
+      input[type=range].pl-input::-ms-thumb {
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); } }
+  input[type=range].pl-input:focus::-ms-fill-lower {
+    background: #c9cfd5; }
+  input[type=range].pl-input:focus::-ms-fill-upper {
+    background: #adb6c0; }
+
+.pl-checkbox, .pl-radio {
+  position: relative; }
+  .pl-checkbox > input, .pl-radio > input {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden; }
+  .pl-checkbox > label, .pl-radio > label {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+    min-height: 1.5em; }
+    .pl-checkbox > label:before, .pl-radio > label:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 0.5em;
+      background: transparent url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%237189b7' viewBox='0 0 24 24'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") center no-repeat; }
+      body.pl-mode-dark .pl-checkbox > label:before, body.pl-mode-dark .pl-radio > label:before {
+        background: transparent url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") center no-repeat; }
+      @media (prefers-color-scheme: dark) {
+        .pl-checkbox > label:before, .pl-radio > label:before {
+          background: transparent url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") center no-repeat; } }
+  .pl-checkbox > input[type=checkbox]:checked + label:before, .pl-radio > input[type=checkbox]:checked + label:before {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%232a4e93' viewBox='0 0 24 24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+    color: #2a4e93; }
+    body.pl-mode-dark .pl-checkbox > input[type=checkbox]:checked + label:before, body.pl-mode-dark .pl-radio > input[type=checkbox]:checked + label:before {
+      background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+      color: #b8c4db; }
+    @media (prefers-color-scheme: dark) {
+      .pl-checkbox > input[type=checkbox]:checked + label:before, .pl-radio > input[type=checkbox]:checked + label:before {
+        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+        color: #b8c4db; } }
+  .pl-checkbox > input[type=checkbox]:focus:not(:focus-visible), .pl-radio > input[type=checkbox]:focus:not(:focus-visible) {
+    outline: none; }
+  .pl-checkbox > input[type=checkbox]:focus:not(:hover) + label, .pl-radio > input[type=checkbox]:focus:not(:hover) + label {
+    outline: 1px solid #2a4e93;
+    outline-offset: 5px; }
+    body.pl-mode-dark .pl-checkbox > input[type=checkbox]:focus:not(:hover) + label, body.pl-mode-dark .pl-radio > input[type=checkbox]:focus:not(:hover) + label {
+      outline-color: #b8c4db; }
+    @media (prefers-color-scheme: dark) {
+      .pl-checkbox > input[type=checkbox]:focus:not(:hover) + label, .pl-radio > input[type=checkbox]:focus:not(:hover) + label {
+        outline-color: #b8c4db; } }
+  .pl-checkbox.pl-radio > label:before, .pl-radio.pl-radio > label:before {
+    background: transparent url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%237189b7' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") center no-repeat; }
+    body.pl-mode-dark .pl-checkbox.pl-radio > label:before, body.pl-mode-dark .pl-radio.pl-radio > label:before {
+      background: transparent url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") center no-repeat; }
+    @media (prefers-color-scheme: dark) {
+      .pl-checkbox.pl-radio > label:before, .pl-radio.pl-radio > label:before {
+        background: transparent url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") center no-repeat; } }
+  .pl-checkbox.pl-radio > input:checked + label:before, .pl-radio.pl-radio > input:checked + label:before {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%232a4e93' viewBox='0 0 24 24'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    color: #2a4e93; }
+    body.pl-mode-dark .pl-checkbox.pl-radio > input:checked + label:before, body.pl-mode-dark .pl-radio.pl-radio > input:checked + label:before {
+      background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+      color: #b8c4db; }
+    @media (prefers-color-scheme: dark) {
+      .pl-checkbox.pl-radio > input:checked + label:before, .pl-radio.pl-radio > input:checked + label:before {
+        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23b8c4db' viewBox='0 0 24 24'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+        color: #b8c4db; } }
 
 table.pl-table {
   table-layout: auto;
@@ -864,6 +1272,9 @@ table.pl-table {
     table.pl-table > tbody > tr > th.fit {
       width: 1%;
       white-space: nowrap; }
+  table.pl-table > tbody > tr > td.fit {
+    padding: 0;
+    margin: 0; }
   table.pl-table > tfoot > th, table.pl-table > tfoot > tr {
     background: #eeeff0; }
     body.pl-mode-dark table.pl-table > tfoot > th, body.pl-mode-dark table.pl-table > tfoot > tr {
@@ -2286,7 +2697,9 @@ table.pl-table {
 
 .pl-panel {
   background: #f6f6f6;
-  border: 1px solid #e6e6e6; }
+  border: 1px solid #e6e6e6;
+  width: 100%;
+  position: relative; }
   body.pl-mode-dark .pl-panel {
     background: #3e3e3e;
     border: 1px solid #494949; }
@@ -2783,11 +3196,11 @@ section#typography > div.font-panel {
     letter-spacing: 0.1em; }
 
 section#colors table.color-table > thead > tr > th {
-  padding: 0.57143rem 2.28571rem;
+  padding: 0.57143rem 1.14286rem;
   text-align: left; }
 
 section#colors table.color-table > tbody > tr > td {
-  padding: 0.57143rem 2.28571rem; }
+  padding: 0.57143rem 1.14286rem; }
   section#colors table.color-table > tbody > tr > td.hex, section#colors table.color-table > tbody > tr > td.var {
     user-select: all; }
   section#colors table.color-table > tbody > tr > td.desc {
@@ -2796,23 +3209,6 @@ section#colors table.color-table > tbody > tr > td {
     color: #222222; }
   section#colors table.color-table > tbody > tr > td.spacer {
     padding-top: 2.28571rem; }
-
-div.color-scheme > div.title {
-  font-size: 1.3em;
-  font-family: "prompt", "noto sans", arial, sans-serif;
-  padding-bottom: 0.57143rem; }
-
-div.color-scheme > div.component {
-  display: flex;
-  padding: 0.57143rem 2.28571rem; }
-  div.color-scheme > div.component > div.name {
-    flex: 1 1;
-    font-weight: 600;
-    padding-right: 2.28571rem;
-    font-size: 0.92rem; }
-  div.color-scheme > div.component > div.hex {
-    width: 100px;
-    user-select: all; }
 
 .pl-color-body-light-text-bg {
   background: #ffffff; }
@@ -3713,13 +4109,6 @@ div.color-scheme > div.component {
 
 .pl-sc-moon-tint-900-ctr {
   color: #000000; }
-
-.CodeMirror {
-  height: auto;
-  font-size: 14px;
-  display: inline-flex;
-  font-family: "source code pro", monospace;
-  background: transparent !important; }
 
 div.pl-panel-container > section {
   margin-bottom: 4.57143rem; }

@@ -5,23 +5,21 @@ section#typography
 
   div.font-panel.pl-mrg-b-md
     div.purpose
-      h6 Body font
-    table.pl-table.block.lg.borders.pl-mrg-y-sm
-      tr
-        th.fit Font family property
-        td: code.pl-user-select-all font-family: 'noto sans ui', 'noto sans', arial, sans-serif;
+      h6 Body font stack
+    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
+          | font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
+          | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
     div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-body
-      div ABCDEFGHIJKLMNOPQRSTUVWXYZ
-      div abcdefghijklmnopqrstuvwxyz
-      div 0123456789
+      div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
+      div.pl-word-break-all 0123456789
 
   div.font-panel.pl-mrg-b-md
     div.purpose
-      h6 Primary title font
-    table.pl-table.block.lg.borders.pl-mrg-y-sm
-      tr
-        th.fit Font family property
-        td: code.pl-user-select-all font-family: 'muli', 'noto sans', arial, sans-serif;
+      h6 Primary title font stack
+    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
+          | font-family: 'muli', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
+          | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
     div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-title-primary
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
@@ -29,11 +27,10 @@ section#typography
 
   div.font-panel.pl-mrg-b-md
     div.purpose
-      h6 Secondary title font
-    table.pl-table.block.lg.borders.pl-mrg-y-sm
-      tr
-        th.fit Font family property
-        td: code.pl-user-select-all font-family: 'prompt', 'noto sans', arial, sans-serif;
+      h6 Secondary title font stack
+    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
+           | font-family: 'prompt', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
+           | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
     div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-title-secondary
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
@@ -41,11 +38,9 @@ section#typography
 
   div.font-panel.pl-mrg-b-md
     div.purpose
-      h6 Monospace font
-    table.pl-table.block.lg.borders.pl-mrg-y-sm
-      tr
-        th.fit Font family property
-        td: code.pl-user-select-all font-family: 'source code pro', monospace;
+      h6 Monospace font stack
+    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
+          | font-family: 'source code pro', consolas, 'courier new', courier, monospace;
     div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-mono
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
@@ -70,10 +65,7 @@ section#typography
   h3.pl-title Text copy
 
   h4 Body copy
-  table.pl-table.block.lg.borders.pl-mrg-b-sm
-    tr
-      th.fit Class
-      td: code.pl-user-select-all pl-text-body
+  code.pl-mrg-b-sm.block pl-text-body
   div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
     div
       p: include ../lorem/average.txt
@@ -81,18 +73,12 @@ section#typography
       p: include ../lorem/average.txt
 
   h4 Micro copy heading
-  table.pl-table.block.lg.borders.pl-mrg-b-sm
-    tr
-      th.fit Class
-      td: code.pl-user-select-all pl-text-micro heading
+  code.pl-mrg-b-sm.block pl-text-micro heading
   div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
     div.pl-text-micro.heading: include ../lorem/short.txt
 
   h4 Micro copy text
-  table.pl-table.block.lg.borders.pl-mrg-b-sm
-    tr
-      th.fit Class
-      td: code.pl-user-select-all pl-text-micro copy
+  code.pl-mrg-b-sm.block pl-text-micro copy
   div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
     p.pl-text-micro.copy: include ../lorem/average.txt
 

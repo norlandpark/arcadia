@@ -2,10 +2,57 @@
 @import "colors";
 @import "utilities";
 
-$pl-font-family-title-primary: 'muli', 'noto sans', arial, sans-serif !default;
-$pl-font-family-title-secondary: 'prompt', 'noto sans', arial, sans-serif !default;
-$pl-font-family-body: 'noto sans ui', 'noto sans', arial, sans-serif !default;
-$pl-font-family-mono: 'source code pro', monospace !default;
+$pl-font-family-body: -apple-system,
+BlinkMacSystemFont,
+'segoe ui',
+roboto,
+oxygen-sans,
+ubuntu,
+cantarell,
+'helvetica neue',
+'arial',
+sans-serif,
+'apple color emoji',
+'segoe ui emoji',
+'segoe ui symbol' !default;
+
+$pl-font-family-title-primary: 'muli',
+-apple-system,
+BlinkMacSystemFont,
+'segoe ui',
+roboto,
+oxygen-sans,
+ubuntu,
+cantarell,
+'helvetica neue',
+'arial',
+sans-serif,
+'apple color emoji',
+'segoe ui emoji',
+'segoe ui symbol' !default;
+
+$pl-font-family-title-secondary: 'prompt',
+-apple-system,
+BlinkMacSystemFont,
+'segoe ui',
+roboto,
+oxygen-sans,
+ubuntu,
+cantarell,
+'helvetica neue',
+'arial',
+sans-serif,
+'apple color emoji',
+'segoe ui emoji',
+'segoe ui symbol' !default;
+
+$pl-font-family-mono: 'source code pro',
+consolas,
+'courier new',
+courier,
+monospace !default;
+
+
 $pl-font-size-body: 14px !default;
 $pl-font-size-body-line-height: 22px !default;
 $pl-heading-title-margin-mul: 1.5 !default;
@@ -184,6 +231,10 @@ $pl-heading-title-padding-mul: 0.25 !default;
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  label {
+    user-select: none;
   }
 
   code, pre {

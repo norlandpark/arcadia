@@ -3,7 +3,9 @@
 @import "elevation";
 
 @mixin pl-buttons {
-  button.pl-button, a.pl-button {
+  button.pl-button, a.pl-button, input[type=submit], input[type=button], input[type=reset] {
+    font-family: $pl-font-family-body;
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +16,7 @@
     background: $pl-color-neptune;
     color: $pl-color-neptune-ctr;
     border: 1px solid transparent;
-    font-weight: 600;
+    font-weight: 500;
     transition-property: background-color, box-shadow, outline-offset;
     transition-timing-function: $pl-animation-transition-common;
     transition-duration: $pl-elevation-transition-duration;
@@ -26,7 +28,50 @@
 
     &.lg {
       padding: 0.75em 2.557em;
-      font-size: 1.2em;
+      font-size: 1em;
+    }
+
+    &.with-icon, &.only-icon {
+      & > svg, & > img {
+        shape-rendering: crispEdges;
+        position: relative;
+        margin-right: 0.3em;
+        height: 2em;
+      }
+
+      padding: 0.357em 2.5em;
+
+      &.sm {
+        padding: 0.2em 1.286em;
+
+        & > svg, & > img {
+          height: 1em;
+        }
+      }
+
+      &.lg {
+        padding: 0.375em 2.557em;
+
+        & > svg, & > img {
+          height: 3em;
+        }
+      }
+
+      &.only-icon {
+        padding: 0.357em;
+
+        & > svg, & > img {
+          margin-right: 0;
+        }
+
+        &.sm {
+          padding: 0.2em
+        }
+
+        &.lg {
+          padding: 0.375em;
+        }
+      }
     }
 
     &:hover {
@@ -218,7 +263,7 @@
       }
     }
 
-    &.tangerine {
+    &.tangerine, &[type=reset] {
       background: $pl-color-tangerine;
       color: $pl-color-tangerine-ctr;
 

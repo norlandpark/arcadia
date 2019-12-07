@@ -4,6 +4,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-node-sass');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.initConfig({
     pug: {
@@ -55,6 +56,17 @@ module.exports = function (grunt) {
         files: ['docs-src/js/*.js', 'docs-src/js/**/*.js'],
         tasks: ['uglify'],
       },
+      docs_src_static: {
+        files: ['docs-src/static/*', 'docs-src/static/**/*'],
+        tasks: ['copy'],
+      },
+    },
+    copy: {
+      main: {
+        files: [
+          {expand: true,cwd: './docs-src/static/', src: ['./**'], dest: './docs/static/'},
+        ],
+      }
     },
     connect: {
       server: {
@@ -68,6 +80,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', 'Build', function () {
+    grunt.task.run('copy');
     grunt.task.run('pug');
     grunt.task.run('sass');
     grunt.task.run('uglify');

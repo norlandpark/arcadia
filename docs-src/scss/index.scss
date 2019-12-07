@@ -5,14 +5,6 @@
 @import "sections/typography";
 @import "sections/colors";
 
-.CodeMirror {
-  height: auto;
-  font-size: 14px;
-  display: inline-flex;
-  font-family: $pl-font-family-mono;
-  background: transparent !important;
-}
-
 div.pl-panel-container {
   & > section {
     margin-bottom: $pl-spacing-xl;

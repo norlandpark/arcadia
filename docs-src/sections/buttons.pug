@@ -89,3 +89,53 @@ section#buttons
     tr
       td: button.pl-button.link.danger Danger
       td: code.pl-user-select-all pl-button link danger
+
+  h3.pl-title Icon buttons
+
+  div.pl-mrg-b-sm
+    p Icon buttons are auto-sizing relative to the size of the button font.
+    p Icon buttons should work fine with <code>svg</code> and <code>img</code>. Icon fonts are not supported.
+
+  table.pl-table.block.lg.borders.pl-mrg-y-sm
+    tr
+      td.top(rowspan=3) Icon button with labels
+      td: button.pl-button.sm.with-icon
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+        | Icon button
+      td: code.pl-user-select-all pl-button with-icon sm
+    tr
+      td: button.pl-button.with-icon
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+        | Icon button
+      td: code.pl-user-select-all pl-button with-icon
+    tr
+      td: button.pl-button.lg.with-icon
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+        | Icon button
+      td: code.pl-user-select-all pl-button with-icon lg
+    tr
+      td.top(rowspan=3) Icon button without labels
+      td: button.pl-button.sm.only-icon
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+      td: code.pl-user-select-all pl-button only-icon sm
+    tr
+      td: button.pl-button.only-icon
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+      td: code.pl-user-select-all pl-button only-icon
+    tr
+      td: button.pl-button.lg.only-icon
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+      td: code.pl-user-select-all pl-button only-icon lg
+

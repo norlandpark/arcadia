@@ -127,6 +127,10 @@
         }
 
         & > td {
+          &.fit {
+            padding: 0;
+            margin: 0;
+          }
         }
       }
     }
