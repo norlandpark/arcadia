@@ -470,17 +470,17 @@ h6 {
     margin-bottom: 0.375em;
     padding-bottom: 0.0625em; }
 
-a {
+a:not(.pl-button) {
   color: #2a4e93; }
-  a::-moz-focus-inner {
+  a:not(.pl-button)::-moz-focus-inner {
     border: 0; }
-  body.pl-mode-dark a {
+  body.pl-mode-dark a:not(.pl-button) {
     color: #7189b7; }
-  a:hover {
+  a:not(.pl-button):hover {
     cursor: pointer;
     text-decoration: underline;
     color: #15274a; }
-    body.pl-mode-dark a:hover {
+    body.pl-mode-dark a:not(.pl-button):hover {
       color: #2a4e93; }
 
 p {

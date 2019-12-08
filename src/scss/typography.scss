@@ -277,7 +277,7 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
     }
   }
 
-  a {
+  a:not(.pl-button) {
     color: $pl-color-neptune;
 
     &::-moz-focus-inner {
