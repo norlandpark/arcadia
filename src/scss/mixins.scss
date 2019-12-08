@@ -1,10 +1,44 @@
+@import "properties";
+
 @mixin pl-mode-dark {
   @at-root body.pl-mode-dark & {
     @content;
   }
+}
 
+@mixin pl-screen-sm-up {
   @at-root {
-    @media (prefers-color-scheme: dark) {
+    @media only screen and (min-width: $pl-grid-size-sm-min) {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin pl-screen-md-up {
+  @at-root {
+    @media only screen and (min-width: $pl-grid-size-md-min) {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin pl-screen-lg-up {
+  @at-root {
+    @media only screen and (min-width: $pl-grid-size-lg-min) {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin pl-screen-xl-up {
+  @at-root {
+    @media only screen and (min-width: $pl-grid-size-xl-min) {
       & {
         @content;
       }

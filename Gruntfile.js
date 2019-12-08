@@ -11,7 +11,16 @@ module.exports = function (grunt) {
       compile: {
         options: {
           data: {
-            debug: false
+            debug: false,
+          },
+          filters: {
+            'render-escape': function (block) {
+              return this.pug
+                .render(block, {pretty: true})
+                .replace(/[\u00A0-\u9999<>&]/gim, function (i) {
+                  return '&#' + i.charCodeAt(0) + ';';
+                });
+            }
           }
         },
         files: {
@@ -64,7 +73,7 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {expand: true,cwd: './docs-src/static/', src: ['./**'], dest: './docs/static/'},
+          {expand: true, cwd: './docs-src/static/', src: ['./**'], dest: './docs/static/'},
         ],
       }
     },

@@ -1,4 +1,7 @@
 @import "../../src/scss/index";
+@import "../../src/scss/properties";
+@import "../../src/scss/colors";
+@import "../../src/scss/mixins";
 
 @include pl-main;
 
@@ -8,5 +11,91 @@
 div.pl-panel-container {
   & > section {
     margin-bottom: $pl-spacing-xl;
+  }
+}
+
+div.element-doc {
+  @include pl-mrg-y($pl-spacing-md);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-top: 0;
+  }
+
+  border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+
+  @include pl-mode-dark {
+    border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+  }
+
+  & > div.title {
+    @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xs);
+
+    border-bottom: 1px solid $pl-color-body-light-bg-panel-primary-border;
+    background: $pl-color-body-light-bg-panel-primary;
+
+    @include pl-mode-dark {
+      border-bottom: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+      background: $pl-color-body-dark-bg-panel-primary;
+    }
+
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+      @include pl-mrg-xy(0, 0);
+    }
+  }
+
+  & > div.preview {
+    @include pl-pad-xy($pl-spacing-sm, $pl-spacing-md);
+
+    & > div.item:not(:last-child) {
+      margin-bottom: $pl-spacing-sm;
+    }
+  }
+
+  & > div.about {
+    @include pl-pad-xy($pl-spacing-sm, $pl-spacing-sm);
+
+    border-bottom: 1px solid $pl-color-body-light-bg-panel-primary-border;
+    background: $pl-color-body-light-bg-panel-primary;
+
+    @include pl-mode-dark {
+      border-bottom: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+      background: $pl-color-body-dark-bg-panel-primary;
+    }
+  }
+
+  & > div.code-sample {
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+      font-weight: 500;
+      @include pl-mrg-xy(0, 0);
+      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xxs);
+
+      border-top: 1px solid $pl-color-body-light-bg-panel-tertiary-border;
+      border-bottom: 1px dotted $pl-color-body-light-bg-panel-tertiary-border;
+      background: $pl-color-body-light-bg-panel-tertiary;
+
+      @include pl-mode-dark {
+        border-top: 1px solid $pl-color-body-dark-bg-panel-tertiary-border;
+        border-bottom: 1px dotted $pl-color-body-dark-bg-panel-tertiary-border;
+        background: $pl-color-body-dark-bg-panel-tertiary;
+      }
+    }
+
+    & > code {
+      display: block;
+      user-select: all;
+      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-sm);
+
+      &:not(:last-child) {
+        border-bottom: 1px dotted $pl-color-body-light-bg-panel-primary-border;
+
+        @include pl-mode-dark {
+          border-bottom: 1px dotted $pl-color-body-dark-bg-panel-primary-border;
+        }
+      }
+    }
   }
 }

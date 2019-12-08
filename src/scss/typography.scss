@@ -2,6 +2,8 @@
 @import "colors";
 @import "utilities";
 
+// TODO: cleanup, extract variables etc.
+
 $pl-font-family-body: -apple-system,
 BlinkMacSystemFont,
 'segoe ui',
@@ -52,11 +54,46 @@ consolas,
 courier,
 monospace !default;
 
-
 $pl-font-size-body: 14px !default;
 $pl-font-size-body-line-height: 22px !default;
 $pl-heading-title-margin-mul: 1.5 !default;
 $pl-heading-title-padding-mul: 0.25 !default;
+
+$pl-heading-h1-font-size-large: 3.42921em;
+$pl-heading-h1-line-height-large: 4.04317rem;
+
+$pl-heading-h1-font-size: $pl-heading-h1-font-size-large * 0.7;
+$pl-heading-h1-line-height: $pl-heading-h1-line-height-large * 0.7;
+
+$pl-heading-h2-font-size-large: 2.28571em;
+$pl-heading-h2-line-height-large: 3.03113rem;
+
+$pl-heading-h2-font-size: $pl-heading-h2-font-size-large * 0.8;
+$pl-heading-h2-line-height: $pl-heading-h2-line-height-large * 0.8;
+
+$pl-heading-h3-font-size-large: 1.71428em;
+$pl-heading-h3-line-height-large: 2.42857rem;
+
+$pl-heading-h3-font-size: $pl-heading-h3-font-size-large * 0.8;
+$pl-heading-h3-line-height: $pl-heading-h3-line-height-large * 0.8;
+
+$pl-heading-h4-font-size-large: 1.57142em;
+$pl-heading-h4-line-height-large: 2.14285rem;
+
+$pl-heading-h4-font-size: $pl-heading-h4-font-size-large * 0.8;
+$pl-heading-h4-line-height: $pl-heading-h4-line-height-large * 0.8;
+
+$pl-heading-h5-font-size-large: 1.42857em;
+$pl-heading-h5-line-height-large: 2.11285rem;
+
+$pl-heading-h5-font-size: $pl-heading-h5-font-size-large * 0.8;
+$pl-heading-h5-line-height: $pl-heading-h5-line-height-large * 0.8;
+
+$pl-heading-h6-font-size-large: 1.14285em;
+$pl-heading-h6-line-height-large: 1.57142rem;
+
+$pl-heading-h6-font-size: $pl-heading-h6-font-size-large * 0.95;
+$pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
 
 @mixin pl-typography {
   .pl-font-title-primary {
@@ -114,8 +151,14 @@ $pl-heading-title-padding-mul: 0.25 !default;
   }
 
   h1 {
-    font-size: 3.42921em;
-    line-height: 4.04317rem;
+    font-size: $pl-heading-h1-font-size;
+    line-height: $pl-heading-h1-line-height;
+
+    @include pl-screen-md-up {
+      font-size: $pl-heading-h1-font-size-large;
+      line-height: $pl-heading-h1-line-height-large;
+    }
+
     letter-spacing: -0.023em; // TODO extract
     @include pl-mrg-y(0.75em);
 
@@ -130,8 +173,14 @@ $pl-heading-title-padding-mul: 0.25 !default;
   }
 
   h2 {
-    font-size: 2.28571em;
-    line-height: 3.03113rem;
+    font-size: $pl-heading-h2-font-size;
+    line-height: $pl-heading-h2-line-height;
+
+    @include pl-screen-md-up {
+      font-size: $pl-heading-h2-font-size-large;
+      line-height: $pl-heading-h2-line-height-large;
+    }
+
     @include pl-mrg-y(0.5em);
 
     &:first-child {
@@ -145,8 +194,14 @@ $pl-heading-title-padding-mul: 0.25 !default;
   }
 
   h3 {
-    font-size: 1.71428em;
-    line-height: 2.42857rem;
+    font-size: $pl-heading-h3-font-size;
+    line-height: $pl-heading-h3-line-height;
+
+    @include pl-screen-md-up {
+      font-size: $pl-heading-h3-font-size-large;
+      line-height: $pl-heading-h3-line-height-large;
+    }
+
     @include pl-mrg-y(0.5em);
 
     &:first-child {
@@ -160,8 +215,14 @@ $pl-heading-title-padding-mul: 0.25 !default;
   }
 
   h4 {
-    font-size: 1.57142em;
-    line-height: 2.14285rem;
+    font-size: $pl-heading-h4-font-size;
+    line-height: $pl-heading-h4-line-height;
+
+    @include pl-screen-md-up {
+      font-size: $pl-heading-h4-font-size-large;
+      line-height: $pl-heading-h4-line-height-large;
+    }
+
     @include pl-mrg-y(0.5em);
 
     &:first-child {
@@ -175,8 +236,14 @@ $pl-heading-title-padding-mul: 0.25 !default;
   }
 
   h5 {
-    font-size: 1.42857em;
-    line-height: 2.11285rem;
+    font-size: $pl-heading-h5-font-size;
+    line-height: $pl-heading-h5-line-height;
+
+    @include pl-screen-md-up {
+      font-size: $pl-heading-h5-font-size-large;
+      line-height: $pl-heading-h5-line-height-large;
+    }
+
     @include pl-mrg-y(0.25em);
 
     &:first-child {
@@ -190,8 +257,14 @@ $pl-heading-title-padding-mul: 0.25 !default;
   }
 
   h6 {
-    font-size: 1.14285em;
-    line-height: 1.57142rem;
+    font-size: $pl-heading-h6-font-size;
+    line-height: $pl-heading-h6-line-height;
+
+    @include pl-screen-md-up {
+      font-size: $pl-heading-h6-font-size-large;
+      line-height: $pl-heading-h6-line-height-large;
+    }
+
     @include pl-mrg-y(0.25em);
 
     &:first-child {
@@ -206,6 +279,10 @@ $pl-heading-title-padding-mul: 0.25 !default;
 
   a {
     color: $pl-color-neptune;
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
 
     @include pl-mode-dark {
       color: $pl-color-neptune-tint-200;
@@ -241,6 +318,7 @@ $pl-heading-title-padding-mul: 0.25 !default;
     font-size: 1em;
     font-family: $pl-font-family-mono;
     font-weight: normal;
+    overflow: auto;
 
     &.wrap {
       white-space: pre-wrap;
@@ -253,18 +331,23 @@ $pl-heading-title-padding-mul: 0.25 !default;
 
   code {
     color: $pl-color-crimson;
-    background: $pl-color-body-light-bg-panel-primary;
+    background: $pl-color-body-light-bg-panel-secondary;
     padding-left: 2px;
     padding-right: 2px;
 
     @include pl-mode-dark() {
-      color: $pl-color-crimson-tint-100;
-      background: $pl-color-body-dark-bg-panel-primary;
+      color: $pl-color-crimson-tint-200;
+      background: $pl-color-body-dark-bg-panel-secondary;
     }
 
     &.block {
       display: block;
       padding: 0.8em;
+    }
+
+    & > pre {
+      margin: 0;
+      padding: 0;
     }
   }
 

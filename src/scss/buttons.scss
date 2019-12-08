@@ -1,6 +1,6 @@
 @import "typography";
 @import "colors";
-@import "elevation";
+@import "properties";
 
 @mixin pl-buttons {
   button.pl-button, a.pl-button, input[type=submit], input[type=button], input[type=reset] {
@@ -20,7 +20,10 @@
     transition-property: background-color, box-shadow, outline-offset;
     transition-timing-function: $pl-animation-transition-common;
     transition-duration: $pl-elevation-transition-duration;
-    @include pl-elevation(1);
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
 
     &.sm {
       padding: 0.4em 1.286em;
@@ -78,25 +81,15 @@
       text-decoration: none;
       background: $pl-color-neptune-shade-400;
       color: $pl-color-neptune-shade-400-ctr;
-      @include pl-elevation(8);
-    }
-
-    &:active {
-      @include pl-elevation(1);
     }
 
     &:focus {
-      outline: none;
-    }
-
-    &:focus:not(:hover) {
       outline: 1px solid $pl-color-neptune-shade-400-ctr;
       outline-offset: -5px;
     }
 
     &.block {
       width: 100%;
-      display: flex;
     }
 
     &.secondary {
@@ -109,21 +102,31 @@
         color: $pl-color-fjord-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
+      &:focus {
         outline: 1px solid $pl-color-fjord;
+      }
+
+      &:focus:hover {
+        outline: 1px solid $pl-color-fjord-tint-500;
       }
 
       @include pl-mode-dark {
         background: $pl-color-fjord-tint-300;
+        border: 1px solid transparent;
         color: $pl-color-fjord-shade-200;
 
         &:hover {
           background: $pl-color-fjord-shade-400;
+          border: 1px solid transparent;
           color: $pl-color-fjord-shade-400-ctr;
         }
 
-        &:focus:not(:hover) {
+        &:focus {
           outline: 1px solid $pl-color-fjord-shade-200;
+        }
+
+        &:focus:hover {
+          outline: 1px solid $pl-color-fjord-tint-300;
         }
       }
     }
@@ -135,7 +138,6 @@
       &:hover {
         background: $pl-color-moon-shade-500;
         color: $pl-color-moon-tint-100;
-        @include pl-elevation(1);
       }
 
       &:active, &:focus {
@@ -145,6 +147,9 @@
 
       &:active, &:focus, &:hover {
         cursor: not-allowed;
+      }
+
+      @include pl-mode-dark {
       }
     }
 
@@ -158,8 +163,12 @@
         color: $pl-color-gaia-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
-        outline: 1px solid $pl-color-fjord;
+      &:focus {
+        outline: 1px solid $pl-color-gaia;
+      }
+
+      &:focus:hover {
+        outline: 1px solid $pl-color-gaia-tint-500;
       }
 
       @include pl-mode-dark {
@@ -169,10 +178,15 @@
         &:hover {
           background: $pl-color-gaia-shade-400;
           color: $pl-color-gaia-shade-400-ctr;
+          border: 1px solid transparent;
         }
 
-        &:focus:not(:hover) {
+        &:focus {
           outline: 1px solid $pl-color-gaia-shade-200;
+        }
+
+        &:focus:hover {
+          outline: 1px solid $pl-color-gaia-tint-300;
         }
       }
     }
@@ -187,8 +201,12 @@
         color: $pl-color-apricot-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
+      &:focus {
         outline: 1px solid $pl-color-apricot;
+      }
+
+      &:focus:hover {
+        outline: 1px solid $pl-color-apricot-tint-500;
       }
 
       @include pl-mode-dark {
@@ -197,11 +215,16 @@
 
         &:hover {
           background: $pl-color-apricot-shade-400;
+          border: 1px solid transparent;
           color: $pl-color-apricot-shade-400-ctr;
         }
 
-        &:focus:not(:hover) {
+        &:focus {
           outline: 1px solid $pl-color-apricot-shade-200;
+        }
+
+        &:focus:hover {
+          outline: 1px solid $pl-color-apricot-tint-300;
         }
       }
     }
@@ -216,8 +239,12 @@
         color: $pl-color-wolf-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
+      &:focus {
         outline: 1px solid $pl-color-wolf;
+      }
+
+      &:focus:hover {
+        outline: 1px solid $pl-color-wolf-tint-500;
       }
 
       @include pl-mode-dark {
@@ -227,10 +254,15 @@
         &:hover {
           background: $pl-color-wolf-shade-400;
           color: $pl-color-wolf-shade-400-ctr;
+          border: 1px solid transparent;
         }
 
-        &:focus:not(:hover) {
+        &:focus {
           outline: 1px solid $pl-color-wolf-shade-200;
+        }
+
+        &:focus:hover {
+          outline: 1px solid $pl-color-wolf-tint-300;
         }
       }
     }
@@ -244,7 +276,7 @@
         color: $pl-color-crimson-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
+      &:focus {
         outline: 1px solid $pl-color-crimson-ctr;
       }
     }
@@ -258,7 +290,7 @@
         color: $pl-color-cornflower-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
+      &:focus {
         outline: 1px solid $pl-color-cornflower-ctr;
       }
     }
@@ -272,8 +304,12 @@
         color: $pl-color-tangerine-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
+      &:focus {
         outline: 1px solid $pl-color-tangerine-ctr;
+      }
+
+      &:focus:hover {
+        outline: 1px solid $pl-color-tangerine-shade-400-ctr;
       }
     }
 
@@ -286,7 +322,7 @@
         color: $pl-color-eve-shade-400-ctr;
       }
 
-      &:focus:not(:hover) {
+      &:focus {
         outline: 1px solid $pl-color-eve-ctr;
       }
     }
@@ -301,7 +337,6 @@
       font-size: 1em;
       outline: none;
       font-weight: normal;
-      @include pl-elevation(0);
 
       @include pl-mode-dark {
         color: $pl-color-neptune-tint-200;
@@ -312,7 +347,6 @@
         background: transparent;
         text-decoration: underline;
         color: $pl-color-neptune-shade-300;
-        @include pl-elevation(0);
 
         @include pl-mode-dark {
           color: $pl-color-neptune;
@@ -321,6 +355,7 @@
 
       &:focus {
         outline: none;
+        text-decoration: underline;
       }
 
       &.success {
@@ -361,6 +396,10 @@
           &:hover {
             color: $pl-color-fjord-tint-200;
           }
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -399,6 +438,10 @@
           &:hover {
             color: $pl-color-gaia-tint-200;
           }
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -421,6 +464,10 @@
 
           &:hover {
             color: $pl-color-apricot-tint-200;
+          }
+
+          &:focus {
+            outline: none;
           }
         }
       }
@@ -445,6 +492,10 @@
           &:hover {
             color: $pl-color-wolf-tint-200;
           }
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -467,6 +518,10 @@
 
           &:hover {
             color: $pl-color-crimson;
+          }
+
+          &:focus {
+            outline: none;
           }
         }
       }
@@ -491,6 +546,10 @@
           &:hover {
             color: $pl-color-cornflower;
           }
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -507,13 +566,16 @@
           outline: none;
         }
 
-
         @include pl-mode-dark {
           color: $pl-color-tangerine-tint-100;
           background: transparent;
 
           &:hover {
             color: $pl-color-tangerine;
+          }
+
+          &:focus {
+            outline: none;
           }
         }
       }
@@ -537,6 +599,10 @@
 
           &:hover {
             color: $pl-color-eve;
+          }
+
+          &:focus {
+            outline: none;
           }
         }
       }

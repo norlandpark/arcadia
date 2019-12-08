@@ -8,134 +8,210 @@ section#buttons
 
   h3.pl-title Block buttons
 
-  table.pl-table.block.lg.borders.pl-mrg-y-sm
-    tr
-      td.top(rowspan=1) Default button
-      td: button.pl-button Default
-      td: code.pl-user-select-all pl-button
-    tr
-      td.top(rowspan=2) Modifiers
-      td: button.pl-button.disabled Disabled
-      td: code.pl-user-select-all pl-button disabled
-    tr
-      td: button.pl-button.block Block
-      td: code.pl-user-select-all pl-button block
-    tr
-      td.top(rowspan=2) Sizes
-      td: button.pl-button.sm Small
-      td: code.pl-user-select-all pl-button sm
-    tr
-      td: button.pl-button.lg Large
-      td: code.pl-user-select-all pl-button lg
-    tr
-      td.top(rowspan=4) Call to action
-      td: button.pl-button.crimson Crimson
-      td: code.pl-user-select-all pl-button crimson
-    tr
-      td: button.pl-button.cornflower Cornflower
-      td: code.pl-user-select-all pl-button cornflower
-    tr
-      td: button.pl-button.tangerine Tangerine
-      td: code.pl-user-select-all pl-button tangerine
-    tr
-      td: button.pl-button.eve Eve
-      td: code.pl-user-select-all pl-button eve
-    tr
-      td.top(rowspan=1) Generic call to action
-      td: button.pl-button.secondary Secondary
-      td: code.pl-user-select-all pl-button secondary
-    tr
-      td.top(rowspan=3) Actions with indicated outcome
-      td: button.pl-button.success Success
-      td: code.pl-user-select-all pl-button success
-    tr
-      td: button.pl-button.warning Warning
-      td: code.pl-user-select-all pl-button warning
-    tr
-      td: button.pl-button.danger Danger
-      td: code.pl-user-select-all pl-button danger
+  div.element-doc
+    div.title
+      h5 Basic button
+    div.about
+      p A basic button can be created with minimal markup.
+    div.preview
+      div.item: button.pl-button Basic button
+      div.item: a(href='javascript:void(0);').pl-button Basic link button
+      div.item: button.pl-button.secondary Secondary button
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        button.pl-button Basic button
+      code(data-lang="html"): :render-escape
+        a(href="#").pl-button Basic link button
+      code(data-lang="html"): :render-escape
+        button.pl-button.secondary Secondary button
 
-  h3.pl-title Link buttons
+  div.element-doc
+    div.title
+      h5 Button modifiers
+    div.about
+      p TBD
+    div.preview
+      div.item: button.pl-button.disabled Disabled button
+      div.item: button.pl-button.block Block button
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        button.pl-button.disabled Disabled button
+      code(data-lang="html"): :render-escape
+        button.pl-button.block Block button
 
-  table.pl-table.block.lg.borders.pl-mrg-y-sm
-    tr
-      td.top(rowspan=1) Default button
-      td: button.pl-button.link Default
-      td: code.pl-user-select-all pl-button link
-    tr
-      td.top(rowspan=4) Call to action
-      td: button.pl-button.link.crimson Crimson
-      td: code.pl-user-select-all pl-button link crimson
-    tr
-      td: button.pl-button.link.cornflower Cornflower
-      td: code.pl-user-select-all pl-button link cornflower
-    tr
-      td: button.pl-button.link.tangerine Tangerine
-      td: code.pl-user-select-all pl-button link tangerine
-    tr
-      td: button.pl-button.link.eve Eve
-      td: code.pl-user-select-all pl-button link eve
-    tr
-      td.top(rowspan=1) Generic call to action
-      td: button.pl-button.link.secondary Secondary
-      td: code.pl-user-select-all pl-button link secondary
-    tr
-      td.top(rowspan=3) Actions with indicated outcome
-      td: button.pl-button.link.success Success
-      td: code.pl-user-select-all pl-button link success
-    tr
-      td: button.pl-button.link.warning Warning
-      td: code.pl-user-select-all pl-button link warning
-    tr
-      td: button.pl-button.link.danger Danger
-      td: code.pl-user-select-all pl-button link danger
+  div.element-doc
+    div.title
+      h5 Button sizing
+    div.about
+      p TBD
+    div.preview
+      div.item: button.pl-button.sm Small button
+      div.item: button.pl-button Regular button
+      div.item: button.pl-button.lg Large button
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        button.pl-button.sm Small button
+      code(data-lang="html"): :render-escape
+        button.pl-button Regular button
+      code(data-lang="html"): :render-escape
+        button.pl-button.lg Large button
 
-  h3.pl-title Icon buttons
+  div.element-doc
+    div.title
+      h5 Call to action buttons
+    div.about
+      p TBD
+    div.preview
+      div.item: button.pl-button.crimson Crimson
+      div.item: button.pl-button.cornflower Cornflower
+      div.item: button.pl-button.tangerine Tangerine
+      div.item: button.pl-button.eve Eve
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        button.pl-button.crimson Crimson
+      code(data-lang="html"): :render-escape
+        button.pl-button.cornflower Cornflower
+      code(data-lang="html"): :render-escape
+        button.pl-button.tangerine Tangerine
+      code(data-lang="html"): :render-escape
+        button.pl-button.eve Eve
 
-  div.pl-mrg-b-sm
-    p Icon buttons are auto-sizing relative to the size of the button font.
-    p Icon buttons should work fine with <code>svg</code> and <code>img</code>. Icon fonts are not supported.
+  div.element-doc
+    div.title
+      h5 Button with effect
+    div.about
+      p TBD
+    div.preview
+      div.item: button.pl-button.success Success button
+      div.item: button.pl-button.warning Warning button
+      div.item: button.pl-button.danger Danger button
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        button.pl-button.success Success button
+      code(data-lang="html"): :render-escape
+        button.pl-button.warning Warning button
+      code(data-lang="html"): :render-escape
+        button.pl-button.danger Danger button
 
-  table.pl-table.block.lg.borders.pl-mrg-y-sm
-    tr
-      td.top(rowspan=3) Icon button with labels
-      td: button.pl-button.sm.with-icon
+  div.element-doc
+    div.title
+      h5 Links and button links
+    div.about
+      p TBD
+    div.preview
+      div.item: button.pl-button.link Default link
+      div.item: button.pl-button.link.crimson Crimson link
+      div.item: button.pl-button.link.cornflower Cornflower link
+      div.item: button.pl-button.link.tangerine Tangerine link
+      div.item: button.pl-button.link.eve Eve link
+      div.item: button.pl-button.link.secondary Secondary link
+      div.item: button.pl-button.link.success Success link
+      div.item: button.pl-button.link.warning Warning link
+      div.item: button.pl-button.link.danger Danger link
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        button.pl-button.link Default link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.secondary Secondary link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.crimson Crimson link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.cornflower Cornflower link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.tangerine Tangerine link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.eve Eve link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.success Success link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.warning Warning link
+      code(data-lang="html"): :render-escape
+        button.pl-button.link.danger Danger link
+
+  div.element-doc
+    div.title
+      h5 Icon buttons
+    div.about
+      p TBD
+    div.preview
+      div.item: button.pl-button.with-icon.sm
         svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
           path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
           path(d='M0 0h24v24H0z', fill='none')
-        | Icon button
-      td: code.pl-user-select-all pl-button with-icon sm
-    tr
-      td: button.pl-button.with-icon
+        | Small icon button
+      div.item: button.pl-button.with-icon
         svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
           path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
           path(d='M0 0h24v24H0z', fill='none')
-        | Icon button
-      td: code.pl-user-select-all pl-button with-icon
-    tr
-      td: button.pl-button.lg.with-icon
+        | Regular icon button
+      div.item: button.pl-button.with-icon.lg
         svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
           path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
           path(d='M0 0h24v24H0z', fill='none')
-        | Icon button
-      td: code.pl-user-select-all pl-button with-icon lg
-    tr
-      td.top(rowspan=3) Icon button without labels
-      td: button.pl-button.sm.only-icon
-        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
-          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
-          path(d='M0 0h24v24H0z', fill='none')
-      td: code.pl-user-select-all pl-button only-icon sm
-    tr
-      td: button.pl-button.only-icon
-        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
-          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
-          path(d='M0 0h24v24H0z', fill='none')
-      td: code.pl-user-select-all pl-button only-icon
-    tr
-      td: button.pl-button.lg.only-icon
-        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
-          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
-          path(d='M0 0h24v24H0z', fill='none')
-      td: code.pl-user-select-all pl-button only-icon lg
+        | Large icon button
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        button.pl-button.with-icon.sm
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+            path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+            path(d='M0 0h24v24H0z', fill='none')
+          |
+          | Small icon button
+      code(data-lang="html"): pre: :render-escape
+        button.pl-button.with-icon
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+            path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+            path(d='M0 0h24v24H0z', fill='none')
+          |
+          | Regular icon button
+      code(data-lang="html"): pre: :render-escape
+        button.pl-button.with-icon.lg
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+            path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+            path(d='M0 0h24v24H0z', fill='none')
+          |
+          | Large icon button
 
+
+  div.element-doc
+    div.title
+      h5 Icon buttons without labels
+    div.about
+      p TBD
+    div.preview
+      div.item: button.pl-button.only-icon.sm
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+      div.item: button.pl-button.only-icon
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+      div.item: button.pl-button.only-icon.lg
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+          path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+          path(d='M0 0h24v24H0z', fill='none')
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        button.pl-button.only-icon.sm
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+            path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+            path(d='M0 0h24v24H0z', fill='none')
+      code(data-lang="html"): pre: :render-escape
+        button.pl-button.only-icon
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+            path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+            path(d='M0 0h24v24H0z', fill='none')
+      code(data-lang="html"): pre: :render-escape
+        button.pl-button.only-icon.lg
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='#ffffff')
+            path(d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z')
+            path(d='M0 0h24v24H0z', fill='none')

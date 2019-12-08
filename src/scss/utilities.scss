@@ -39,6 +39,18 @@ $pl-spacing-3xl: 6.857142857142857rem;
   @include pl-mrg-y($y);
 }
 
+@mixin pl-mrg-y-smart($size) {
+  &:not(:only-child) {
+    &:first-child {
+      margin-top: $size;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $size;
+    }
+  }
+}
+
 @mixin pl-utilities {
   $spacing-sizes: (
     'na': $pl-spacing-na,

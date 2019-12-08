@@ -3,58 +3,64 @@ section#typography
 
   h3.pl-title Fonts
 
-  div.font-panel.pl-mrg-b-md
+  div.font-panel
     div.purpose
       h6 Body font stack
-    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
-          | font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
-          | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
-    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-body
+    div.about
+      p Used for body text, buttons, inputs, and headings <code>h4</code>, <code>h5</code> and <code>h3</code>.
+      p System fonts are used when possible, with fallback to <code>sans-serif</code> and emoji fonts.
+    div.font-sample.pl-font-body
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
       div.pl-word-break-all 0123456789
+    code.font-family
+      | font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
+      | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
 
-  div.font-panel.pl-mrg-b-md
+  div.font-panel
     div.purpose
-      h6 Primary title font stack
-    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
-          | font-family: 'muli', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
-          | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
-    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-title-primary
+      h6 Primary title font - Muli
+    div.about Used exclusively for page level heading - <code>h1</code>.
+    div.font-sample.pl-font-title-primary
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
       div.pl-word-break-all 0123456789
+    code.font-family
+      | font-family: 'muli', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
+      | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
 
-  div.font-panel.pl-mrg-b-md
+  div.font-panel
     div.purpose
-      h6 Secondary title font stack
-    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
-           | font-family: 'prompt', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
-           | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
-    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-title-secondary
+      h6 Secondary title font - Prompt
+    div.about Used for headings <code>h2</code> and <code>h3</code>.
+    div.font-sample.pl-font-title-secondary
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
       div.pl-word-break-all 0123456789
+    code.font-family
+      | font-family: 'prompt', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
+      | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
 
-  div.font-panel.pl-mrg-b-md
+  div.font-panel
     div.purpose
-      h6 Monospace font stack
-    code.pl-panel.pl-user-select-all.block.pl-mrg-b-sm
-          | font-family: 'source code pro', consolas, 'courier new', courier, monospace;
-    div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-font-mono
+      h6 Monospace font - Source Code Pro
+    div.about TBD
+    div.font-sample.pl-font-mono
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
       div.pl-word-break-all 0123456789
+    code.font-family
+      | font-family: 'source code pro', consolas, 'courier new', courier, monospace;
 
   h3.pl-title Headings
 
-  div.content.pl-panel.pl-pad-x-md.pl-pad-y-md.pl-mrg-b-sm
-    h1 h1. The quick brown fox jumps over the lazy dog
-    h2 h2. The quick brown fox jumps over the lazy dog
-    h3 h3. The quick brown fox jumps over the lazy dog
-    h4 h4. The quick brown fox jumps over the lazy dog
-    h5 h5. The quick brown fox jumps over the lazy dog
-    h6 h6. The quick brown fox jumps over the lazy dog
+  div.font-sample.pl-mrg-b-sm
+    h1 H1 The quick brown fox jumps over the lazy dog
+    h2 H2 The quick brown fox jumps over the lazy dog
+    h3 H3 The quick brown fox jumps over the lazy dog
+    h4 H4 The quick brown fox jumps over the lazy dog
+    h5 H5 The quick brown fox jumps over the lazy dog
+    h6 H6 The quick brown fox jumps over the lazy dog
 
   div.pl-mrg-b-md
     p
@@ -65,7 +71,7 @@ section#typography
   h3.pl-title Text copy
 
   h4 Body copy
-  code.pl-mrg-b-sm.block pl-text-body
+  code.pl-panel.pl-mrg-b-sm.block pl-text-body
   div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
     div
       p: include ../lorem/average.txt
@@ -73,12 +79,12 @@ section#typography
       p: include ../lorem/average.txt
 
   h4 Micro copy heading
-  code.pl-mrg-b-sm.block pl-text-micro heading
+  code.pl-panel.pl-mrg-b-sm.block pl-text-micro heading
   div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
     div.pl-text-micro.heading: include ../lorem/short.txt
 
   h4 Micro copy text
-  code.pl-mrg-b-sm.block pl-text-micro copy
+  code.pl-panel.pl-mrg-b-sm.block pl-text-micro copy
   div.content.pl-panel.pl-pad-x-md.pl-pad-y-sm
     p.pl-text-micro.copy: include ../lorem/average.txt
 

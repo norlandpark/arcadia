@@ -2,7 +2,6 @@
 @import "colors";
 @import "properties";
 @import "mixins";
-@import "elevation";
 
 @mixin pl-form {
   input.pl-input:not([type]),
@@ -26,11 +25,6 @@
     font-family: $pl-font-family-body;
     font-size: 1em;
     padding: 0.714em 1.428em;
-    @include pl-elevation(1);
-
-    &:focus {
-      @include pl-elevation(8);
-    }
 
     @include pl-mode-dark {
       background: $pl-color-body-dark-bg-input-bg;
@@ -89,7 +83,6 @@
     }
 
     &::-webkit-slider-thumb {
-      @include pl-elevation(2);
       border: 0;
       height: 26px;
       width: 13px;
@@ -111,7 +104,6 @@
     }
 
     &::-moz-range-thumb {
-      @include pl-elevation(2);
       border: 0;
       height: 26px;
       width: 13px;
@@ -138,7 +130,6 @@
     }
 
     &::-ms-thumb {
-      @include pl-elevation(2);
       border: 0;
       width: 13px;
       background: $pl-color-neptune;

@@ -1,0 +1,63 @@
+section#buttons
+  h2.pl-title Panels
+
+  div.element-doc
+    div.title
+      h5 Basic panel
+    div.about
+      p TBD. By default, panels have no margin or padding.
+    div.preview
+      div.item: div.pl-panel
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        div.pl-panel
+
+  div.element-doc
+    div.title
+      h5 Card
+    div.about
+      p TBD. By default, includes small padding and has elevation value of <kbd>1</kbd>.
+    div.preview
+      div.item: div.pl-card I am a card
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        div.pl-card
+
+  div.element-doc
+    div.title
+      h5 Signal panels
+    div.about
+      p TBD
+    div.preview
+      div.item: div.pl-panel.signal-info
+        div.signal-heading Beware!
+        div.signal-body A very important notification!
+      div.item: div.pl-panel.signal-success
+        div.signal-heading Beware!
+        div.signal-body A very important notification!
+      div.item: div.pl-panel.signal-warning
+        div.signal-heading Beware!
+        div.signal-body A very important notification!
+      div.item: div.pl-panel.signal-danger
+        div.signal-heading Beware!
+        div.signal-body A very important notification!
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        div.pl-panel.signal-info
+          div.signal-heading Beware!
+          div.signal-body A very important notification!
+      code(data-lang="html"): pre: :render-escape
+        div.pl-panel.signal-success
+          div.signal-heading Beware!
+          div.signal-body A very important notification!
+      code(data-lang="html"): pre: :render-escape
+        div.pl-panel.signal-warning
+          div.signal-heading Beware!
+          div.signal-body A very important notification!
+      code(data-lang="html"): pre: :render-escape
+        div.pl-panel.signal-danger
+          div.signal-heading Beware!
+          div.signal-body A very important notification!

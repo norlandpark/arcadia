@@ -1,5 +1,7 @@
 @import "colors";
 @import "properties";
+@import "utilities";
+@import "mixins";
 
 // Material-like elevations
 // Original code from angular/components
@@ -117,10 +119,10 @@
 
 $pl-elevation-transition-duration: $pl-animation-timing-normal !default;
 $pl-elevation-transition-timing-function: $pl-animation-transition-common !default;
-$pl-elevation-color-light: #000 !default;
-$pl-elevation-color-dark: #000 !default;
-$pl-elevation-opacity-light: 0.65 !default;
-$pl-elevation-opacity-dark: 1 !default;
+$pl-elevation-color-light: #111111 !default;
+$pl-elevation-color-dark: #111111 !default;
+$pl-elevation-opacity-light: 1 !default;
+$pl-elevation-opacity-dark: 2 !default;
 
 // Applies the correct css rules to an element to give it the elevation specified by $zValue.
 // The $zValue must be between 0 and 24.
@@ -130,7 +132,6 @@ $pl-elevation-opacity-dark: 1 !default;
   #{map-get(_get-ambient-map($pl-elevation-color-light, $pl-elevation-opacity-light), $zValue)};
 
   @include pl-mode-dark {
-
     box-shadow: #{map-get(_get-umbra-map($pl-elevation-color-dark, $pl-elevation-opacity-dark), $zValue)},
     #{map-get(_get-penumbra-map($pl-elevation-color-dark, $pl-elevation-opacity-dark), $zValue)},
     #{map-get(_get-ambient-map($pl-elevation-color-dark, $pl-elevation-opacity-dark), $zValue)};
@@ -144,4 +145,10 @@ $pl-elevation-opacity-dark: 1 !default;
   $duration: $pl-elevation-transition-duration,
   $easing: $pl-elevation-transition-timing-function) {
   transition: box-shadow #{$duration} #{$easing};
+}
+
+@for $i from 1 through 4 {
+  .pl-elevate-#{$i} {
+    @include pl-elevation($i);
+  }
 }
