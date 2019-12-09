@@ -25,6 +25,7 @@
     font-family: $pl-font-family-body;
     font-size: 1em;
     padding: 0.714em 1.428em;
+    border-radius: 2px;
 
     @include pl-mode-dark {
       background: $pl-color-body-dark-bg-input-bg;

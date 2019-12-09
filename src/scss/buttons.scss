@@ -20,6 +20,7 @@
     transition-property: background-color, box-shadow, outline-offset;
     transition-timing-function: $pl-animation-transition-common;
     transition-duration: $pl-elevation-transition-duration;
+    border-radius: 2px;
 
     &::-moz-focus-inner {
       border: 0;
@@ -83,7 +84,7 @@
       color: $pl-color-neptune-shade-400-ctr;
     }
 
-    &:focus {
+    &:active, &:focus {
       outline: 1px solid $pl-color-neptune-shade-400-ctr;
       outline-offset: -5px;
     }
@@ -102,11 +103,11 @@
         color: $pl-color-fjord-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-fjord;
       }
 
-      &:focus:hover {
+      &:active, &:focus:hover {
         outline: 1px solid $pl-color-fjord-tint-500;
       }
 
@@ -121,11 +122,11 @@
           color: $pl-color-fjord-shade-400-ctr;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: 1px solid $pl-color-fjord-shade-200;
         }
 
-        &:focus:hover {
+        &:active, &:focus:hover {
           outline: 1px solid $pl-color-fjord-tint-300;
         }
       }
@@ -140,12 +141,12 @@
         color: $pl-color-moon-tint-100;
       }
 
-      &:active, &:focus {
+      &:active, &:active, &:focus {
         outline: none;
         transform: none;
       }
 
-      &:active, &:focus, &:hover {
+      &:active, &:active, &:focus, &:hover {
         cursor: not-allowed;
       }
 
@@ -163,11 +164,11 @@
         color: $pl-color-gaia-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-gaia;
       }
 
-      &:focus:hover {
+      &:active, &:focus:hover {
         outline: 1px solid $pl-color-gaia-tint-500;
       }
 
@@ -181,11 +182,11 @@
           border: 1px solid transparent;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: 1px solid $pl-color-gaia-shade-200;
         }
 
-        &:focus:hover {
+        &:active, &:focus:hover {
           outline: 1px solid $pl-color-gaia-tint-300;
         }
       }
@@ -201,11 +202,11 @@
         color: $pl-color-apricot-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-apricot;
       }
 
-      &:focus:hover {
+      &:active, &:focus:hover {
         outline: 1px solid $pl-color-apricot-tint-500;
       }
 
@@ -219,11 +220,11 @@
           color: $pl-color-apricot-shade-400-ctr;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: 1px solid $pl-color-apricot-shade-200;
         }
 
-        &:focus:hover {
+        &:active, &:focus:hover {
           outline: 1px solid $pl-color-apricot-tint-300;
         }
       }
@@ -239,11 +240,11 @@
         color: $pl-color-wolf-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-wolf;
       }
 
-      &:focus:hover {
+      &:active, &:focus:hover {
         outline: 1px solid $pl-color-wolf-tint-500;
       }
 
@@ -257,11 +258,11 @@
           border: 1px solid transparent;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: 1px solid $pl-color-wolf-shade-200;
         }
 
-        &:focus:hover {
+        &:active, &:focus:hover {
           outline: 1px solid $pl-color-wolf-tint-300;
         }
       }
@@ -276,7 +277,7 @@
         color: $pl-color-crimson-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-crimson-ctr;
       }
     }
@@ -290,7 +291,7 @@
         color: $pl-color-cornflower-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-cornflower-ctr;
       }
     }
@@ -304,11 +305,11 @@
         color: $pl-color-tangerine-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-tangerine-ctr;
       }
 
-      &:focus:hover {
+      &:active, &:focus:hover {
         outline: 1px solid $pl-color-tangerine-shade-400-ctr;
       }
     }
@@ -322,7 +323,7 @@
         color: $pl-color-eve-shade-400-ctr;
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: 1px solid $pl-color-eve-ctr;
       }
     }
@@ -353,7 +354,7 @@
         }
       }
 
-      &:focus {
+      &:active, &:focus {
         outline: none;
         text-decoration: underline;
       }
@@ -367,7 +368,7 @@
           color: $pl-color-gaia-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
       }
@@ -385,7 +386,7 @@
           color: $pl-color-fjord-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -397,7 +398,7 @@
             color: $pl-color-fjord-tint-200;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
@@ -413,7 +414,7 @@
           cursor: not-allowed;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
       }
@@ -427,7 +428,7 @@
           color: $pl-color-gaia-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -439,7 +440,7 @@
             color: $pl-color-gaia-tint-200;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
@@ -454,7 +455,7 @@
           color: $pl-color-apricot-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -466,7 +467,7 @@
             color: $pl-color-apricot-tint-200;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
@@ -481,7 +482,7 @@
           color: $pl-color-wolf-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -493,7 +494,7 @@
             color: $pl-color-wolf-tint-200;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
@@ -508,7 +509,7 @@
           color: $pl-color-crimson-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -520,7 +521,7 @@
             color: $pl-color-crimson;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
@@ -535,7 +536,7 @@
           color: $pl-color-cornflower-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -547,7 +548,7 @@
             color: $pl-color-cornflower;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
@@ -562,7 +563,7 @@
           color: $pl-color-tangerine-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -574,7 +575,7 @@
             color: $pl-color-tangerine;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
@@ -589,7 +590,7 @@
           color: $pl-color-eve-shade-400;
         }
 
-        &:focus {
+        &:active, &:focus {
           outline: none;
         }
 
@@ -601,7 +602,7 @@
             color: $pl-color-eve;
           }
 
-          &:focus {
+          &:active, &:focus {
             outline: none;
           }
         }
