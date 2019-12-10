@@ -8,5 +8,8 @@ $pl-grid-size-xl-min: 1200px !default;
 $pl-panel-container-wrap-at: 960px !default;
 
 
-$pl-animation-timing-normal: 120ms;
-$pl-animation-transition-common: cubic-bezier(0.4, 0, 0.2, 1);
+$pl-animation-timing-normal: 120ms !default;
+$pl-animation-transition-common: cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+$pl-navbar-sticky-z-index: 7275 !default;
+$pl-navbar-full-breakpoint: 768px !default;

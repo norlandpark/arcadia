@@ -1,0 +1,47 @@
+section#navbar
+  h2.pl-title Navigation bar
+
+  div.pl-panel.signal-warning
+    div.signal-heading This component is not responsive
+    div.signal-body.
+      This navigation bar is not meant to be displayed on mobile devices and is not responsive.
+      Use mobile-specific navigation instead.
+
+  div.element-doc
+    div.title
+      h5 Basic navigation bar
+    div.about
+      p TBD
+    div.preview
+      div.item: nav.pl-navbar
+        ul.nav-items
+          li: a.nav-item(href="javascript:void(null)") Menu link
+          li: button.nav-item Menu button
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        nav.pl-navbar
+          ul.nav-items
+            li: a.nav-item(href="javascript:void(null)") Menu link
+            li: button.nav-item Menu button
+
+  div.element-doc
+    div.title
+      h5 Sticky navigation bar
+    div.about
+      p TBD.
+    div.preview
+      i See navigation bar of this page
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        header.pl-navbar-container.sticky
+          nav.pl-navbar
+            ul.nav-items
+              li: a.nav-item.logo(href="#")
+                img.pl-only-light(src="#")
+                img.pl-only-dark(src="#")
+              li.spacer
+              li: a.nav-item(href="#") Link 1
+              li: a.nav-item(href="#") Link 2
+              li: a.nav-item(href="#") Link 3

@@ -126,15 +126,20 @@ $pl-elevation-opacity-dark: 2 !default;
 
 // Applies the correct css rules to an element to give it the elevation specified by $zValue.
 // The $zValue must be between 0 and 24.
-@mixin pl-elevation($zValue) {
-  box-shadow: #{map-get(_get-umbra-map($pl-elevation-color-light, $pl-elevation-opacity-light), $zValue)},
-  #{map-get(_get-penumbra-map($pl-elevation-color-light, $pl-elevation-opacity-light), $zValue)},
-  #{map-get(_get-ambient-map($pl-elevation-color-light, $pl-elevation-opacity-light), $zValue)};
+@mixin pl-elevation(
+  $zValue,
+  $lightColor: $pl-elevation-color-light,
+  $darkColor: $pl-elevation-color-dark,
+  $opacityLight: $pl-elevation-opacity-light,
+  $opacityDark: $pl-elevation-opacity-dark) {
+  box-shadow: #{map-get(_get-umbra-map($lightColor, $opacityLight), $zValue)},
+  #{map-get(_get-penumbra-map($lightColor, $opacityLight), $zValue)},
+  #{map-get(_get-ambient-map($lightColor, $opacityLight), $zValue)};
 
   @include pl-mode-dark {
-    box-shadow: #{map-get(_get-umbra-map($pl-elevation-color-dark, $pl-elevation-opacity-dark), $zValue)},
-    #{map-get(_get-penumbra-map($pl-elevation-color-dark, $pl-elevation-opacity-dark), $zValue)},
-    #{map-get(_get-ambient-map($pl-elevation-color-dark, $pl-elevation-opacity-dark), $zValue)};
+    box-shadow: #{map-get(_get-umbra-map($darkColor, $opacityDark), $zValue)},
+    #{map-get(_get-penumbra-map($darkColor, $opacityDark), $zValue)},
+    #{map-get(_get-ambient-map($darkColor, $opacityDark), $zValue)};
   }
 }
 

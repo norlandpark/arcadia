@@ -25,12 +25,17 @@ html
 
     block stylesheets
   body
-    section#head.pl-panel-container.pl-pad-t-sm.pl-pad-b-xs
-      a(href="./index.html")
-        img.only-light(src="https://norlandpark.com/assets/logo.svg", style="height: 22px")
-        img.only-dark(src="https://norlandpark.com/assets/logo-light.svg", style="height: 22px")
+    header.pl-navbar-container.sticky
+      nav.pl-navbar
+        ul.nav-items
+          li: a.nav-item.logo(href="./index.html")
+            img.pl-only-light(src="https://norlandpark.com/assets/logo.svg")
+            img.pl-only-dark(src="https://norlandpark.com/assets/logo-light.svg")
+          li.spacer
+          li: a.active.nav-item(href="./license.html") License
+          li: a.nav-item(href="https://norlandpark.com") Company
 
-    div.pl-panel-container.pl-pad-t-md
+    div.pl-panel-container.pl-pad-t-md.pl-pad-b-sm
       button.pl-button.crimson#toggle-dark-mode Toggle dark mode
     div.pl-pad-x-xxs: block content
     block scripts

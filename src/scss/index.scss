@@ -9,6 +9,8 @@
 @import "containers";
 @import "utilities";
 @import "elevation";
+@import "navbar";
+@import "layouts";
 
 @mixin pl-main {
   @at-root {
@@ -34,7 +36,7 @@
       background: $pl-color-body-light-text-bg;
       color: $pl-color-body-light-text-fg;
 
-      .only-dark {
+      .pl-only-dark {
         display: none;
       }
 
@@ -42,11 +44,11 @@
         background: $pl-color-body-dark-text-bg;
         color: $pl-color-body-dark-text-fg;
 
-        .only-dark {
+        .pl-only-dark {
           display: initial;
         }
 
-        .only-light {
+        .pl-only-light {
           display: none;
         }
       }
@@ -56,6 +58,7 @@
       box-sizing: inherit;
     }
 
+    // TODO: rename to pl-module-*
     @include pl-typography();
     @include pl-buttons();
     @include pl-form();
@@ -63,5 +66,7 @@
     @include pl-grid();
     @include pl-containers();
     @include pl-utilities();
+    @include pl-navbar();
+    @include pl-layouts();
   }
 }
