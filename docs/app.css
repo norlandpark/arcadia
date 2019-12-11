@@ -452,10 +452,7 @@ body {
   box-sizing: inherit; }
 
 .pl-font-title-primary {
-  font-family: "muli", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
-
-.pl-font-title-secondary {
-  font-family: "prompt", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
+  font-family: "nunito", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
 
 .pl-font-body {
   font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
@@ -467,7 +464,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin: 0;
   padding: 0;
-  color: #444444; }
+  color: #444444;
+  font-family: "nunito", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
   body.pl-mode-dark h1, body.pl-mode-dark h2, body.pl-mode-dark h3, body.pl-mode-dark h4, body.pl-mode-dark h5, body.pl-mode-dark h6 {
     color: #cccccc; }
   h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small {
@@ -478,21 +476,20 @@ h1, h2, h3, h4, h5, h6 {
       border-bottom: 1px solid #494949; }
 
 h1 {
-  font-family: "muli", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+  font-weight: 300; }
+
+h2 {
+  font-weight: 400; }
+
+h3 {
   font-weight: 600; }
 
-h2, h3 {
-  font-family: "prompt", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
-  font-weight: 500; }
-
 h4, h5, h6 {
-  font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
+  font-weight: 600; }
 
 h1 {
   font-size: 2.40045em;
   line-height: 2.83022rem;
-  letter-spacing: -0.023em;
   margin-top: 0.75em;
   margin-bottom: 0.75em; }
   @media only screen and (min-width: 768px) {
@@ -521,13 +518,13 @@ h2 {
     padding-bottom: 0.125em; }
 
 h3 {
-  font-size: 1.37142em;
+  font-size: 1.45142em;
   line-height: 1.94286rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em; }
   @media only screen and (min-width: 768px) {
     h3 {
-      font-size: 1.71428em;
+      font-size: 1.81428em;
       line-height: 2.42857rem; } }
   h3:first-child {
     margin-top: 0; }

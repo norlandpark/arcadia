@@ -18,22 +18,7 @@ sans-serif,
 'segoe ui emoji',
 'segoe ui symbol' !default;
 
-$pl-font-family-title-primary: 'muli',
--apple-system,
-BlinkMacSystemFont,
-'segoe ui',
-roboto,
-oxygen-sans,
-ubuntu,
-cantarell,
-'helvetica neue',
-'arial',
-sans-serif,
-'apple color emoji',
-'segoe ui emoji',
-'segoe ui symbol' !default;
-
-$pl-font-family-title-secondary: 'prompt',
+$pl-font-family-title: 'nunito',
 -apple-system,
 BlinkMacSystemFont,
 'segoe ui',
@@ -71,7 +56,7 @@ $pl-heading-h2-line-height-large: 3.03113rem;
 $pl-heading-h2-font-size: $pl-heading-h2-font-size-large * 0.8;
 $pl-heading-h2-line-height: $pl-heading-h2-line-height-large * 0.8;
 
-$pl-heading-h3-font-size-large: 1.71428em;
+$pl-heading-h3-font-size-large: 1.81428em;
 $pl-heading-h3-line-height-large: 2.42857rem;
 
 $pl-heading-h3-font-size: $pl-heading-h3-font-size-large * 0.8;
@@ -97,11 +82,7 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
 
 @mixin pl-typography {
   .pl-font-title-primary {
-    font-family: $pl-font-family-title-primary;
-  }
-
-  .pl-font-title-secondary {
-    font-family: $pl-font-family-title-secondary;
+    font-family: $pl-font-family-title;
   }
 
   .pl-font-body {
@@ -117,6 +98,7 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
     margin: 0;
     padding: 0;
     color: $pl-color-body-light-heading-text-fg;
+    font-family: $pl-font-family-title;
 
     @include pl-mode-dark {
       color: $pl-color-body-dark-heading-text-fg;
@@ -136,18 +118,19 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
   }
 
   h1 {
-    font-family: $pl-font-family-title-primary;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+
+  h3 {
     font-weight: 600;
   }
 
-  h2, h3 {
-    font-family: $pl-font-family-title-secondary;
-    font-weight: 500;
-  }
-
   h4, h5, h6 {
-    font-weight: 400;
-    font-family: $pl-font-family-body;
+    font-weight: 600;
   }
 
   h1 {
@@ -159,7 +142,6 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
       line-height: $pl-heading-h1-line-height-large;
     }
 
-    letter-spacing: -0.023em; // TODO extract
     @include pl-mrg-y(0.75em);
 
     &:first-child {
