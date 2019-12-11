@@ -8,7 +8,7 @@ section#typography {
     border: 1px solid $pl-color-body-light-bg-panel-primary-border;
 
     &:not(:last-child) {
-      margin-bottom: $pl-spacing-sm;
+      margin-bottom: $pl-spacing-md;
     }
 
     @include pl-mode-dark {

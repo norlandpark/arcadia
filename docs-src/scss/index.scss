@@ -49,9 +49,14 @@ div.element-doc {
 
   & > div.preview {
     @include pl-pad-xy($pl-spacing-sm, $pl-spacing-md);
+    border-bottom: 1px solid $pl-color-body-light-bg-panel-tertiary-border;
 
     & > div.item:not(:last-child) {
       margin-bottom: $pl-spacing-sm;
+    }
+
+    @include pl-mode-dark {
+      border-bottom: 1px solid $pl-color-body-dark-bg-panel-tertiary-border;
     }
   }
 
@@ -73,12 +78,10 @@ div.element-doc {
       @include pl-mrg-xy(0, 0);
       @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xxs);
 
-      border-top: 1px solid $pl-color-body-light-bg-panel-tertiary-border;
       border-bottom: 1px dotted $pl-color-body-light-bg-panel-tertiary-border;
       background: $pl-color-body-light-bg-panel-tertiary;
 
       @include pl-mode-dark {
-        border-top: 1px solid $pl-color-body-dark-bg-panel-tertiary-border;
         border-bottom: 1px dotted $pl-color-body-dark-bg-panel-tertiary-border;
         background: $pl-color-body-dark-bg-panel-tertiary;
       }

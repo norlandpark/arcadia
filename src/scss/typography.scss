@@ -18,7 +18,7 @@ sans-serif,
 'segoe ui emoji',
 'segoe ui symbol' !default;
 
-$pl-font-family-title: 'nunito',
+$pl-font-family-title: 'open sans',
 -apple-system,
 BlinkMacSystemFont,
 'segoe ui',
@@ -121,16 +121,12 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
     font-weight: 300;
   }
 
-  h2 {
-    font-weight: 400;
-  }
-
-  h3 {
+  h2, h3 {
     font-weight: 600;
   }
 
   h4, h5, h6 {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   h1 {
@@ -296,7 +292,15 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
     user-select: none;
   }
 
-  code, pre {
+  kbd {
+    color: $pl-color-crimson;
+
+    @include pl-mode-dark() {
+      color: $pl-color-crimson-tint-200;
+    }
+  }
+
+  code, pre, kbd {
     font-size: 1em;
     font-family: $pl-font-family-mono;
     font-weight: normal;

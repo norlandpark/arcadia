@@ -452,7 +452,7 @@ body {
   box-sizing: inherit; }
 
 .pl-font-title-primary {
-  font-family: "nunito", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
+  font-family: "open sans", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
 
 .pl-font-body {
   font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
@@ -465,7 +465,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   color: #444444;
-  font-family: "nunito", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
+  font-family: "open sans", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", "arial", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"; }
   body.pl-mode-dark h1, body.pl-mode-dark h2, body.pl-mode-dark h3, body.pl-mode-dark h4, body.pl-mode-dark h5, body.pl-mode-dark h6 {
     color: #cccccc; }
   h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small {
@@ -478,14 +478,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-weight: 300; }
 
-h2 {
-  font-weight: 400; }
-
-h3 {
+h2, h3 {
   font-weight: 600; }
 
 h4, h5, h6 {
-  font-weight: 600; }
+  font-weight: 400; }
 
 h1 {
   font-size: 2.40045em;
@@ -601,12 +598,17 @@ p {
 label {
   user-select: none; }
 
-code, pre {
+kbd {
+  color: #dd2e44; }
+  body.pl-mode-dark kbd {
+    color: #e87482; }
+
+code, pre, kbd {
   font-size: 1em;
   font-family: "source code pro", consolas, "courier new", courier, monospace;
   font-weight: normal;
   overflow: auto; }
-  code.wrap, pre.wrap {
+  code.wrap, pre.wrap, kbd.wrap {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
@@ -3390,7 +3392,7 @@ nav.pl-navbar {
 section#typography > div.font-panel {
   border: 1px solid #e6e6e6; }
   section#typography > div.font-panel:not(:last-child) {
-    margin-bottom: 1.14286rem; }
+    margin-bottom: 2.28571rem; }
   body.pl-mode-dark section#typography > div.font-panel {
     border: 1px solid #494949; }
   section#typography > div.font-panel > div.purpose {
@@ -4393,9 +4395,12 @@ div.element-doc {
     padding-left: 1.14286rem;
     padding-right: 1.14286rem;
     padding-top: 2.28571rem;
-    padding-bottom: 2.28571rem; }
+    padding-bottom: 2.28571rem;
+    border-bottom: 1px solid #dbdbdb; }
     div.element-doc > div.preview > div.item:not(:last-child) {
       margin-bottom: 1.14286rem; }
+    body.pl-mode-dark div.element-doc > div.preview {
+      border-bottom: 1px solid #5b5b5b; }
   div.element-doc > div.about {
     padding-left: 1.14286rem;
     padding-right: 1.14286rem;
@@ -4416,11 +4421,9 @@ div.element-doc {
     padding-right: 1.14286rem;
     padding-top: 0.28571rem;
     padding-bottom: 0.28571rem;
-    border-top: 1px solid #dbdbdb;
     border-bottom: 1px dotted #dbdbdb;
     background: #eeeff0; }
     body.pl-mode-dark div.element-doc > div.code-sample > h1, body.pl-mode-dark div.element-doc > div.code-sample > h2, body.pl-mode-dark div.element-doc > div.code-sample > h3, body.pl-mode-dark div.element-doc > div.code-sample > h4, body.pl-mode-dark div.element-doc > div.code-sample > h5, body.pl-mode-dark div.element-doc > div.code-sample > h6 {
-      border-top: 1px solid #5b5b5b;
       border-bottom: 1px dotted #5b5b5b;
       background: #4b4b4b; }
   div.element-doc > div.code-sample > code {

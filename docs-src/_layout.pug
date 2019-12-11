@@ -1,7 +1,7 @@
 html
   head
     title: block title
-    link(href='//fonts.googleapis.com/css?family=Nunito:300,400,600,700|Source+Code+Pro:400,500&display=swap&subset=latin-ext', rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Source+Code+Pro:400,500&display=swap&subset=latin-ext', rel='stylesheet')
     link(href="./app.css", rel="stylesheet")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(property='og:type', content='website')
@@ -41,11 +41,9 @@ html
     block scripts
     script(src="./app.js")
     section#footer.pl-panel-container.pl-pad-t-xl.pl-pad-b-3xl
-      | &copy; 2019
-      |
-      a(href="https://norlandpark.com") Norland Park
-      | .
-      | Norland Park, Parkland Design System, copyright &copy; 2019 Norland Park
-      | .
-      |
-      a(href="./license.html") Legal information
+      div.pl-mrg-b-sm
+        | &copy; 2019 Norland Park, all rights reserved.
+      div
+        | Norland Park&trade; <i>and</i> Parkland Design System&trade; - copyright &copy; 2019 Norland Park.
+        |
+        a(href="./license.html") Licensing information.

@@ -19,14 +19,14 @@ section#typography
 
   div.font-panel
     div.purpose
-      h6 Primary title font - Nunito
+      h6 Primary title font - Open Sans
     div.about Used exclusively for page level heading - <code>h1</code> through <code>h6</code>.
     div.font-sample.pl-font-title-primary
       div.pl-word-break-all ABCDEFGHIJKLMNOPQRSTUVWXYZ
       div.pl-word-break-all abcdefghijklmnopqrstuvwxyz
       div.pl-word-break-all 0123456789
     code.font-family
-      | font-family: 'nunito', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
+      | font-family: 'open sans', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell,
       | 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
 
   div.font-panel
@@ -42,19 +42,52 @@ section#typography
 
   h3.pl-title Headings
 
-  div.font-sample.pl-mrg-b-sm
-    h1 H1 The quick brown fox jumps over the lazy dog
-    h2 H2 The quick brown fox jumps over the lazy dog
-    h3 H3 The quick brown fox jumps over the lazy dog
-    h4 H4 The quick brown fox jumps over the lazy dog
-    h5 H5 The quick brown fox jumps over the lazy dog
-    h6 H6 The quick brown fox jumps over the lazy dog
+  div.pl-panel.signal-info
+    div.signal-body.
+      Headings can use <kbd>.title</kbd> class to display bottom border indicating
+      a section break
 
-  div.pl-mrg-b-md
-    p
-      | Headings allow for
-      code .title
-      |  modifier to display bottom border for headings.
+  div.element-doc
+    div.title
+      h5 Primary heading: H1
+    div.about
+      p Font weight: 300
+    div.preview
+      h1 The quick brown fox jumps over the lazy dog
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        h1 The quick brown fox jumps over the lazy dog
+
+  div.element-doc
+    div.title
+      h5 Secondary headings: H2, H3
+    div.about
+      p Font weight: 600
+    div.preview
+      h2 The quick brown fox jumps over the lazy dog
+      h3 The quick brown fox jumps over the lazy dog
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        h2 The quick brown fox jumps over the lazy dog
+        h3 The quick brown fox jumps over the lazy dog
+
+  div.element-doc
+    div.title
+      h5 Tertiary headings: H4, H5, H6
+    div.about
+      p Font weight: 400
+    div.preview
+      h3 The quick brown fox jumps over the lazy dog
+      h4 The quick brown fox jumps over the lazy dog
+      h5 The quick brown fox jumps over the lazy dog
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        h3 The quick brown fox jumps over the lazy dog
+        h4 The quick brown fox jumps over the lazy dog
+        h5 The quick brown fox jumps over the lazy dog
 
   h3.pl-title Text copy
 
