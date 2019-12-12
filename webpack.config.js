@@ -19,7 +19,8 @@ Encore
   .enableVersioning(Encore.isProduction())
   .enableSassLoader()
   .addPlugin(new CopyPlugin([
-    { from: './docs-src/static/', to: 'static/[path][name].[ext]' }
+    { from: './docs-src/static/', to: 'static/[path][name].[ext]' },
+    { from: './docs-src/CNAME', to: '[path][name].[ext]' }
   ]))
   .addLoader({
     test: /\.pug$/,
