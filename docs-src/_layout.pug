@@ -2,7 +2,6 @@ html
   head
     title: block title
     link(href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Source+Code+Pro:400,500&display=swap&subset=latin-ext', rel='stylesheet')
-    link(href="./app.css", rel="stylesheet")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(property='og:type', content='website')
     meta(property='og:title', content='Parkland Design System - Norland Park')
@@ -28,9 +27,11 @@ html
     header.pl-navbar-container.sticky
       nav.pl-navbar
         ul.nav-items
-          li: a.nav-item.logo(href="./index.html")
-            img.pl-only-light(src="https://norlandpark.com/assets/logo.svg")
-            img.pl-only-dark(src="https://norlandpark.com/assets/logo-light.svg")
+          li.pl-only-light
+            a.nav-item.logo.light(href="./index.html")
+              include static/logo.svg
+            a.nav-item.logo.dark(href="./index.html")
+              include static/logo-light.svg
           li.spacer
           li: a.nav-item(href="./license.html") License
           li: a.nav-item(href="https://norlandpark.com") Company
@@ -39,7 +40,6 @@ html
       button.pl-button.crimson#toggle-dark-mode Toggle dark mode
     div.pl-pad-x-xxs: block content
     block scripts
-    script(src="./app.js")
     section#footer.pl-panel-container.pl-pad-t-xl.pl-pad-b-3xl
       div.pl-mrg-b-sm
         | &copy; 2019 Norland Park, all rights reserved.

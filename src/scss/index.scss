@@ -1,3 +1,4 @@
+@import "vendor";
 @import "mixins";
 @import "properties";
 @import "colors";
@@ -16,6 +17,7 @@
   @at-root {
     body, html {
       font-size: $pl-font-size-body;
+      line-height: initial;
       font-family: $pl-font-family-body;
       font-weight: normal;
       font-style: normal;
@@ -52,6 +54,14 @@
           display: none;
         }
       }
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      line-height: initial;
     }
 
     *, *:before, *:after {

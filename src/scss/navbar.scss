@@ -148,7 +148,26 @@
             padding: 0;
 
             & > img, & > svg {
-              max-height: 16px;
+              height: 16px;
+              image-rendering: high-quality;
+            }
+
+            & > svg {
+              shape-rendering: geometricPrecision;
+            }
+
+            &.dark {
+              display: none;
+            }
+
+            @include pl-mode-dark {
+              &.light {
+                display: none;
+              }
+
+              &.dark {
+                display: flex;
+              }
             }
           }
         }

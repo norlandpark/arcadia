@@ -12,18 +12,23 @@
     "/LICENSE_ART.txt",
     "/README.md"
   ],
+  "dependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "js-cookie": "^2.2.1",
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
-    "grunt": "^1.0.4",
-    "grunt-contrib-connect": "^2.1.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-pug": "^2.0.0",
-    "grunt-contrib-uglify": "^4.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-node-sass": "^1.0.1"
+    "@symfony/webpack-encore": "^0.28.2",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "raw-loader": "^4.0.0",
+    "sass-loader": "^7.0.1"
   },
   "scripts": {
-    "build": "grunt build",
-    "watch": "grunt watch",
-    "serve": "grunt serve"
+    "build": "encore production",
+    "watch": "encore production --watch",
+    "serve": "encore dev-server --liveReload"
   }
 }
