@@ -37,7 +37,7 @@
 
     &.with-icon, &.only-icon {
       & > svg, & > img {
-        shape-rendering: crispEdges;
+        shape-rendering: geometricPrecision;
         position: relative;
         margin-right: 0.3em;
         height: 2em;

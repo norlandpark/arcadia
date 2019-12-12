@@ -33,12 +33,14 @@ html
             a.nav-item.logo.dark(href="./index.html")
               include static/logo-light.svg
           li.spacer
-          li: a.nav-item(href="./license.html") License
-          li: a.nav-item(href="https://norlandpark.com") Company
+          li: a.nav-item.github(href="https://github.com/norlandpark/parkland", target="_github", title="View source on GitHub")
+            span.pl-only-light: include static/github.svg
+            span.pl-only-dark: include static/github-light.svg
+          li: button.nav-item.theme#toggle-dark-mode(title="Toggle light and dark mode")
+            span.pl-only-light: include static/moon.svg
+            span.pl-only-dark: include static/sun.svg
 
-    div.pl-panel-container.pl-pad-t-md.pl-pad-b-sm
-      button.pl-button.crimson#toggle-dark-mode Toggle dark mode
-    div.pl-pad-x-xxs: block content
+    block content
     block scripts
     section#footer.pl-panel-container.pl-pad-t-xl.pl-pad-b-3xl
       div.pl-mrg-b-sm

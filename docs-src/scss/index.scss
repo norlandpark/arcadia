@@ -8,6 +8,20 @@
 @import "sections/typography";
 @import "sections/colors";
 
+a.nav-item.github, button.nav-item.theme {
+  padding-left: $pl-spacing-sm !important;
+  padding-right: $pl-spacing-sm !important;
+
+  span {
+    height: 16px;
+  }
+
+  svg {
+    height: 16px;
+    margin-right: $pl-spacing-xs;
+  }
+}
+
 div.pl-panel-container {
   & > section {
     margin-bottom: $pl-spacing-xl;
