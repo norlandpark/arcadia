@@ -1,14 +1,17 @@
 {
-  "index.css": "/index.f6b89557.css",
-  "index.js": "/index.d5d2ae84.js",
+  "index.css": "/index.bc1c3421.css",
+  "index.js": "/index.b5296228.js",
   "CNAME": "/CNAME",
   "index.html": "/index.html",
   "license.html": "/license.html",
+  "static/2fa.svg": "/static/2fa.svg",
   "static/github-light.svg": "/static/github-light.svg",
   "static/github.svg": "/static/github.svg",
   "static/icon-add.svg": "/static/icon-add.svg",
   "static/logo-light.svg": "/static/logo-light.svg",
   "static/logo.svg": "/static/logo.svg",
   "static/moon.svg": "/static/moon.svg",
+  "static/register.svg": "/static/register.svg",
+  "static/send.svg": "/static/send.svg",
   "static/sun.svg": "/static/sun.svg"
 }

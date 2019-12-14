@@ -126,44 +126,49 @@ $pl-spacing-3xl: 6.857142857142857rem;
       margin-bottom: $spacing;
     }
   }
-}
 
-.pl-user-select-none {
-  user-select: none;
-}
+  .pl-mrg-x-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.pl-user-select-auto {
-  user-select: auto;
-}
+  .pl-user-select-none {
+    user-select: none;
+  }
 
-.pl-user-select-text {
-  user-select: text;
-}
+  .pl-user-select-auto {
+    user-select: auto;
+  }
 
-.pl-user-select-contain {
-  user-select: contain;
-}
+  .pl-user-select-text {
+    user-select: text;
+  }
 
-.pl-user-select-all {
-  user-select: all;
-}
+  .pl-user-select-contain {
+    user-select: contain;
+  }
 
-.pl-text-left {
-  text-align: left;
-}
+  .pl-user-select-all {
+    user-select: all;
+  }
 
-.pl-text-center {
-  text-align: center;
-}
+  .pl-text-left {
+    text-align: left;
+  }
 
-.pl-text-right {
-  text-align: right;
-}
+  .pl-text-center {
+    text-align: center;
+  }
 
-.pl-word-break-all {
-  word-break: break-all;
-}
+  .pl-text-right {
+    text-align: right;
+  }
 
-.pl-word-break-word {
-  word-break: break-word;
+  .pl-word-break-all {
+    word-break: break-all;
+  }
+
+  .pl-word-break-word {
+    word-break: break-word;
+  }
 }

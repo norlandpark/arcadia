@@ -1,0 +1,105 @@
+section#pricing
+  h2.pl-title Pricing table
+
+  div.element-doc
+    div.title
+      h5 Pricing table
+    div.about
+      p TBD
+    div.preview
+      section.pl-pricing
+        div.plan: div.content
+          div.title
+            h4 Starter
+          div.price
+            span.price Free
+          div.term Forever
+          div.cta
+            button.pl-button.cornflower Sign Up
+          div.description
+            include ../lorem/short.txt
+          ul.conditions
+            li Up to 5 users
+            li 1GB storage
+            li Unlimited everything else
+        div.plan: div.content
+          div.title
+            h4 Business
+          div.price
+            span.symbol $
+            span.price 119.00
+            span.currency USD
+          div.term
+            | monthly
+          div.cta
+            button.pl-button.cornflower Start Trial
+          div.description
+            include ../lorem/short.txt
+          ul.conditions
+            li Up to 100 users
+            li 5GB storage
+            li Unlimited everything else
+        div.plan: div.content
+          div.title
+            h4 Enterprise
+          div.price
+            span.symbol $
+            span.price 12.00
+            span.currency USD
+          div.term per user, per month
+          div.cta
+            button.pl-button.cornflower Start Trial
+          div.description
+            include ../lorem/short.txt
+          ul.conditions
+            li Unlimited users
+            li Unlimited storage
+            li Unlimited everything else
+    div.code-sample
+      h6 HTML
+      code(data-lang="html", class="language-html"): pre: :render-escape
+        section.pl-pricing
+          div.plan: div.content
+            div.title
+              h4 Starter
+            div.price
+              span.price Free
+            div.term Forever
+            div.cta
+              button.pl-button.cornflower Sign Up
+            div.description ...
+            ul.conditions
+              li Up to 5 users
+              li 1GB storage
+              li Unlimited everything else
+          div.plan: div.content
+            div.title
+              h4 Business
+            div.price
+              span.symbol $
+              span.price 119.00
+              span.currency USD
+            div.term
+              | monthly
+            div.cta
+              button.pl-button.cornflower Start Trial
+            div.description ...
+            ul.conditions
+              li Up to 100 users
+              li 5GB storage
+              li Unlimited everything else
+          div.plan: div.content
+            div.title
+              h4 Enterprise
+            div.price
+              span.symbol $
+              span.price 12.00
+              span.currency USD
+            div.term per user, per month
+            div.cta
+              button.pl-button.cornflower Start Trial
+            div.description ...
+            ul.conditions
+              li Unlimited users
+              li Unlimited storage
+              li Unlimited everything else

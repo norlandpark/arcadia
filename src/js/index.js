@@ -1,9 +1,11 @@
 import PlNavbar from './navbar.js';
 import PlDarkMode from './darkmode.js';
+import PlValidate from './validate.js';
 
 const knownModules = {
   navbar: PlNavbar,
-  darkMode: PlDarkMode
+  darkMode: PlDarkMode,
+  validate: PlValidate
 };
 
 export default function (context, options) {

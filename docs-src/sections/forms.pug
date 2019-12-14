@@ -1,28 +1,98 @@
 section#forms
+  h2.pl-title Forms and form elements
+  div.element-doc
+    div.title
+      h5 Input elements
+    div.about
+      p TBD
+    div.preview
+      div.item: div.pl-mrg-b-md: input.pl-input.sm(placeholder="Your name")
+      div.item: div.pl-mrg-b-md: input.pl-input(placeholder="Your name")
+      div.item: div.pl-mrg-b-md: input.pl-input.lg(placeholder="Your name")
+      div.item: div.pl-mrg-b-md: input.pl-input.block(placeholder="Your name")
+      div.item: div.pl-mrg-b-md: input.pl-input(type="color")
+      div.item: div.pl-mrg-b-md: input.pl-input(type="file")
+      div.item: div.pl-mrg-b-md: input.pl-input(type="range")
+      div.item: div.pl-mrg-b-md: input.pl-input.pl-button.warning(type="reset")
+      div.item: div.pl-mrg-b-md
+        select.pl-input
+          option Option 1
+          option Option 2
+          option Option 3
+      div.item: div.pl-mrg-b-md
+        select.pl-input.block
+          option Option 1
+          option Option 2
+          option Option 3
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input.sm(placeholder="Your name")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input(placeholder="Your name")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input.lg(placeholder="Your name")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input.block(placeholder="Your name")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input(type="color")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input(type="file")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input(type="range")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-input.pl-button.warning(type="reset")
+      code(data-lang="html"): :render-escape
+        div.pl-mrg-b-md: input.pl-button(type="submit", value="Submit")
+      code(data-lang="html"): :render-escape
+        select.pl-input
+          option Option 1
+          option Option 2
+          option Option 3
+      code(data-lang="html"): :render-escape
+        select.pl-input.block
+          option Option 1
+          option Option 2
+          option Option 3
 
-  div.pl-mrg-b-md: input.pl-input.sm(placeholder="Your name")
-  div.pl-mrg-b-md: input.pl-input(placeholder="Your name")
-  div.pl-mrg-b-md: input.pl-input.lg(placeholder="Your name")
-  div.pl-mrg-b-md: input.pl-input(type="radio")
-  div.pl-mrg-b-md: input.pl-input(type="checkbox")
-  div.pl-mrg-b-md: input.pl-input(type="color")
-  div.pl-mrg-b-md: input.pl-input(type="file")
-  div.pl-mrg-b-md: input.pl-input(type="range")
-  div.pl-mrg-b-md: input.pl-input(type="reset")
-  div.pl-mrg-b-md: textarea.pl-input.sm
-  div.pl-mrg-b-md: textarea.pl-input
-  div.pl-mrg-b-md: textarea.pl-input.lg
-  div.pl-mrg-b-md: textarea.pl-input.block
+  div.element-doc
+    div.title
+      h5 Radio and checkbox
+    div.about
+      p TBD
+    div.preview
+      div.item
+        input.pl-input(type="checkbox", id="example_int_1")
+        label(for="example_int_1") Some label
+      div.item
+        input.pl-input(type="radio", id="example_int_2")
+        label(for="example_int_2") Some label
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        input.pl-input(type="checkbox", id="example_1")
+        label(for="example_1") Some label
+      code(data-lang="html"): :render-escape
+        input.pl-input(type="radio", id="example_2")
+        label(for="example_2") Some label
 
-  div.pl-mrg-b-md: input(type="submit", value="Submit")
-
-  div.pl-mrg-b-md
-    div.pl-checkbox
-      input(type="checkbox", id="cb")
-      label(for="cb") Some label
-
-  div.pl-mrg-b-md
-    div.pl-radio
-      input(type="radio", id="cd")
-      label(for="cd") Some label
-
+  div.element-doc
+    div.title
+      h5 Textarea
+    div.about
+      p TBD
+    div.preview
+      div.item: textarea.pl-input.sm
+      div.item: textarea.pl-input
+      div.item: textarea.pl-input.lg
+      div.item: textarea.pl-input.block
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        textarea.pl-input.sm
+      code(data-lang="html"): :render-escape
+        textarea.pl-input
+      code(data-lang="html"): :render-escape
+        textarea.pl-input.lg
+      code(data-lang="html"): :render-escape
+        textarea.pl-input.block

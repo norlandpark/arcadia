@@ -12,6 +12,8 @@
 @import "elevation";
 @import "navbar";
 @import "layouts";
+@import "account";
+@import "pricing";
 
 @mixin pl-main {
   @at-root {
@@ -78,5 +80,7 @@
     @include pl-utilities();
     @include pl-navbar();
     @include pl-layouts();
+    @include pl-account();
+    @include pl-pricing();
   }
 }

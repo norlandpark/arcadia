@@ -62,8 +62,12 @@ div.element-doc {
   }
 
   & > div.preview {
-    @include pl-pad-xy($pl-spacing-sm, $pl-spacing-md);
+    position: relative;
     border-bottom: 1px solid $pl-color-body-light-bg-panel-tertiary-border;
+
+    &:not(.slim) {
+      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-md);
+    }
 
     & > div.item:not(:last-child) {
       margin-bottom: $pl-spacing-sm;

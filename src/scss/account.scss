@@ -1,0 +1,64 @@
+@import "properties";
+@import "colors";
+@import "typography";
+@import "mixins";
+
+@mixin pl-account {
+  // This style intentionally avoids strict nesting (form generators often wrap elements in div's etc)
+  section.pl-account a {
+    text-decoration: none;
+  }
+
+  section.pl-account {
+    &.sign-in {
+      max-width: 25rem;
+    }
+
+    div.welcome {
+      font-size: $pl-heading-h2-font-size;
+      line-height: $pl-heading-h2-line-height;
+      font-weight: 300;
+      margin-bottom: $pl-spacing-xs;
+    }
+
+    div.lead {
+      margin-bottom: $pl-spacing-md;
+    }
+
+    div.links {
+      margin-top: $pl-spacing-lg;
+
+      & > div.link:not(:last-child) {
+        margin-bottom: $pl-spacing-xxs;
+      }
+    }
+
+    form {
+      input:not([type]),
+      input[type=date],
+      input[type=datetime-local],
+      input[type=email],
+      input[type=month],
+      input[type=number],
+      input[type=password],
+      input[type=search],
+      input[type=tel],
+      input[type=text],
+      input[type=time],
+      input[type=url],
+      input[type=week] {
+        display: flex;
+        width: 100%;
+      }
+
+      button {
+        display: flex;
+        width: 100%;
+
+        &.submit, &[type=submit] {
+          margin-top: $pl-spacing-md;
+        }
+      }
+    }
+  }
+}

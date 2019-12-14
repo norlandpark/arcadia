@@ -44,38 +44,38 @@ $pl-font-size-body-line-height: 22px !default;
 $pl-heading-title-margin-mul: 1.5 !default;
 $pl-heading-title-padding-mul: 0.25 !default;
 
-$pl-heading-h1-font-size-large: 3.42921em;
-$pl-heading-h1-line-height-large: 4.04317rem;
+$pl-heading-h1-font-size-large: 3.42921rem;
+$pl-heading-h1-line-height-large: 4.04317rrem;
 
 $pl-heading-h1-font-size: $pl-heading-h1-font-size-large * 0.7;
 $pl-heading-h1-line-height: $pl-heading-h1-line-height-large * 0.7;
 
-$pl-heading-h2-font-size-large: 2.28571em;
-$pl-heading-h2-line-height-large: 3.03113rem;
+$pl-heading-h2-font-size-large: 2.28571rem;
+$pl-heading-h2-line-height-large: 3.03113rrem;
 
 $pl-heading-h2-font-size: $pl-heading-h2-font-size-large * 0.8;
 $pl-heading-h2-line-height: $pl-heading-h2-line-height-large * 0.8;
 
-$pl-heading-h3-font-size-large: 1.81428em;
-$pl-heading-h3-line-height-large: 2.42857rem;
+$pl-heading-h3-font-size-large: 1.81428rem;
+$pl-heading-h3-line-height-large: 2.42857rrem;
 
 $pl-heading-h3-font-size: $pl-heading-h3-font-size-large * 0.8;
 $pl-heading-h3-line-height: $pl-heading-h3-line-height-large * 0.8;
 
-$pl-heading-h4-font-size-large: 1.57142em;
-$pl-heading-h4-line-height-large: 2.14285rem;
+$pl-heading-h4-font-size-large: 1.57142rem;
+$pl-heading-h4-line-height-large: 2.14285rrem;
 
 $pl-heading-h4-font-size: $pl-heading-h4-font-size-large * 0.8;
 $pl-heading-h4-line-height: $pl-heading-h4-line-height-large * 0.8;
 
-$pl-heading-h5-font-size-large: 1.42857em;
-$pl-heading-h5-line-height-large: 2.11285rem;
+$pl-heading-h5-font-size-large: 1.42857rem;
+$pl-heading-h5-line-height-large: 2.11285rrem;
 
 $pl-heading-h5-font-size: $pl-heading-h5-font-size-large * 0.8;
 $pl-heading-h5-line-height: $pl-heading-h5-line-height-large * 0.8;
 
-$pl-heading-h6-font-size-large: 1.14285em;
-$pl-heading-h6-line-height-large: 1.57142rem;
+$pl-heading-h6-font-size-large: 1.14285rem;
+$pl-heading-h6-line-height-large: 1.57142rrem;
 
 $pl-heading-h6-font-size: $pl-heading-h6-font-size-large * 0.95;
 $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
@@ -327,7 +327,7 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
     }
 
     &.block {
-      display: block;
+      display: flex;
       padding: 0.8em;
     }
 
