@@ -2,7 +2,7 @@
   "entrypoints": {
     "index": {
       "css": [
-        "/index.42876e3c.css"
+        "/index.b8a179e9.css"
       ],
       "js": [
         "/index.bd17f9a4.js"
@@ -10,7 +10,7 @@
     }
   },
   "integrity": {
-    "/index.42876e3c.css": "sha384-Ca1BZarFON6olozVryf/Btgce1/JhobS3/wOj+7y8INSk+4uv+pjIXqMvPUPYyaN",
+    "/index.b8a179e9.css": "sha384-A8p4Dvp1Ds8yZrnBTgFmQkw09GQV4srM7FvzkWRBfTTWdhUdsfO9hKCRC58A5M8j",
     "/index.bd17f9a4.js": "sha384-IFj7bMnwRA1wbshQSThGyZ+LVJQstSko4VGkMdiWR9VaxFfRwE1J2DLQyOfqn6Fu"
   }
 }

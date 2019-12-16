@@ -10,7 +10,8 @@
     }
 
     label {
-      display: flex;
+      cursor: pointer;
+      display: inline-flex;
       font-family: $ac-font-family-body;
       font-size: $ac-heading-h6-font-size;
       line-height: $ac-heading-h6-line-height;
@@ -93,7 +94,8 @@
     }
 
     // Deviation from normal naming convention to avoid collisions with other valdiation tools
-    &.ac-input-error, &:invalid {
+    // Not coloring :required:invalid because they are marked as such on page load.
+    &.ac-input-error, &:invalid:not(:required) {
       background: $ac-color-wolf-tint-500;
       border: 1px solid $ac-color-wolf-tint-300;
       color: $ac-color-wolf;

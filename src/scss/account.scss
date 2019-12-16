@@ -26,7 +26,7 @@
     }
 
     div.links {
-      margin-top: $ac-spacing-lg;
+      margin-top: $ac-spacing-md;
 
       & > div.link:not(:last-child) {
         margin-bottom: $ac-spacing-xxs;
@@ -56,7 +56,7 @@
         width: 100%;
 
         &.submit, &[type=submit] {
-          margin-top: $ac-spacing-md;
+          margin-top: $ac-spacing-sm;
         }
       }
     }

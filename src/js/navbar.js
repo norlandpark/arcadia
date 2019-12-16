@@ -1,6 +1,6 @@
 export default {
   defaults: {},
-  module(context, options) {
+  module: function (context, options) {
     this.init = () => {
     };
     this.ready = () => {

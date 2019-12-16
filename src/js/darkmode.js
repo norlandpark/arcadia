@@ -11,7 +11,7 @@ export default {
       expires: 90
     }
   },
-  module(context, options) {
+  module: function (context, options) {
     this.init = () => {
       const body = context.document.body;
 

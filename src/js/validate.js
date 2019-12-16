@@ -8,7 +8,7 @@ export default {
   defaults: {
     rules: {}
   },
-  module(context, options) {
+  module: function (context, options) {
     this.setInputState = (errors, inputs) => {
       if (0 === inputs.length) {
         return;
@@ -25,7 +25,7 @@ export default {
 
           const errorLists = input.parentElement.querySelectorAll('.ac-error-list');
 
-          for(const errorList of errorLists) {
+          for (const errorList of errorLists) {
             input.parentElement.removeChild(errorList);
           }
 
@@ -46,7 +46,7 @@ export default {
         const messagesElement = messages.length > 1 ? 'ul' : 'div';
         let nextElement = input.nextElementSibling || input.nextSibling;
 
-        if(null !== nextElement && nextElement.tagName.toLowerCase() === 'label') {
+        if (null !== nextElement && nextElement.tagName.toLowerCase() === 'label') {
           nextElement = nextElement.nextElementSibling || nextElement.nextSibling;
         }
 
@@ -64,7 +64,7 @@ export default {
           input.parentElement.insertBefore(errorContainer, input.nextSibling);
         }
 
-        if(1 === messages.length) {
+        if (1 === messages.length) {
           errorContainer.innerText = messages[0];
           continue;
         }
