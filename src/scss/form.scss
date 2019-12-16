@@ -5,7 +5,7 @@
 
 @mixin ac-form {
   form.ac-form {
-    & > div.form-item:not(:last-child) {
+    div.form-item:not(:last-child) {
       margin-bottom: $ac-spacing-sm;
     }
 
