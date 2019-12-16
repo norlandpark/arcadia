@@ -1,9 +1,9 @@
 {
-  "name": "@norlandpark/parkland",
+  "name": "@norlandpark/arcadia",
   "version": "0.1.6",
-  "description": "Parkland design system",
+  "description": "Arcadia design system",
   "keywords": [],
-  "homepage": "https://github.com/norlandpark/parkland",
+  "homepage": "https://github.com/norlandpark/arcadia",
   "author": "Norland Park <hello@norlandpark.com>",
   "license": "Apache-2.0",
   "files": [

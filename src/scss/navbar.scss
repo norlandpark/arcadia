@@ -4,64 +4,64 @@
 @import "typography";
 @import "containers";
 
-@mixin pl-navbar {
-  .pl-navbar-container {
+@mixin ac-navbar {
+  .ac-navbar-container {
     width: 100%;
-    background: $pl-color-body-light-bg-navbar-bg;
-    z-index: $pl-navbar-sticky-z-index;
+    background: $ac-color-body-light-bg-navbar-bg;
+    z-index: $ac-navbar-sticky-z-index;
 
-    @include pl-mode-dark {
-      background: $pl-color-body-dark-bg-navbar-bg;
+    @include ac-mode-dark {
+      background: $ac-color-body-dark-bg-navbar-bg;
     }
 
     &.sticky {
-      @include pl-elevation(
+      @include ac-elevation(
           1,
-          $pl-color-body-light-bg-navbar-elevation-light,
-          $pl-color-body-dark-bg-navbar-elevation-dark,
+          $ac-color-body-light-bg-navbar-elevation-light,
+          $ac-color-body-dark-bg-navbar-elevation-dark,
           3,
           2
       );
 
       top: 0;
       position: sticky;
-      padding-left: $pl-spacing-sm;
-      padding-right: $pl-spacing-sm;
+      padding-left: $ac-spacing-sm;
+      padding-right: $ac-spacing-sm;
     }
 
-    & > nav.pl-navbar {
-      max-width: $pl-panel-container-wrap-at;
+    & > nav.ac-navbar {
+      max-width: $ac-panel-container-wrap-at;
       margin: auto;
     }
   }
 
-  nav.pl-navbar {
+  nav.ac-navbar {
     width: 100%;
-    background: $pl-color-body-light-bg-navbar-bg;
+    background: $ac-color-body-light-bg-navbar-bg;
     position: relative;
     min-height: 32px;
     max-height: 70vh;
     overflow-y: auto; // :)
     overflow-x: auto; // :)
 
-    @include pl-mode-dark {
-      background: $pl-color-body-dark-bg-navbar-bg;
+    @include ac-mode-dark {
+      background: $ac-color-body-dark-bg-navbar-bg;
 
       & > ul.nav-items > li {
         & > a.nav-item, & > button.nav-item {
-          color: $pl-color-body-dark-bg-navbar-fg;
+          color: $ac-color-body-dark-bg-navbar-fg;
 
           &:hover {
-            color: $pl-color-body-dark-bg-navbar-hover-fg;
+            color: $ac-color-body-dark-bg-navbar-hover-fg;
           }
 
           &:active, &:focus {
-            color: $pl-color-body-dark-bg-navbar-active-fg;
-            border-bottom: 1px solid $pl-color-body-dark-bg-navbar-active-fg;
+            color: $ac-color-body-dark-bg-navbar-active-fg;
+            border-bottom: 1px solid $ac-color-body-dark-bg-navbar-active-fg;
           }
 
           &.active {
-            color: $pl-color-body-dark-bg-navbar-active-fg;
+            color: $ac-color-body-dark-bg-navbar-active-fg;
           }
 
           &.plain:hover, &.plain:active, &.plain:focus, &.plain.active,
@@ -90,16 +90,16 @@
         position: relative;
 
         &.spacer {
-          padding-right: $pl-spacing-md;
+          padding-right: $ac-spacing-md;
         }
 
         & > a.nav-item, & > button.nav-item {
           position: relative;
           display: flex;
-          color: $pl-color-body-light-bg-navbar-fg;
-          font-family: $pl-font-family-body;
-          font-size: $pl-font-size-body;
-          line-height: $pl-font-size-body-line-height;
+          color: $ac-color-body-light-bg-navbar-fg;
+          font-family: $ac-font-family-body;
+          font-size: $ac-font-size-body;
+          line-height: $ac-font-size-body-line-height;
           border-radius: 0;
           background: transparent;
           text-decoration: none;
@@ -113,18 +113,18 @@
           flex: 1;
 
           &:hover {
-            color: $pl-color-body-light-bg-navbar-hover-fg;
-            border-bottom: 1px solid $pl-color-body-light-bg-navbar-hover-fg;
+            color: $ac-color-body-light-bg-navbar-hover-fg;
+            border-bottom: 1px solid $ac-color-body-light-bg-navbar-hover-fg;
           }
 
           &:active, &:focus {
             outline: none;
-            color: $pl-color-body-light-bg-navbar-active-fg;
-            border-bottom: 1px solid $pl-color-body-light-bg-navbar-active-fg;
+            color: $ac-color-body-light-bg-navbar-active-fg;
+            border-bottom: 1px solid $ac-color-body-light-bg-navbar-active-fg;
           }
 
           &.active {
-            color: $pl-color-body-light-bg-navbar-hover-fg;
+            color: $ac-color-body-light-bg-navbar-hover-fg;
           }
 
           &.plain:hover, &.plain:active, &.plain:focus, &.plain.active,
@@ -138,7 +138,7 @@
           }
 
           &:not(.plain) {
-            padding: 1.44rem $pl-spacing-md;
+            padding: 1.44rem $ac-spacing-md;
           }
 
           &.logo {
@@ -159,7 +159,7 @@
               display: none;
             }
 
-            @include pl-mode-dark {
+            @include ac-mode-dark {
               &.light {
                 display: none;
               }

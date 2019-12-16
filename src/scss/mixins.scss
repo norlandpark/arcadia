@@ -1,14 +1,14 @@
 @import "properties";
 
-@mixin pl-mode-dark {
-  @at-root body.pl-mode-dark & {
+@mixin ac-mode-dark {
+  @at-root body.ac-mode-dark & {
     @content;
   }
 }
 
-@mixin pl-screen-sm-up {
+@mixin ac-screen-sm-up {
   @at-root {
-    @media only screen and (min-width: $pl-grid-size-sm-min) {
+    @media only screen and (min-width: $ac-grid-size-sm-min) {
       & {
         @content;
       }
@@ -16,9 +16,9 @@
   }
 }
 
-@mixin pl-screen-md-up {
+@mixin ac-screen-md-up {
   @at-root {
-    @media only screen and (min-width: $pl-grid-size-md-min) {
+    @media only screen and (min-width: $ac-grid-size-md-min) {
       & {
         @content;
       }
@@ -26,9 +26,9 @@
   }
 }
 
-@mixin pl-screen-lg-up {
+@mixin ac-screen-lg-up {
   @at-root {
-    @media only screen and (min-width: $pl-grid-size-lg-min) {
+    @media only screen and (min-width: $ac-grid-size-lg-min) {
       & {
         @content;
       }
@@ -36,9 +36,9 @@
   }
 }
 
-@mixin pl-screen-xl-up {
+@mixin ac-screen-xl-up {
   @at-root {
-    @media only screen and (min-width: $pl-grid-size-xl-min) {
+    @media only screen and (min-width: $ac-grid-size-xl-min) {
       & {
         @content;
       }

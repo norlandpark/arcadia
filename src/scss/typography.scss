@@ -4,7 +4,7 @@
 
 // TODO: cleanup, extract variables etc.
 
-$pl-font-family-body: -apple-system,
+$ac-font-family-body: -apple-system,
 BlinkMacSystemFont,
 'segoe ui',
 roboto,
@@ -18,7 +18,7 @@ sans-serif,
 'segoe ui emoji',
 'segoe ui symbol' !default;
 
-$pl-font-family-title: 'open sans',
+$ac-font-family-title: 'open sans',
 -apple-system,
 BlinkMacSystemFont,
 'segoe ui',
@@ -33,86 +33,86 @@ sans-serif,
 'segoe ui emoji',
 'segoe ui symbol' !default;
 
-$pl-font-family-mono: 'source code pro',
+$ac-font-family-mono: 'source code pro',
 consolas,
 'courier new',
 courier,
 monospace !default;
 
-$pl-font-size-body: 14px !default;
-$pl-font-size-body-line-height: 22px !default;
-$pl-heading-title-margin-mul: 1.5 !default;
-$pl-heading-title-padding-mul: 0.25 !default;
+$ac-font-size-body: 14px !default;
+$ac-font-size-body-line-height: 22px !default;
+$ac-heading-title-margin-mul: 1.5 !default;
+$ac-heading-title-padding-mul: 0.25 !default;
 
-$pl-heading-h1-font-size-large: 3.42921rem;
-$pl-heading-h1-line-height-large: 4.04317rrem;
+$ac-heading-h1-font-size-large: 3.42921rem;
+$ac-heading-h1-line-height-large: 4.04317rrem;
 
-$pl-heading-h1-font-size: $pl-heading-h1-font-size-large * 0.7;
-$pl-heading-h1-line-height: $pl-heading-h1-line-height-large * 0.7;
+$ac-heading-h1-font-size: $ac-heading-h1-font-size-large * 0.7;
+$ac-heading-h1-line-height: $ac-heading-h1-line-height-large * 0.7;
 
-$pl-heading-h2-font-size-large: 2.28571rem;
-$pl-heading-h2-line-height-large: 3.03113rrem;
+$ac-heading-h2-font-size-large: 2.28571rem;
+$ac-heading-h2-line-height-large: 3.03113rrem;
 
-$pl-heading-h2-font-size: $pl-heading-h2-font-size-large * 0.8;
-$pl-heading-h2-line-height: $pl-heading-h2-line-height-large * 0.8;
+$ac-heading-h2-font-size: $ac-heading-h2-font-size-large * 0.8;
+$ac-heading-h2-line-height: $ac-heading-h2-line-height-large * 0.8;
 
-$pl-heading-h3-font-size-large: 1.81428rem;
-$pl-heading-h3-line-height-large: 2.42857rrem;
+$ac-heading-h3-font-size-large: 1.81428rem;
+$ac-heading-h3-line-height-large: 2.42857rrem;
 
-$pl-heading-h3-font-size: $pl-heading-h3-font-size-large * 0.8;
-$pl-heading-h3-line-height: $pl-heading-h3-line-height-large * 0.8;
+$ac-heading-h3-font-size: $ac-heading-h3-font-size-large * 0.8;
+$ac-heading-h3-line-height: $ac-heading-h3-line-height-large * 0.8;
 
-$pl-heading-h4-font-size-large: 1.57142rem;
-$pl-heading-h4-line-height-large: 2.14285rrem;
+$ac-heading-h4-font-size-large: 1.57142rem;
+$ac-heading-h4-line-height-large: 2.14285rrem;
 
-$pl-heading-h4-font-size: $pl-heading-h4-font-size-large * 0.8;
-$pl-heading-h4-line-height: $pl-heading-h4-line-height-large * 0.8;
+$ac-heading-h4-font-size: $ac-heading-h4-font-size-large * 0.8;
+$ac-heading-h4-line-height: $ac-heading-h4-line-height-large * 0.8;
 
-$pl-heading-h5-font-size-large: 1.42857rem;
-$pl-heading-h5-line-height-large: 2.11285rrem;
+$ac-heading-h5-font-size-large: 1.42857rem;
+$ac-heading-h5-line-height-large: 2.11285rrem;
 
-$pl-heading-h5-font-size: $pl-heading-h5-font-size-large * 0.8;
-$pl-heading-h5-line-height: $pl-heading-h5-line-height-large * 0.8;
+$ac-heading-h5-font-size: $ac-heading-h5-font-size-large * 0.8;
+$ac-heading-h5-line-height: $ac-heading-h5-line-height-large * 0.8;
 
-$pl-heading-h6-font-size-large: 1.14285rem;
-$pl-heading-h6-line-height-large: 1.57142rrem;
+$ac-heading-h6-font-size-large: 1.14285rem;
+$ac-heading-h6-line-height-large: 1.57142rrem;
 
-$pl-heading-h6-font-size: $pl-heading-h6-font-size-large * 0.95;
-$pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
+$ac-heading-h6-font-size: $ac-heading-h6-font-size-large * 0.95;
+$ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
 
-@mixin pl-typography {
-  .pl-font-title-primary {
-    font-family: $pl-font-family-title;
+@mixin ac-typography {
+  .ac-font-title-primary {
+    font-family: $ac-font-family-title;
   }
 
-  .pl-font-body {
-    font-family: $pl-font-family-body;
+  .ac-font-body {
+    font-family: $ac-font-family-body;
   }
 
-  .pl-font-mono {
-    font-family: $pl-font-family-mono;
+  .ac-font-mono {
+    font-family: $ac-font-family-mono;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 0;
     padding: 0;
-    color: $pl-color-body-light-heading-text-fg;
-    font-family: $pl-font-family-title;
+    color: $ac-color-body-light-heading-text-fg;
+    font-family: $ac-font-family-title;
 
-    @include pl-mode-dark {
-      color: $pl-color-body-dark-heading-text-fg;
+    @include ac-mode-dark {
+      color: $ac-color-body-dark-heading-text-fg;
     }
 
     & > small {
       font-size: 0.6em;
     }
 
-    &.pl-title {
-      border-bottom: 1px solid $pl-color-body-light-bg-panel-primary-border;
+    &.ac-title {
+      border-bottom: 1px solid $ac-color-body-light-bg-panel-primary-border;
 
-      @include pl-mode-dark {
-        border-bottom: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+      @include ac-mode-dark {
+        border-bottom: 1px solid $ac-color-body-dark-bg-panel-primary-border;
       }
     }
   }
@@ -130,156 +130,156 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
   }
 
   h1 {
-    font-size: $pl-heading-h1-font-size;
-    line-height: $pl-heading-h1-line-height;
+    font-size: $ac-heading-h1-font-size;
+    line-height: $ac-heading-h1-line-height;
 
-    @include pl-screen-md-up {
-      font-size: $pl-heading-h1-font-size-large;
-      line-height: $pl-heading-h1-line-height-large;
+    @include ac-screen-md-up {
+      font-size: $ac-heading-h1-font-size-large;
+      line-height: $ac-heading-h1-line-height-large;
     }
 
-    @include pl-mrg-y(0.75em);
+    @include ac-mrg-y(0.75em);
 
     &:first-child {
       margin-top: 0;
     }
 
-    &.pl-title {
-      margin-bottom: 0.75em * $pl-heading-title-margin-mul;
-      padding-bottom: 0.75em * $pl-heading-title-padding-mul;
+    &.ac-title {
+      margin-bottom: 0.75em * $ac-heading-title-margin-mul;
+      padding-bottom: 0.75em * $ac-heading-title-padding-mul;
     }
   }
 
   h2 {
-    font-size: $pl-heading-h2-font-size;
-    line-height: $pl-heading-h2-line-height;
+    font-size: $ac-heading-h2-font-size;
+    line-height: $ac-heading-h2-line-height;
 
-    @include pl-screen-md-up {
-      font-size: $pl-heading-h2-font-size-large;
-      line-height: $pl-heading-h2-line-height-large;
+    @include ac-screen-md-up {
+      font-size: $ac-heading-h2-font-size-large;
+      line-height: $ac-heading-h2-line-height-large;
     }
 
-    @include pl-mrg-y(0.5em);
+    @include ac-mrg-y(0.5em);
 
     &:first-child {
       margin-top: 0;
     }
 
-    &.pl-title {
-      margin-bottom: 0.5em * $pl-heading-title-margin-mul;
-      padding-bottom: 0.5em * $pl-heading-title-padding-mul;
+    &.ac-title {
+      margin-bottom: 0.5em * $ac-heading-title-margin-mul;
+      padding-bottom: 0.5em * $ac-heading-title-padding-mul;
     }
   }
 
   h3 {
-    font-size: $pl-heading-h3-font-size;
-    line-height: $pl-heading-h3-line-height;
+    font-size: $ac-heading-h3-font-size;
+    line-height: $ac-heading-h3-line-height;
 
-    @include pl-screen-md-up {
-      font-size: $pl-heading-h3-font-size-large;
-      line-height: $pl-heading-h3-line-height-large;
+    @include ac-screen-md-up {
+      font-size: $ac-heading-h3-font-size-large;
+      line-height: $ac-heading-h3-line-height-large;
     }
 
-    @include pl-mrg-y(0.5em);
+    @include ac-mrg-y(0.5em);
 
     &:first-child {
       margin-top: 0;
     }
 
-    &.pl-title {
-      margin-bottom: 0.5em * $pl-heading-title-margin-mul;
-      padding-bottom: 0.5em * $pl-heading-title-padding-mul;
+    &.ac-title {
+      margin-bottom: 0.5em * $ac-heading-title-margin-mul;
+      padding-bottom: 0.5em * $ac-heading-title-padding-mul;
     }
   }
 
   h4 {
-    font-size: $pl-heading-h4-font-size;
-    line-height: $pl-heading-h4-line-height;
+    font-size: $ac-heading-h4-font-size;
+    line-height: $ac-heading-h4-line-height;
 
-    @include pl-screen-md-up {
-      font-size: $pl-heading-h4-font-size-large;
-      line-height: $pl-heading-h4-line-height-large;
+    @include ac-screen-md-up {
+      font-size: $ac-heading-h4-font-size-large;
+      line-height: $ac-heading-h4-line-height-large;
     }
 
-    @include pl-mrg-y(0.5em);
+    @include ac-mrg-y(0.5em);
 
     &:first-child {
       margin-top: 0;
     }
 
-    &.pl-title {
-      margin-bottom: 0.5em * $pl-heading-title-margin-mul;
-      padding-bottom: 0.5em * $pl-heading-title-padding-mul;
+    &.ac-title {
+      margin-bottom: 0.5em * $ac-heading-title-margin-mul;
+      padding-bottom: 0.5em * $ac-heading-title-padding-mul;
     }
   }
 
   h5 {
-    font-size: $pl-heading-h5-font-size;
-    line-height: $pl-heading-h5-line-height;
+    font-size: $ac-heading-h5-font-size;
+    line-height: $ac-heading-h5-line-height;
 
-    @include pl-screen-md-up {
-      font-size: $pl-heading-h5-font-size-large;
-      line-height: $pl-heading-h5-line-height-large;
+    @include ac-screen-md-up {
+      font-size: $ac-heading-h5-font-size-large;
+      line-height: $ac-heading-h5-line-height-large;
     }
 
-    @include pl-mrg-y(0.25em);
+    @include ac-mrg-y(0.25em);
 
     &:first-child {
       margin-top: 0;
     }
 
-    &.pl-title {
-      margin-bottom: 0.25em * $pl-heading-title-margin-mul;
-      padding-bottom: 0.25em * $pl-heading-title-padding-mul;
+    &.ac-title {
+      margin-bottom: 0.25em * $ac-heading-title-margin-mul;
+      padding-bottom: 0.25em * $ac-heading-title-padding-mul;
     }
   }
 
   h6 {
-    font-size: $pl-heading-h6-font-size;
-    line-height: $pl-heading-h6-line-height;
+    font-size: $ac-heading-h6-font-size;
+    line-height: $ac-heading-h6-line-height;
 
-    @include pl-screen-md-up {
-      font-size: $pl-heading-h6-font-size-large;
-      line-height: $pl-heading-h6-line-height-large;
+    @include ac-screen-md-up {
+      font-size: $ac-heading-h6-font-size-large;
+      line-height: $ac-heading-h6-line-height-large;
     }
 
-    @include pl-mrg-y(0.25em);
+    @include ac-mrg-y(0.25em);
 
     &:first-child {
       margin-top: 0;
     }
 
-    &.pl-title {
-      margin-bottom: 0.25em * $pl-heading-title-margin-mul;
-      padding-bottom: 0.25em * $pl-heading-title-padding-mul;
+    &.ac-title {
+      margin-bottom: 0.25em * $ac-heading-title-margin-mul;
+      padding-bottom: 0.25em * $ac-heading-title-padding-mul;
     }
   }
 
-  a:not(.pl-button) {
-    color: $pl-color-neptune;
+  a:not(.ac-button) {
+    color: $ac-color-neptune;
 
     &::-moz-focus-inner {
       border: 0;
     }
 
-    @include pl-mode-dark {
-      color: $pl-color-neptune-tint-200;
+    @include ac-mode-dark {
+      color: $ac-color-neptune-tint-200;
     }
 
     &:hover {
       cursor: pointer;
       text-decoration: underline;
-      color: $pl-color-neptune-shade-300;
+      color: $ac-color-neptune-shade-300;
 
-      @include pl-mode-dark {
-        color: $pl-color-neptune;
+      @include ac-mode-dark {
+        color: $ac-color-neptune;
       }
     }
   }
 
   p {
-    font-size: $pl-font-size-body;
-    line-height: $pl-font-size-body-line-height;
+    font-size: $ac-font-size-body;
+    line-height: $ac-font-size-body-line-height;
     margin-top: 0;
     margin-bottom: 1rem;
 
@@ -293,16 +293,16 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
   }
 
   kbd {
-    color: $pl-color-crimson;
+    color: $ac-color-crimson;
 
-    @include pl-mode-dark() {
-      color: $pl-color-crimson-tint-200;
+    @include ac-mode-dark() {
+      color: $ac-color-crimson-tint-200;
     }
   }
 
   code, pre, kbd {
     font-size: 1em;
-    font-family: $pl-font-family-mono;
+    font-family: $ac-font-family-mono;
     font-weight: normal;
     overflow: auto;
 
@@ -316,14 +316,14 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
   }
 
   code {
-    color: $pl-color-crimson;
-    background: $pl-color-body-light-bg-panel-secondary;
+    color: $ac-color-crimson;
+    background: $ac-color-body-light-bg-panel-secondary;
     padding-left: 2px;
     padding-right: 2px;
 
-    @include pl-mode-dark() {
-      color: $pl-color-crimson-tint-200;
-      background: $pl-color-body-dark-bg-panel-secondary;
+    @include ac-mode-dark() {
+      color: $ac-color-crimson-tint-200;
+      background: $ac-color-body-dark-bg-panel-secondary;
     }
 
     &.block {
@@ -337,7 +337,7 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
     }
   }
 
-  .pl-text-micro {
+  .ac-text-micro {
     &.heading {
       font-size: 0.929em;
       line-height: 1.429em;
@@ -350,9 +350,9 @@ $pl-heading-h6-line-height: $pl-heading-h6-line-height-large * 0.95;
     }
   }
 
-  .pl-text-body {
-    font-size: $pl-font-size-body;
-    font-family: $pl-font-family-body;
-    line-height: $pl-font-size-body-line-height;
+  .ac-text-body {
+    font-size: $ac-font-size-body;
+    font-family: $ac-font-family-body;
+    line-height: $ac-font-size-body-line-height;
   }
 }

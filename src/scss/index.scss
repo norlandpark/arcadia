@@ -15,12 +15,12 @@
 @import "account";
 @import "pricing";
 
-@mixin pl-main {
+@mixin ac-main {
   @at-root {
     body, html {
-      font-size: $pl-font-size-body;
+      font-size: $ac-font-size-body;
       line-height: initial;
-      font-family: $pl-font-family-body;
+      font-family: $ac-font-family-body;
       font-weight: normal;
       font-style: normal;
       -webkit-font-smoothing: subpixel-antialiased;
@@ -37,22 +37,22 @@
     }
 
     body {
-      background: $pl-color-body-light-text-bg;
-      color: $pl-color-body-light-text-fg;
+      background: $ac-color-body-light-text-bg;
+      color: $ac-color-body-light-text-fg;
 
-      .pl-only-dark {
+      .ac-only-dark {
         display: none;
       }
 
-      &.pl-mode-dark {
-        background: $pl-color-body-dark-text-bg;
-        color: $pl-color-body-dark-text-fg;
+      &.ac-mode-dark {
+        background: $ac-color-body-dark-text-bg;
+        color: $ac-color-body-dark-text-fg;
 
-        .pl-only-dark {
+        .ac-only-dark {
           display: initial;
         }
 
-        .pl-only-light {
+        .ac-only-light {
           display: none;
         }
       }
@@ -70,17 +70,17 @@
       box-sizing: inherit;
     }
 
-    // TODO: rename to pl-module-*
-    @include pl-typography();
-    @include pl-buttons();
-    @include pl-form();
-    @include pl-table();
-    @include pl-grid();
-    @include pl-containers();
-    @include pl-utilities();
-    @include pl-navbar();
-    @include pl-layouts();
-    @include pl-account();
-    @include pl-pricing();
+    // TODO: rename to ac-module-*
+    @include ac-typography();
+    @include ac-buttons();
+    @include ac-form();
+    @include ac-table();
+    @include ac-grid();
+    @include ac-containers();
+    @include ac-utilities();
+    @include ac-navbar();
+    @include ac-layouts();
+    @include ac-account();
+    @include ac-pricing();
   }
 }

@@ -15,7 +15,7 @@ export default function (context, options) {
 
   for (const moduleName of optionsModulesEnabled) {
     if (!knownModules.hasOwnProperty(moduleName)) {
-      throw 'Unknown Parkland module requested - ' + moduleName;
+      throw 'Unknown Arcadia module requested - ' + moduleName;
     }
 
     const moduleDef = knownModules[moduleName];

@@ -3,62 +3,62 @@
 @import "properties";
 @import "mixins";
 
-@mixin pl-form {
-  form.pl-form {
+@mixin ac-form {
+  form.ac-form {
     & > div:not(:last-child) {
-      margin-bottom: $pl-spacing-sm;
+      margin-bottom: $ac-spacing-sm;
     }
 
     label {
       display: flex;
-      font-family: $pl-font-family-body;
-      font-size: $pl-heading-h6-font-size;
-      line-height: $pl-heading-h6-line-height;
-      margin-bottom: $pl-spacing-xs;
+      font-family: $ac-font-family-body;
+      font-size: $ac-heading-h6-font-size;
+      line-height: $ac-heading-h6-line-height;
+      margin-bottom: $ac-spacing-xs;
     }
 
-    ul.pl-error-list {
-      color: $pl-color-wolf;
+    ul.ac-error-list {
+      color: $ac-color-wolf;
       margin: 0;
       padding: 0.25rem 0 0 1.4rem;
       font-size: 0.9rem;
 
-      @include pl-mode-dark {
-        color: $pl-color-wolf-tint-200;
+      @include ac-mode-dark {
+        color: $ac-color-wolf-tint-200;
       }
     }
 
-    div.pl-error-list {
-      color: $pl-color-wolf;
+    div.ac-error-list {
+      color: $ac-color-wolf;
       padding-top: 0.25rem;
       font-size: 0.9rem;
 
-      @include pl-mode-dark {
-        color: $pl-color-wolf-tint-200;
+      @include ac-mode-dark {
+        color: $ac-color-wolf-tint-200;
       }
     }
   }
 
-  input.pl-input:not([type]),
-  input.pl-input[type=date],
-  input.pl-input[type=datetime-local],
-  input.pl-input[type=email],
-  input.pl-input[type=month],
-  input.pl-input[type=number],
-  input.pl-input[type=password],
-  input.pl-input[type=search],
-  input.pl-input[type=tel],
-  input.pl-input[type=text],
-  input.pl-input[type=time],
-  input.pl-input[type=url],
-  input.pl-input[type=week],
-  select.pl-input,
+  input.ac-input:not([type]),
+  input.ac-input[type=date],
+  input.ac-input[type=datetime-local],
+  input.ac-input[type=email],
+  input.ac-input[type=month],
+  input.ac-input[type=number],
+  input.ac-input[type=password],
+  input.ac-input[type=search],
+  input.ac-input[type=tel],
+  input.ac-input[type=text],
+  input.ac-input[type=time],
+  input.ac-input[type=url],
+  input.ac-input[type=week],
+  select.ac-input,
   textarea {
-    background: $pl-color-body-light-bg-input-bg;
-    border: 1px solid $pl-color-body-light-bg-input-border;
-    color: $pl-color-body-light-bg-input-fg;
-    outline-color: $pl-color-eve;
-    font-family: $pl-font-family-body;
+    background: $ac-color-body-light-bg-input-bg;
+    border: 1px solid $ac-color-body-light-bg-input-border;
+    color: $ac-color-body-light-bg-input-fg;
+    outline-color: $ac-color-eve;
+    font-family: $ac-font-family-body;
     font-size: 1em;
     padding: 0.714em 1.428em;
     border-radius: 2px;
@@ -72,14 +72,14 @@
       font-size: 0.97em;
     }
 
-    @include pl-mode-dark {
-      background: $pl-color-body-dark-bg-input-bg;
-      border: 1px solid $pl-color-body-dark-bg-input-border;
-      color: $pl-color-body-dark-bg-input-fg;
-      outline-color: $pl-color-cornflower;
+    @include ac-mode-dark {
+      background: $ac-color-body-dark-bg-input-bg;
+      border: 1px solid $ac-color-body-dark-bg-input-border;
+      color: $ac-color-body-dark-bg-input-fg;
+      outline-color: $ac-color-cornflower;
 
       &::placeholder {
-        color: darken($pl-color-body-dark-bg-input-fg, 20%);
+        color: darken($ac-color-body-dark-bg-input-fg, 20%);
         opacity: 1;
       }
     }
@@ -93,35 +93,35 @@
     }
 
     // Deviation from normal naming convention to avoid collisions with other valdiation tools
-    &.pl-input-error, &:invalid {
-      background: $pl-color-wolf-tint-500;
-      border: 1px solid $pl-color-wolf-tint-300;
-      color: $pl-color-wolf;
-      outline-color: $pl-color-wolf;
+    &.ac-input-error, &:invalid {
+      background: $ac-color-wolf-tint-500;
+      border: 1px solid $ac-color-wolf-tint-300;
+      color: $ac-color-wolf;
+      outline-color: $ac-color-wolf;
 
       &::placeholder {
-        color: $pl-color-wolf;
+        color: $ac-color-wolf;
       }
 
-      @include pl-mode-dark {
-        background: $pl-color-wolf-tint-500;
-        border: 1px solid $pl-color-wolf-tint-200;
-        color: $pl-color-wolf;
-        outline-color: $pl-color-wolf-tint-200;
+      @include ac-mode-dark {
+        background: $ac-color-wolf-tint-500;
+        border: 1px solid $ac-color-wolf-tint-200;
+        color: $ac-color-wolf;
+        outline-color: $ac-color-wolf-tint-200;
 
         &::placeholder {
-          color: $pl-color-wolf;
+          color: $ac-color-wolf;
         }
       }
     }
   }
 
-  select.pl-input {
+  select.ac-input {
     cursor: pointer;
     appearance: none;
   }
 
-  textarea.pl-input {
+  textarea.ac-input {
     padding: 0.714em;
     min-height: 7em;
 
@@ -139,12 +139,12 @@
     }
   }
 
-  input.pl-input[type=checkbox] + label,
-  input.pl-input[type=radio] + label{
+  input.ac-input[type=checkbox] + label,
+  input.ac-input[type=radio] + label{
     display: inline;
-    padding-left: $pl-spacing-xs;
+    padding-left: $ac-spacing-xs;
     cursor: pointer;
-    font-size: $pl-font-size-body;
+    font-size: $ac-font-size-body;
     line-height: initial;
   }
 }

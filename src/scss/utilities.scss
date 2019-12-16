@@ -1,45 +1,45 @@
-$pl-spacing-na: 0;
-$pl-spacing-3xs: 0.14285714285714285rem;
-$pl-spacing-xxs: 0.2857142857142857rem;
-$pl-spacing-xs: 0.5714285714285714rem;
-$pl-spacing-sm: 1.1428571428571428rem;
-$pl-spacing-md: 2.2857142857142856rem;
-$pl-spacing-lg: 3.4285714285714284rem;
-$pl-spacing-xl: 4.571428571428571rem;
-$pl-spacing-xxl: 5.714285714285714rem;
-$pl-spacing-3xl: 6.857142857142857rem;
+$ac-spacing-na: 0;
+$ac-spacing-3xs: 0.14285714285714285rem;
+$ac-spacing-xxs: 0.2857142857142857rem;
+$ac-spacing-xs: 0.5714285714285714rem;
+$ac-spacing-sm: 1.1428571428571428rem;
+$ac-spacing-md: 2.2857142857142856rem;
+$ac-spacing-lg: 3.4285714285714284rem;
+$ac-spacing-xl: 4.571428571428571rem;
+$ac-spacing-xxl: 5.714285714285714rem;
+$ac-spacing-3xl: 6.857142857142857rem;
 
-@mixin pl-pad-x($size) {
+@mixin ac-pad-x($size) {
   padding-left: $size;
   padding-right: $size;
 }
 
-@mixin pl-pad-y($size) {
+@mixin ac-pad-y($size) {
   padding-top: $size;
   padding-bottom: $size;
 }
 
-@mixin pl-pad-xy($x, $y) {
-  @include pl-pad-x($x);
-  @include pl-pad-y($y);
+@mixin ac-pad-xy($x, $y) {
+  @include ac-pad-x($x);
+  @include ac-pad-y($y);
 }
 
-@mixin pl-mrg-x($size) {
+@mixin ac-mrg-x($size) {
   margin-left: $size;
   margin-right: $size;
 }
 
-@mixin pl-mrg-y($size) {
+@mixin ac-mrg-y($size) {
   margin-top: $size;
   margin-bottom: $size;
 }
 
-@mixin pl-mrg-xy($x, $y) {
-  @include pl-mrg-x($x);
-  @include pl-mrg-y($y);
+@mixin ac-mrg-xy($x, $y) {
+  @include ac-mrg-x($x);
+  @include ac-mrg-y($y);
 }
 
-@mixin pl-mrg-y-smart($size) {
+@mixin ac-mrg-y-smart($size) {
   &:not(:only-child) {
     &:first-child {
       margin-top: $size;
@@ -51,124 +51,124 @@ $pl-spacing-3xl: 6.857142857142857rem;
   }
 }
 
-@mixin pl-utilities {
+@mixin ac-utilities {
   $spacing-sizes: (
-    'na': $pl-spacing-na,
-    '3xs': $pl-spacing-3xs,
-    'xxs': $pl-spacing-xxs,
-    'xs': $pl-spacing-xs,
-    'sm': $pl-spacing-sm,
-    'md': $pl-spacing-md,
-    'lg': $pl-spacing-lg,
-    'xl': $pl-spacing-xl,
-    'xxl': $pl-spacing-xxl,
-    '3xl': $pl-spacing-3xl,
+    'na': $ac-spacing-na,
+    '3xs': $ac-spacing-3xs,
+    'xxs': $ac-spacing-xxs,
+    'xs': $ac-spacing-xs,
+    'sm': $ac-spacing-sm,
+    'md': $ac-spacing-md,
+    'lg': $ac-spacing-lg,
+    'xl': $ac-spacing-xl,
+    'xxl': $ac-spacing-xxl,
+    '3xl': $ac-spacing-3xl,
   );
 
   @each $size, $spacing in $spacing-sizes {
-    .pl-pad-xy-#{$size} {
+    .ac-pad-xy-#{$size} {
       padding: $spacing;
     }
 
-    .pl-pad-x-#{$size} {
+    .ac-pad-x-#{$size} {
       padding-left: $spacing;
       padding-right: $spacing;
     }
 
-    .pl-pad-y-#{$size} {
+    .ac-pad-y-#{$size} {
       padding-top: $spacing;
       padding-bottom: $spacing;
     }
 
-    .pl-pad-l-#{$size} {
+    .ac-pad-l-#{$size} {
       padding-left: $spacing;
     }
 
-    .pl-pad-r-#{$size} {
+    .ac-pad-r-#{$size} {
       padding-right: $spacing;
     }
 
-    .pl-pad-t-#{$size} {
+    .ac-pad-t-#{$size} {
       padding-top: $spacing;
     }
 
-    .pl-pad-b-#{$size} {
+    .ac-pad-b-#{$size} {
       padding-bottom: $spacing;
     }
 
-    .pl-mrg-xy-#{$size} {
+    .ac-mrg-xy-#{$size} {
       margin: $spacing;
     }
 
-    .pl-mrg-x-#{$size} {
+    .ac-mrg-x-#{$size} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .pl-mrg-y-#{$size} {
+    .ac-mrg-y-#{$size} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .pl-mrg-l-#{$size} {
+    .ac-mrg-l-#{$size} {
       margin-left: $spacing;
     }
 
-    .pl-mrg-r-#{$size} {
+    .ac-mrg-r-#{$size} {
       margin-right: $spacing;
     }
 
-    .pl-mrg-t-#{$size} {
+    .ac-mrg-t-#{$size} {
       margin-top: $spacing;
     }
 
-    .pl-mrg-b-#{$size} {
+    .ac-mrg-b-#{$size} {
       margin-bottom: $spacing;
     }
   }
 
-  .pl-mrg-x-auto {
+  .ac-mrg-x-auto {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .pl-user-select-none {
+  .ac-user-select-none {
     user-select: none;
   }
 
-  .pl-user-select-auto {
+  .ac-user-select-auto {
     user-select: auto;
   }
 
-  .pl-user-select-text {
+  .ac-user-select-text {
     user-select: text;
   }
 
-  .pl-user-select-contain {
+  .ac-user-select-contain {
     user-select: contain;
   }
 
-  .pl-user-select-all {
+  .ac-user-select-all {
     user-select: all;
   }
 
-  .pl-text-left {
+  .ac-text-left {
     text-align: left;
   }
 
-  .pl-text-center {
+  .ac-text-center {
     text-align: center;
   }
 
-  .pl-text-right {
+  .ac-text-right {
     text-align: right;
   }
 
-  .pl-word-break-all {
+  .ac-word-break-all {
     word-break: break-all;
   }
 
-  .pl-word-break-word {
+  .ac-word-break-word {
     word-break: break-word;
   }
 }

@@ -3,33 +3,33 @@
 @import "typography";
 @import "mixins";
 
-@mixin pl-account {
+@mixin ac-account {
   // This style intentionally avoids strict nesting (form generators often wrap elements in div's etc)
-  section.pl-account a {
+  section.ac-account a {
     text-decoration: none;
   }
 
-  section.pl-account {
+  section.ac-account {
     &.sign-in {
       max-width: 25rem;
     }
 
     div.welcome {
-      font-size: $pl-heading-h2-font-size;
-      line-height: $pl-heading-h2-line-height;
+      font-size: $ac-heading-h2-font-size;
+      line-height: $ac-heading-h2-line-height;
       font-weight: 300;
-      margin-bottom: $pl-spacing-xs;
+      margin-bottom: $ac-spacing-xs;
     }
 
     div.lead {
-      margin-bottom: $pl-spacing-md;
+      margin-bottom: $ac-spacing-md;
     }
 
     div.links {
-      margin-top: $pl-spacing-lg;
+      margin-top: $ac-spacing-lg;
 
       & > div.link:not(:last-child) {
-        margin-bottom: $pl-spacing-xxs;
+        margin-bottom: $ac-spacing-xxs;
       }
     }
 
@@ -56,7 +56,7 @@
         width: 100%;
 
         &.submit, &[type=submit] {
-          margin-top: $pl-spacing-md;
+          margin-top: $ac-spacing-md;
         }
       }
     }

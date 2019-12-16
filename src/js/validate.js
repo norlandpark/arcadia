@@ -16,14 +16,14 @@ export default {
 
       for (const input of inputs) {
         const hasErrors = errors.hasOwnProperty(input.name);
-        const isMarkedError = input.classList.contains('pl-input-error');
+        const isMarkedError = input.classList.contains('ac-input-error');
 
         // Was invalid, now is valid
         if (isMarkedError && !hasErrors) {
-          input.classList.remove('pl-input-error');
+          input.classList.remove('ac-input-error');
           input.setCustomValidity('');
 
-          const errorLists = input.parentElement.querySelectorAll('.pl-error-list');
+          const errorLists = input.parentElement.querySelectorAll('.ac-error-list');
 
           for(const errorList of errorLists) {
             input.parentElement.removeChild(errorList);
@@ -39,7 +39,7 @@ export default {
 
         // Is not valid
         if (!isMarkedError) {
-          input.classList.add('pl-input-error');
+          input.classList.add('ac-input-error');
         }
 
         const messages = errors[input.name];
@@ -53,14 +53,14 @@ export default {
         let errorContainer;
         if (null === nextElement) {
           errorContainer = document.createElement(messagesElement);
-          errorContainer.className = 'pl-error-list';
+          errorContainer.className = 'ac-error-list';
           input.parentElement.appendChild(errorContainer);
-        } else if (nextElement.classList.contains('pl-error-list')) {
+        } else if (nextElement.classList.contains('ac-error-list')) {
           errorContainer = nextElement;
           errorContainer.innerHTML = '';
         } else {
           errorContainer = document.createElement(messagesElement);
-          errorContainer.className = 'pl-error-list';
+          errorContainer.className = 'ac-error-list';
           input.parentElement.insertBefore(errorContainer, input.nextSibling);
         }
 
@@ -111,7 +111,7 @@ export default {
     };
 
     this.init = () => {
-      const forms = document.getElementsByClassName('pl-validate');
+      const forms = document.getElementsByClassName('ac-validate');
 
       for (const form of forms) {
         const rulesetName = form.getAttribute('data-ruleset');

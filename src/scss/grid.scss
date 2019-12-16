@@ -1,6 +1,6 @@
 @import "properties";
 
-$pl-grid-sizes: 'sm', 'md', 'lg', 'xl';
+$ac-grid-sizes: 'sm', 'md', 'lg', 'xl';
 
 @mixin grid-size-commons($size) {
   .start-#{$size} {
@@ -48,7 +48,7 @@ $pl-grid-sizes: 'sm', 'md', 'lg', 'xl';
 }
 
 @mixin grid-size-columns($size) {
-  .pl-col-#{$size} {
+  .ac-col-#{$size} {
     flex-grow: 1;
     flex-basis: 0;
     max-width: 100%;
@@ -58,28 +58,28 @@ $pl-grid-sizes: 'sm', 'md', 'lg', 'xl';
     }
   }
 
-  @for $i from 1 through $pl-grid-num-columns {
+  @for $i from 1 through $ac-grid-num-columns {
     $size-percentage: percentage(($i * 4.16666666667) / 100);
 
-    .pl-col-#{$size}-#{$i} {
+    .ac-col-#{$size}-#{$i} {
       box-sizing: border-box;
       flex: 0 0 auto;
       flex-basis: $size-percentage;
       max-width: $size-percentage;
     }
 
-    .pl-col-#{$size}-offset-#{$i} {
+    .ac-col-#{$size}-offset-#{$i} {
       margin-left: $size-percentage;
     }
 
-    .pl-col-#{$size}-push-#{$i} {
+    .ac-col-#{$size}-push-#{$i} {
       margin-right: $size-percentage;
     }
   }
 }
 
 @mixin grid-columns-exclude-not($size) {
-  @each $grid-size in $pl-grid-sizes {
+  @each $grid-size in $ac-grid-sizes {
     @if $grid-size != $size {
       .only-#{$grid-size} {
         display: none;
@@ -88,8 +88,8 @@ $pl-grid-sizes: 'sm', 'md', 'lg', 'xl';
   }
 }
 
-@mixin pl-grid {
-  .pl-row {
+@mixin ac-grid {
+  .ac-row {
     display: flex;
     box-sizing: border-box;
     flex: 0 1 auto;
@@ -114,25 +114,25 @@ $pl-grid-sizes: 'sm', 'md', 'lg', 'xl';
   @include grid-size-columns('xs');
   @include grid-columns-exclude-not('xs');
 
-  @media only screen and (min-width: $pl-grid-size-sm-min) {
+  @media only screen and (min-width: $ac-grid-size-sm-min) {
     @include grid-size-commons('sm');
     @include grid-size-columns('sm');
     @include grid-columns-exclude-not('sm');
   }
 
-  @media only screen and (min-width: $pl-grid-size-md-min) {
+  @media only screen and (min-width: $ac-grid-size-md-min) {
     @include grid-size-commons('md');
     @include grid-size-columns('md');
     @include grid-columns-exclude-not('md');
   }
 
-  @media only screen and (min-width: $pl-grid-size-lg-min) {
+  @media only screen and (min-width: $ac-grid-size-lg-min) {
     @include grid-size-commons('lg');
     @include grid-size-columns('lg');
     @include grid-columns-exclude-not('lg');
   }
 
-  @media only screen and (min-width: $pl-grid-size-xl-min) {
+  @media only screen and (min-width: $ac-grid-size-xl-min) {
     @include grid-size-commons('xl');
     @include grid-size-columns('xl');
     @include grid-columns-exclude-not('xl');

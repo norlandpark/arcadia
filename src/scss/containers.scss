@@ -5,13 +5,13 @@
 @import "properties";
 @import "elevation";
 
-@mixin pl-card {
-  @include pl-elevation(1);
-  @include pl-pad-xy($pl-spacing-sm, $pl-spacing-sm);
+@mixin ac-card {
+  @include ac-elevation(1);
+  @include ac-pad-xy($ac-spacing-sm, $ac-spacing-sm);
 }
 
-@mixin pl-containers {
-  .pl-panel-container {
+@mixin ac-containers {
+  .ac-panel-container {
     margin: auto 1rem;
 
     &.page {
@@ -24,8 +24,8 @@
     }
   }
 
-  @media only screen and (min-width: $pl-grid-size-sm-min) {
-    .pl-panel-container {
+  @media only screen and (min-width: $ac-grid-size-sm-min) {
+    .ac-panel-container {
       margin: auto 2rem;
 
       &.page {
@@ -39,8 +39,8 @@
     }
   }
 
-  @media only screen and (min-width: $pl-grid-size-md-min) {
-    .pl-panel-container {
+  @media only screen and (min-width: $ac-grid-size-md-min) {
+    .ac-panel-container {
       margin: auto 4rem;
 
       &.page {
@@ -54,10 +54,10 @@
     }
   }
 
-  @media only screen and (min-width: $pl-grid-size-lg-min) {
-    .pl-panel-container {
+  @media only screen and (min-width: $ac-grid-size-lg-min) {
+    .ac-panel-container {
       margin: auto;
-      max-width: $pl-panel-container-wrap-at;
+      max-width: $ac-panel-container-wrap-at;
 
       &.page {
         padding-top: 4rem;
@@ -70,10 +70,10 @@
     }
   }
 
-  @media only screen and (min-width: $pl-grid-size-xl-min) {
-    .pl-panel-container {
+  @media only screen and (min-width: $ac-grid-size-xl-min) {
+    .ac-panel-container {
       margin: auto;
-      max-width: $pl-panel-container-wrap-at;
+      max-width: $ac-panel-container-wrap-at;
 
       &.page {
         padding-top: 4rem;
@@ -86,142 +86,142 @@
     }
   }
 
-  .pl-card {
-    @include pl-card;
+  .ac-card {
+    @include ac-card;
 
-    background: $pl-color-body-light-bg-panel-primary;
-    border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+    background: $ac-color-body-light-bg-panel-primary;
+    border: 1px solid $ac-color-body-light-bg-panel-primary-border;
     width: 100%;
     position: relative;
     min-height: 1em;
 
-    @include pl-mode-dark {
-      background: $pl-color-body-dark-bg-panel-primary;
-      border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+    @include ac-mode-dark {
+      background: $ac-color-body-dark-bg-panel-primary;
+      border: 1px solid $ac-color-body-dark-bg-panel-primary-border;
     }
   }
 
-  .pl-panel {
-    background: $pl-color-body-light-bg-panel-primary;
-    border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+  .ac-panel {
+    background: $ac-color-body-light-bg-panel-primary;
+    border: 1px solid $ac-color-body-light-bg-panel-primary-border;
     width: 100%;
     position: relative;
     min-height: 1em;
 
-    @include pl-mode-dark {
-      background: $pl-color-body-dark-bg-panel-primary;
-      border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+    @include ac-mode-dark {
+      background: $ac-color-body-dark-bg-panel-primary;
+      border: 1px solid $ac-color-body-dark-bg-panel-primary-border;
     }
 
-    &.pl-card {
-      @include pl-card;
+    &.ac-card {
+      @include ac-card;
     }
 
     &.secondary {
-      background: $pl-color-body-light-bg-panel-secondary;
-      border: 1px solid $pl-color-body-light-bg-panel-secondary-border;
+      background: $ac-color-body-light-bg-panel-secondary;
+      border: 1px solid $ac-color-body-light-bg-panel-secondary-border;
 
-      @include pl-mode-dark {
-        background: $pl-color-body-dark-bg-panel-secondary;
-        border: 1px solid $pl-color-body-dark-bg-panel-secondary-border;
+      @include ac-mode-dark {
+        background: $ac-color-body-dark-bg-panel-secondary;
+        border: 1px solid $ac-color-body-dark-bg-panel-secondary-border;
       }
     }
 
     &.tertiary {
-      background: $pl-color-body-light-bg-panel-tertiary;
-      border: 1px solid $pl-color-body-light-bg-panel-tertiary-border;
+      background: $ac-color-body-light-bg-panel-tertiary;
+      border: 1px solid $ac-color-body-light-bg-panel-tertiary-border;
 
-      @include pl-mode-dark {
-        background: $pl-color-body-dark-bg-panel-tertiary;
-        border: 1px solid $pl-color-body-dark-bg-panel-tertiary-border;
+      @include ac-mode-dark {
+        background: $ac-color-body-dark-bg-panel-tertiary;
+        border: 1px solid $ac-color-body-dark-bg-panel-tertiary-border;
       }
     }
 
     &.signal-info, &.signal-success, &.signal-warning, &.signal-danger {
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xs);
-      @include pl-mrg-y-smart($pl-spacing-sm);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-xs);
+      @include ac-mrg-y-smart($ac-spacing-sm);
 
       & > .signal-heading {
         font-weight: 500;
 
         &:not(:last-child) {
-          margin-bottom: $pl-spacing-xxs;
+          margin-bottom: $ac-spacing-xxs;
         }
       }
     }
 
     &.signal-info {
-      border: 1px solid $pl-color-neptune-tint-300;
-      background: $pl-color-neptune-tint-500;
+      border: 1px solid $ac-color-neptune-tint-300;
+      background: $ac-color-neptune-tint-500;
 
       & > .signal-heading {
-        color: $pl-color-neptune;
+        color: $ac-color-neptune;
       }
 
-      @include pl-mode-dark {
-        border: 1px solid $pl-color-neptune-shade-500;
-        background: $pl-color-neptune-tint-100;
-        color: $pl-color-neptune-tint-100-ctr;
+      @include ac-mode-dark {
+        border: 1px solid $ac-color-neptune-shade-500;
+        background: $ac-color-neptune-tint-100;
+        color: $ac-color-neptune-tint-100-ctr;
 
         & > .signal-heading {
-          color: $pl-color-neptune-shade-100;
+          color: $ac-color-neptune-shade-100;
         }
       }
     }
 
     &.signal-success {
-      border: 1px solid $pl-color-gaia-tint-300;
-      background: $pl-color-gaia-tint-500;
+      border: 1px solid $ac-color-gaia-tint-300;
+      background: $ac-color-gaia-tint-500;
 
       & > .signal-heading {
-        color: $pl-color-gaia;
+        color: $ac-color-gaia;
       }
 
-      @include pl-mode-dark {
-        border: 1px solid $pl-color-gaia-shade-500;
-        background: $pl-color-gaia-tint-100;
-        color: $pl-color-gaia-tint-100-ctr;
+      @include ac-mode-dark {
+        border: 1px solid $ac-color-gaia-shade-500;
+        background: $ac-color-gaia-tint-100;
+        color: $ac-color-gaia-tint-100-ctr;
 
         & > .signal-heading {
-          color: $pl-color-gaia-shade-100;
+          color: $ac-color-gaia-shade-100;
         }
       }
     }
 
     &.signal-warning {
-      border: 1px solid $pl-color-apricot-tint-300;
-      background: $pl-color-apricot-tint-500;
+      border: 1px solid $ac-color-apricot-tint-300;
+      background: $ac-color-apricot-tint-500;
 
       & > .signal-heading {
-        color: $pl-color-apricot;
+        color: $ac-color-apricot;
       }
 
-      @include pl-mode-dark {
-        border: 1px solid $pl-color-apricot-shade-500;
-        background: $pl-color-apricot-tint-100;
-        color: $pl-color-apricot-tint-100-ctr;
+      @include ac-mode-dark {
+        border: 1px solid $ac-color-apricot-shade-500;
+        background: $ac-color-apricot-tint-100;
+        color: $ac-color-apricot-tint-100-ctr;
 
         & > .signal-heading {
-          color: $pl-color-apricot-shade-100;
+          color: $ac-color-apricot-shade-100;
         }
       }
     }
 
     &.signal-danger {
-      border: 1px solid $pl-color-wolf-tint-300;
-      background: $pl-color-wolf-tint-500;
+      border: 1px solid $ac-color-wolf-tint-300;
+      background: $ac-color-wolf-tint-500;
 
       & > .signal-heading {
-        color: $pl-color-wolf;
+        color: $ac-color-wolf;
       }
 
-      @include pl-mode-dark {
-        border: 1px solid $pl-color-wolf-shade-500;
-        background: $pl-color-wolf-tint-100;
-        color: $pl-color-wolf-tint-100-ctr;
+      @include ac-mode-dark {
+        border: 1px solid $ac-color-wolf-shade-500;
+        background: $ac-color-wolf-tint-100;
+        color: $ac-color-wolf-tint-100-ctr;
 
         & > .signal-heading {
-          color: $pl-color-wolf-shade-100;
+          color: $ac-color-wolf-shade-100;
         }
       }
     }

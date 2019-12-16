@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 export default {
   defaults: {
     cookieEnabled: true,
-    cookieName: 'pl-theme-preference',
+    cookieName: 'ac-theme-preference',
     cookieOptions: {
       path: '/',
       secure: false,
@@ -34,19 +34,19 @@ export default {
         prefersLightTheme = context.matchMedia('(prefers-color-scheme: light)').matches;
       }
 
-      const hasDarkModeEnabled = body.classList.contains('pl-mode-dark');
+      const hasDarkModeEnabled = body.classList.contains('ac-mode-dark');
 
       if ((prefersDarkTheme && hasDarkModeEnabled) || (prefersLightTheme && !hasDarkModeEnabled)) {
         return;
       }
 
       if (prefersDarkTheme) {
-        body.classList.add('pl-mode-dark');
+        body.classList.add('ac-mode-dark');
         return;
       }
 
       if (prefersLightTheme) {
-        body.classList.remove('pl-mode-dark');
+        body.classList.remove('ac-mode-dark');
       }
     };
 
@@ -60,9 +60,9 @@ export default {
         return;
       }
 
-      body.classList.toggle('pl-mode-dark');
+      body.classList.toggle('ac-mode-dark');
 
-      const next = body.classList.contains('pl-mode-dark') ? 'dark' : 'light';
+      const next = body.classList.contains('ac-mode-dark') ? 'dark' : 'light';
 
       if (!options.cookieEnabled) {
         return;

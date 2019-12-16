@@ -1,7 +1,7 @@
 import '../scss/index.scss';
-import Parkland from '../../src/js/index'
+import Arcadia from '../../src/js/index'
 
-const parkland = new Parkland(window, {
+const arcadia = new Arcadia(window, {
   validate: {
     rules: {
       user_2fa: {
@@ -42,14 +42,14 @@ const parkland = new Parkland(window, {
     }
   }
 });
-parkland.init();
+arcadia.init();
 
 document.addEventListener('DOMContentLoaded', function () {
-  parkland.ready();
+  arcadia.ready();
 
   document.getElementById('toggle-dark-mode').addEventListener('click', (e) => {
     e.stopPropagation();
-    parkland.modules.darkMode.toggle();
+    arcadia.modules.darkMode.toggle();
     setTimeout(() => e.target.blur(), 120)
   });
 });

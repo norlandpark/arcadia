@@ -3,14 +3,18 @@
 @import "../../src/scss/colors";
 @import "../../src/scss/mixins";
 
-@include pl-main;
+@include ac-main;
 
 @import "sections/typography";
 @import "sections/colors";
 
+a.nav-item.logo > svg {
+  height: 20px;
+}
+
 a.nav-item.github, button.nav-item.theme {
-  padding-left: $pl-spacing-sm !important;
-  padding-right: $pl-spacing-sm !important;
+  padding-left: $ac-spacing-sm !important;
+  padding-right: $ac-spacing-sm !important;
 
   span {
     height: 16px;
@@ -18,18 +22,18 @@ a.nav-item.github, button.nav-item.theme {
 
   svg {
     height: 16px;
-    margin-right: $pl-spacing-xs;
+    margin-right: $ac-spacing-xs;
   }
 }
 
-div.pl-panel-container {
+div.ac-panel-container {
   & > section {
-    margin-bottom: $pl-spacing-xl;
+    margin-bottom: $ac-spacing-xl;
   }
 }
 
 div.element-doc {
-  @include pl-mrg-y($pl-spacing-md);
+  @include ac-mrg-y($ac-spacing-md);
 
   &:first-child {
     margin-top: 0;
@@ -39,82 +43,82 @@ div.element-doc {
     margin-top: 0;
   }
 
-  border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+  border: 1px solid $ac-color-body-light-bg-panel-primary-border;
 
-  @include pl-mode-dark {
-    border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+  @include ac-mode-dark {
+    border: 1px solid $ac-color-body-dark-bg-panel-primary-border;
   }
 
   & > div.title {
-    @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xs);
+    @include ac-pad-xy($ac-spacing-sm, $ac-spacing-xs);
 
-    border-bottom: 1px solid $pl-color-body-light-bg-panel-primary-border;
-    background: $pl-color-body-light-bg-panel-primary;
+    border-bottom: 1px solid $ac-color-body-light-bg-panel-primary-border;
+    background: $ac-color-body-light-bg-panel-primary;
 
-    @include pl-mode-dark {
-      border-bottom: 1px solid $pl-color-body-dark-bg-panel-primary-border;
-      background: $pl-color-body-dark-bg-panel-primary;
+    @include ac-mode-dark {
+      border-bottom: 1px solid $ac-color-body-dark-bg-panel-primary-border;
+      background: $ac-color-body-dark-bg-panel-primary;
     }
 
     & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
-      @include pl-mrg-xy(0, 0);
+      @include ac-mrg-xy(0, 0);
     }
   }
 
   & > div.preview {
     position: relative;
-    border-bottom: 1px solid $pl-color-body-light-bg-panel-tertiary-border;
+    border-bottom: 1px solid $ac-color-body-light-bg-panel-tertiary-border;
 
     &:not(.slim) {
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-md);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-md);
     }
 
     & > div.item:not(:last-child) {
-      margin-bottom: $pl-spacing-sm;
+      margin-bottom: $ac-spacing-sm;
     }
 
-    @include pl-mode-dark {
-      border-bottom: 1px solid $pl-color-body-dark-bg-panel-tertiary-border;
+    @include ac-mode-dark {
+      border-bottom: 1px solid $ac-color-body-dark-bg-panel-tertiary-border;
     }
   }
 
   & > div.about {
-    @include pl-pad-xy($pl-spacing-sm, $pl-spacing-sm);
+    @include ac-pad-xy($ac-spacing-sm, $ac-spacing-sm);
 
-    border-bottom: 1px solid $pl-color-body-light-bg-panel-primary-border;
-    background: $pl-color-body-light-bg-panel-primary;
+    border-bottom: 1px solid $ac-color-body-light-bg-panel-primary-border;
+    background: $ac-color-body-light-bg-panel-primary;
 
-    @include pl-mode-dark {
-      border-bottom: 1px solid $pl-color-body-dark-bg-panel-primary-border;
-      background: $pl-color-body-dark-bg-panel-primary;
+    @include ac-mode-dark {
+      border-bottom: 1px solid $ac-color-body-dark-bg-panel-primary-border;
+      background: $ac-color-body-dark-bg-panel-primary;
     }
   }
 
   & > div.code-sample {
     & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
       font-weight: 500;
-      @include pl-mrg-xy(0, 0);
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xxs);
+      @include ac-mrg-xy(0, 0);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-xxs);
 
-      border-bottom: 1px dotted $pl-color-body-light-bg-panel-tertiary-border;
-      background: $pl-color-body-light-bg-panel-tertiary;
+      border-bottom: 1px dotted $ac-color-body-light-bg-panel-tertiary-border;
+      background: $ac-color-body-light-bg-panel-tertiary;
 
-      @include pl-mode-dark {
-        border-bottom: 1px dotted $pl-color-body-dark-bg-panel-tertiary-border;
-        background: $pl-color-body-dark-bg-panel-tertiary;
+      @include ac-mode-dark {
+        border-bottom: 1px dotted $ac-color-body-dark-bg-panel-tertiary-border;
+        background: $ac-color-body-dark-bg-panel-tertiary;
       }
     }
 
     & > code {
       display: block;
       user-select: all;
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-sm);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-sm);
 
       &:not(:last-child) {
-        border-bottom: 1px dotted $pl-color-body-light-bg-panel-primary-border;
+        border-bottom: 1px dotted $ac-color-body-light-bg-panel-primary-border;
 
-        @include pl-mode-dark {
-          border-bottom: 1px dotted $pl-color-body-dark-bg-panel-primary-border;
+        @include ac-mode-dark {
+          border-bottom: 1px dotted $ac-color-body-dark-bg-panel-primary-border;
         }
       }
     }

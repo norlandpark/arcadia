@@ -5,70 +5,70 @@
 
 section#typography {
   & > div.font-panel {
-    border: 1px solid $pl-color-body-light-bg-panel-primary-border;
+    border: 1px solid $ac-color-body-light-bg-panel-primary-border;
 
     &:not(:last-child) {
-      margin-bottom: $pl-spacing-md;
+      margin-bottom: $ac-spacing-md;
     }
 
-    @include pl-mode-dark {
-      border: 1px solid $pl-color-body-dark-bg-panel-primary-border;
+    @include ac-mode-dark {
+      border: 1px solid $ac-color-body-dark-bg-panel-primary-border;
     }
 
     & > div.purpose {
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xs);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-xs);
 
-      border-bottom: 1px solid $pl-color-body-light-bg-panel-primary-border;
-      background: $pl-color-body-light-bg-panel-primary;
+      border-bottom: 1px solid $ac-color-body-light-bg-panel-primary-border;
+      background: $ac-color-body-light-bg-panel-primary;
 
-      @include pl-mode-dark {
-        border-bottom: 1px solid $pl-color-body-dark-bg-panel-primary-border;
-        background: $pl-color-body-dark-bg-panel-primary;
+      @include ac-mode-dark {
+        border-bottom: 1px solid $ac-color-body-dark-bg-panel-primary-border;
+        background: $ac-color-body-dark-bg-panel-primary;
       }
 
       & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
-        @include pl-mrg-xy(0, 0);
+        @include ac-mrg-xy(0, 0);
       }
     }
 
     & > div.about {
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-xs);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-xs);
 
-      border-bottom: 1px solid $pl-color-body-light-bg-panel-secondary-border;
-      background: $pl-color-body-light-bg-panel-secondary;
+      border-bottom: 1px solid $ac-color-body-light-bg-panel-secondary-border;
+      background: $ac-color-body-light-bg-panel-secondary;
 
-      @include pl-mode-dark {
-        border-bottom: 1px solid $pl-color-body-dark-bg-panel-secondary-border;
-        background: $pl-color-body-dark-bg-panel-secondary;
+      @include ac-mode-dark {
+        border-bottom: 1px solid $ac-color-body-dark-bg-panel-secondary-border;
+        background: $ac-color-body-dark-bg-panel-secondary;
       }
 
       & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
-        @include pl-mrg-xy(0, 0);
+        @include ac-mrg-xy(0, 0);
       }
     }
 
     & > code.font-family {
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-sm);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-sm);
       display: block;
-      border-top: 1px dotted $pl-color-body-light-bg-panel-primary-border;
-      background: $pl-color-body-light-bg-panel-primary;
+      border-top: 1px dotted $ac-color-body-light-bg-panel-primary-border;
+      background: $ac-color-body-light-bg-panel-primary;
 
-      @include pl-mode-dark {
-        border-top: 1px dotted $pl-color-body-dark-bg-panel-primary-border;
-        background: $pl-color-body-dark-bg-panel-primary;
+      @include ac-mode-dark {
+        border-top: 1px dotted $ac-color-body-dark-bg-panel-primary-border;
+        background: $ac-color-body-dark-bg-panel-primary;
       }
     }
 
     & > div.font-sample {
       font-size: 1em;
 
-      @include pl-screen-md-up {
+      @include ac-screen-md-up {
         font-size: 2em;
       }
 
       font-weight: normal;
       letter-spacing: 0.1em;
-      @include pl-pad-xy($pl-spacing-sm, $pl-spacing-sm);
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-sm);
     }
   }
 }
