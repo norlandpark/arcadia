@@ -13,6 +13,7 @@
 @mixin ac-containers {
   .ac-panel-container {
     margin: auto 1rem;
+    position: relative;
 
     &.page {
       padding-top: 2rem;

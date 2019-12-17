@@ -13,8 +13,8 @@
 
     @include ac-screen-md-up {
       display: flex;
-      top: -$ac-spacing-sm * -1;
-      left: -$ac-spacing-sm * -1;
+      top: $ac-spacing-sm * -1;
+      left: $ac-spacing-sm * -1;
       right: $ac-spacing-sm * -1;
     }
 
