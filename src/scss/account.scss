@@ -5,13 +5,48 @@
 
 @mixin ac-account {
   // This style intentionally avoids strict nesting (form generators often wrap elements in div's etc)
+  $ac-account-max-width: 30rem;
+
+  div.ac-account-header {
+    max-width: $ac-account-max-width;
+
+    & > div.logo {
+      padding-bottom: $ac-spacing-sm;
+
+      & > a {
+        display: inline;
+        line-height: 26px;
+
+        img, svg {
+          max-height: 26px;
+        }
+      }
+    }
+  }
+
   section.ac-account a {
     text-decoration: none;
   }
 
   section.ac-account {
     &.sign-in {
-      max-width: 25rem;
+      max-width: $ac-account-max-width;
+    }
+
+    &.sign-in {
+      border-radius: 2px;
+      background: $ac-color-body-light-bg-panel-secondary;
+      border: 1px solid $ac-color-body-light-bg-panel-secondary-border;
+      @include ac-pad-xy($ac-spacing-sm, $ac-spacing-sm);
+
+      @include ac-mode-dark {
+        background: $ac-color-body-dark-bg-panel-secondary;
+        border: 1px solid $ac-color-body-dark-bg-panel-secondary-border;
+      }
+
+      @include ac-screen-md-up {
+        @include ac-pad-xy($ac-spacing-lg, $ac-spacing-md);
+      }
     }
 
     div.welcome {
@@ -22,14 +57,20 @@
     }
 
     div.lead {
-      margin-bottom: $ac-spacing-md;
+      margin-bottom: $ac-spacing-sm;
+    }
+
+    div.status {
+      margin-top: $ac-spacing-sm;
+      margin-bottom: $ac-spacing-sm;
     }
 
     div.links {
       margin-top: $ac-spacing-md;
+      font-size: 0.98em;
 
       & > div.link:not(:last-child) {
-        margin-bottom: $ac-spacing-xxs;
+        margin-bottom: $ac-spacing-xs;
       }
     }
 

@@ -14,9 +14,9 @@ section#buttons
     div.about
       p A basic button can be created with minimal markup.
     div.preview
-      div.item: button.ac-button Basic button
-      div.item: a(href='javascript:void(0);').ac-button Basic link button
-      div.item: button.ac-button.secondary Secondary button
+      div.item: button.ac-button(data-ac-same-width='preview-button-basic') Basic button
+      div.item: a(href='javascript:void(0);', data-ac-same-width='preview-button-basic').ac-button Basic link button
+      div.item: button.ac-button.secondary(data-ac-same-width='preview-button-basic') Secondary button
     div.code-sample
       h6 HTML
       code(data-lang="html"): :render-escape
@@ -47,9 +47,9 @@ section#buttons
     div.about
       p TBD
     div.preview
-      div.item: button.ac-button.sm Small button
-      div.item: button.ac-button Regular button
-      div.item: button.ac-button.lg Large button
+      div.item: button.ac-button.sm(data-ac-same-width='preview-button-size') Small button
+      div.item: button.ac-button(data-ac-same-width='preview-button-size') Regular button
+      div.item: button.ac-button.lg(data-ac-same-width='preview-button-size') Large button
     div.code-sample
       h6 HTML
       code(data-lang="html"): :render-escape
@@ -65,10 +65,10 @@ section#buttons
     div.about
       p TBD
     div.preview
-      div.item: button.ac-button.crimson Crimson
-      div.item: button.ac-button.cornflower Cornflower
-      div.item: button.ac-button.tangerine Tangerine
-      div.item: button.ac-button.eve Eve
+      div.item: button.ac-button.crimson(data-ac-same-width='preview-button-cta') Crimson
+      div.item: button.ac-button.cornflower(data-ac-same-width='preview-button-cta') Cornflower
+      div.item: button.ac-button.tangerine(data-ac-same-width='preview-button-cta') Tangerine
+      div.item: button.ac-button.eve(data-ac-same-width='preview-button-cta') Eve
     div.code-sample
       h6 HTML
       code(data-lang="html"): :render-escape
@@ -86,9 +86,9 @@ section#buttons
     div.about
       p TBD
     div.preview
-      div.item: button.ac-button.success Success button
-      div.item: button.ac-button.warning Warning button
-      div.item: button.ac-button.danger Danger button
+      div.item: button.ac-button.success(data-ac-same-width='preview-button-effect') Success button
+      div.item: button.ac-button.warning(data-ac-same-width='preview-button-effect') Warning button
+      div.item: button.ac-button.danger(data-ac-same-width='preview-button-effect') Danger button
     div.code-sample
       h6 HTML
       code(data-lang="html"): :render-escape
@@ -140,13 +140,13 @@ section#buttons
     div.about
       p TBD
     div.preview
-      div.item: button.ac-button.with-icon.sm
+      div.item: button.ac-button.with-icon.sm(data-ac-same-width='preview-button-with-icon')
         include ../static/icon-add.svg
         | Small icon button
-      div.item: button.ac-button.with-icon
+      div.item: button.ac-button.with-icon(data-ac-same-width='preview-button-with-icon')
         include ../static/icon-add.svg
         | Regular icon button
-      div.item: button.ac-button.with-icon.lg
+      div.item: button.ac-button.with-icon.lg(data-ac-same-width='preview-button-with-icon')
         include ../static/icon-add.svg
         | Large icon button
     div.code-sample

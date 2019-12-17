@@ -94,51 +94,36 @@
     }
 
     &.secondary {
-      background: $ac-color-fjord-tint-500;
-      border: 1px solid $ac-color-fjord;
-      color: $ac-color-fjord-shade-400;
+      background: $ac-color-moon-shade-500;
+      color: $ac-color-moon-shade-500-ctr;
 
       &:hover {
-        background: $ac-color-fjord-shade-400;
-        color: $ac-color-fjord-shade-400-ctr;
+        background: $ac-color-moon-shade-300;
+        color: $ac-color-moon-shade-300-ctr;
       }
 
       &:active, &:focus {
-        outline: 1px solid $ac-color-fjord;
-      }
-
-      &:active, &:focus:hover {
-        outline: 1px solid $ac-color-fjord-tint-500;
+        outline: 1px solid $ac-color-moon-shade-500-ctr;
       }
 
       @include ac-mode-dark {
-        background: $ac-color-fjord-tint-300;
-        border: 1px solid transparent;
-        color: $ac-color-fjord-shade-200;
+        background: $ac-color-moon-shade-700;
+        color: $ac-color-moon-shade-700-ctr;
 
         &:hover {
-          background: $ac-color-fjord-shade-400;
-          border: 1px solid transparent;
-          color: $ac-color-fjord-shade-400-ctr;
-        }
-
-        &:active, &:focus {
-          outline: 1px solid $ac-color-fjord-shade-200;
-        }
-
-        &:active, &:focus:hover {
-          outline: 1px solid $ac-color-fjord-tint-300;
+          background: $ac-color-moon-shade-500;
+          color: $ac-color-moon-shade-500-ctr;
         }
       }
     }
 
     &.disabled, &:disabled {
-      background: $ac-color-moon-shade-500;
-      color: $ac-color-moon-tint-100;
+      background: $ac-color-moon-shade-900;
+      color: $ac-color-moon-tint-800;
 
       &:hover {
-        background: $ac-color-moon-shade-500;
-        color: $ac-color-moon-tint-100;
+        background: $ac-color-moon-shade-900;
+        color: $ac-color-moon-tint-800;
       }
 
       &:active, &:active, &:focus {
@@ -325,6 +310,77 @@
 
       &:active, &:focus {
         outline: 1px solid $ac-color-eve-ctr;
+      }
+    }
+
+    // Vendor buttons
+    &.vnd-mail-gmail {
+      background: #d44638;
+      color: #ffffff;
+
+      &:hover {
+        background: #b23121;
+        color: #ffffff;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid #ffffff;
+      }
+    }
+
+    &.vnd-mail-outlook {
+      background: #0072c6;
+      color: #ffffff;
+
+      &:hover {
+        background: #004b95;
+        color: #ffffff;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid #ffffff;
+      }
+    }
+
+    &.vnd-mail-icloud {
+      background: #0070c9;
+      color: #ffffff;
+
+      &:hover {
+        background: #0052a3;
+        color: #ffffff;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid #ffffff;
+      }
+    }
+
+    &.vnd-mail-protonmail {
+      background: #505264;
+      color: #ffffff;
+
+      &:hover {
+        background: #2d2f40;
+        color: #ffffff;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid #ffffff;
+      }
+    }
+
+    &.vnd-mail-yahoo {
+      background: #4a00a0;
+      color: #ffffff;
+
+      &:hover {
+        background: #3c0079;
+        color: #ffffff;
+      }
+
+      &:active, &:focus {
+        outline: 1px solid #ffffff;
       }
     }
 

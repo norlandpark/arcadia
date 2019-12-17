@@ -6,16 +6,20 @@
 @mixin ac-pricing {
   section.ac-pricing {
     width: 100%;
-    left: -$ac-spacing-xxs;
+    top: $ac-spacing-xxs * -1;
+    left: $ac-spacing-xxs * -1;
     right: $ac-spacing-xxs * -1;
+    position: relative;
 
     @include ac-screen-md-up {
       display: flex;
-      left: -$ac-spacing-sm;
+      top: -$ac-spacing-sm * -1;
+      left: -$ac-spacing-sm * -1;
       right: $ac-spacing-sm * -1;
     }
 
     & > div.plan {
+      border-radius: 2px;
       margin: $ac-spacing-xs $ac-spacing-xs $ac-spacing-md;
       padding: $ac-spacing-sm;
       background: $ac-color-body-light-bg-panel-secondary;
@@ -38,7 +42,7 @@
 
           & > h4 {
             text-align: center;
-            color: $ac-color-cornflower;
+            color: $ac-color-neptune;
             font-size: $ac-heading-h3-font-size;
             line-height: $ac-heading-h3-font-size;
             font-family: $ac-font-family-title;
@@ -47,7 +51,7 @@
             margin: 0;
 
             @include ac-mode-dark {
-              color: $ac-color-cornflower;
+              color: $ac-color-neptune;
             }
           }
         }
@@ -114,7 +118,7 @@
               line-height: 14px;
               overflow: hidden;
               content: "\002022";
-              color: $ac-color-cornflower;
+              color: $ac-color-neptune;
             }
           }
         }

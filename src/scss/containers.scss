@@ -107,6 +107,7 @@
     width: 100%;
     position: relative;
     min-height: 1em;
+    border-radius: 2px;
 
     @include ac-mode-dark {
       background: $ac-color-body-dark-bg-panel-primary;

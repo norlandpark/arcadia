@@ -1,11 +1,13 @@
-import PlNavbar from './navbar.js';
-import PlDarkMode from './darkmode.js';
-import PlValidate from './validate.js';
+import AcNavbar from './navbar.js';
+import AcDarkMode from './darkmode.js';
+import AcValidate from './validate.js';
+import AcSameWidth from './sameWidth.js';
 
 const knownModules = {
-  navbar: PlNavbar,
-  darkMode: PlDarkMode,
-  validate: PlValidate
+  navbar: AcNavbar,
+  darkMode: AcDarkMode,
+  validate: AcValidate,
+  sameWidth: AcSameWidth,
 };
 
 export default function (context, options) {

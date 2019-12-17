@@ -3,7 +3,7 @@ section#account
 
   div.element-doc
     div.title
-      h5 Passwordless Sign In
+      h5 Passwordless sign in page
     div.about
       p TBD
     div.preview
@@ -24,10 +24,12 @@ section#account
               | Don't have an account?
               |
               a(href="#") Sign Up
+              | .
             div.link
               | Need help accessing your account?
               |
               a(href="#") Contact support
+              | .
     div.code-sample
       h6 HTML
       code(data-lang="html"): pre: :render-escape
@@ -47,10 +49,131 @@ section#account
               | Don't have an account?
               |
               a(href="#") Sign Up
+              | .
             div.link
               | Need help accessing your account?
               |
               a(href="#") Contact support
+              | .
+
+  div.element-doc
+    div.title
+      h5 Passwordless post email screen
+    div.about
+      p TBD
+      div.ac-panel.signal-warning
+        div.signal-heading No call to action button for unknown providers!
+        div.signal-body.
+          A reasonable attempt should be made to determine email provider used by the visitor. Call to action should only
+          be shown if email provider is determined with high degree of certainty and can be linked to programmatically.
+    div.preview
+      div.item
+        section.ac-account.sign-in
+          div.welcome Check your email!
+          div.status We’ve emailed a special link to <strong>example@gmail.com</strong>. Click the link to confirm your address and get started.
+          div.cta
+            a(href="#" target="_ac_email").ac-button.block.vnd-mail-gmail Open Gmail
+          div.links
+            div.link
+              | Didn't receive an email?
+              | Please,&nbsp;
+              a(href="#") try again.
+            div.link
+              | Wrong email?
+              | Please,&nbsp;
+              a(href="#") re-enter your address
+              | .
+            div.link
+              | Need help accessing your account?
+              |
+              a(href="#") Contact support
+              | .
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        section.ac-account.sign-in
+          div.welcome Check your email!
+          div.status We’ve emailed a special link to <strong>example@gmail.com</strong>. Click the link to confirm your address and get started.
+          div.cta
+            a(href="#" target="_ac_email").ac-button.block.vnd-mail-gmail Open Gmail
+          div.links
+            div.link
+              | Didn't receive an email?
+              | Please,&nbsp;
+              a(href="#") try again.
+            div.link
+              | Wrong email?
+              | Please,&nbsp;
+              a(href="#") re-enter your address
+              | .
+            div.link
+              | Need help accessing your account?
+              |
+              a(href="#") Contact support
+              | .
+
+  div.element-doc
+    div.title
+      h5 Passwordless post email buttons
+    div.about
+      p TBD
+    div.preview
+      div.item: a(href="#" target="_ac_email" data-ac-same-width="vnd-open-eml").ac-button.vnd-mail-gmail Open Gmail
+      div.item: a(href="#" target="_ac_email" data-ac-same-width="vnd-open-eml").ac-button.vnd-mail-outlook Open Outlook
+      div.item: a(href="#" target="_ac_email" data-ac-same-width="vnd-open-eml").ac-button.vnd-mail-yahoo Open Yahoo Mail
+      div.item: a(href="#" target="_ac_email" data-ac-same-width="vnd-open-eml").ac-button.vnd-mail-protonmail Open ProtonMail
+      div.item: a(href="#" target="_ac_email" data-ac-same-width="vnd-open-eml").ac-button.vnd-mail-icloud Open iCloud Mail
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        div: a(href="#" target="_ac_email").ac-button.vnd-mail-gmail Open Gmail
+        div: a(href="#" target="_ac_email").ac-button.vnd-mail-outlook Open Outlook
+        div: a(href="#" target="_ac_email").ac-button.vnd-mail-yahoo Open Yahoo Mail
+        div: a(href="#" target="_ac_email").ac-button.vnd-mail-protonmail Open ProtonMail
+        div: a(href="#" target="_ac_email").ac-button.vnd-mail-icloud Open iCloud Mail
+
+  div.element-doc
+    div.title
+      h5 Passwordless unknown user
+    div.about
+      p TBD
+    div.preview
+      div.item
+        section.ac-account.sign-in
+          .welcome Hello, I don't believe we've met!
+          .status
+            | Could not find user account associated with email address
+            |
+            strong example@gmail.com
+            | .
+          .cta
+            a.ac-button.block.ac-mrg-b-xs(href="#") Sign up
+            a.ac-button.secondary.block(href="#") Try another email
+          .links
+            .link
+              | Need help accessing your account?
+              |
+              a(href='#') Contact support
+              | .
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        section.ac-account.sign-in
+          .welcome Hello, I don't believe we've met!
+          .status
+            | Could not find user account associated with email address
+            |
+            strong example@gmail.com
+            | .
+          .cta
+            a.ac-button.block.ac-mrg-b-xs(href="#") Sign up
+            a.ac-button.secondary.block(href="#") Try another email
+          .links
+            .link
+              | Need help accessing your account?
+              |
+              a(href='#') Contact support
+              | .
 
   div.element-doc
     div.title
@@ -80,6 +203,7 @@ section#account
               | Need help accessing your account?
               |
               a(href="#") Contact support
+              | .
     div.code-sample
       h6 HTML
       code(data-lang="html"): pre: :render-escape
@@ -104,6 +228,7 @@ section#account
               | Need help accessing your account?
               |
               a(href="#") Contact support
+              | .
 
   div.element-doc
     div.title
@@ -139,10 +264,12 @@ section#account
               | Already have an account?
               |
               a(href="#") Sign In
+              | .
             div.link
               | Need help creating an account?
               |
               a(href="#") Contact support
+              | .
     div.code-sample
       h6 HTML
       code(data-lang="html"): pre: :render-escape
@@ -173,7 +300,23 @@ section#account
               | Already have an account?
               |
               a(href="#") Sign In
+              | .
             div.link
               | Need help creating an account?
               |
               a(href="#") Contact support
+              | .
+
+  div.element-doc
+    div.title
+      h5 Header hero for passwordless sign in
+    div.about
+      p Used for standalone sign in and account action pages that have no other means of navigation
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): pre: :render-escape
+        div.ac-account-header
+          div.logo
+            a(href="#")
+              img.ac-only-light(src="...")
+              img.ac-only-dark(src="...")
