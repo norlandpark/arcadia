@@ -9,14 +9,22 @@ export default {
     rules: {}
   },
   module: function (context, options) {
-    this.setInputState = (errors, inputs) => {
+    this.setInputState = (errors, inputs, form) => {
       if (0 === inputs.length) {
         return;
       }
 
+      const isFormSubmit = form.getAttribute('ac-validate-submit') === 'true';
+
       for (const input of inputs) {
         const hasErrors = errors.hasOwnProperty(input.name);
         const isMarkedError = input.classList.contains('ac-input-error');
+        const isChangedSelf = input.getAttribute('ac-validate-changed') === 'true';
+
+        // Form has not been submit, so only mark changed fields
+        if (!isChangedSelf && !isFormSubmit) {
+          continue;
+        }
 
         // Was invalid, now is valid
         if (isMarkedError && !hasErrors) {
@@ -81,31 +89,33 @@ export default {
       const inputs = form.querySelectorAll('input, textarea, select');
 
       form.addEventListener('submit', (e) => {
+        form.setAttribute('ac-validate-submit', true);
         const errors = validate(form, constraints) || {};
 
         if (0 === Object.keys(errors).length) {
-          this.setInputState({}, inputs);
+          this.setInputState({}, inputs, form);
           return;
         }
 
         e.preventDefault();
-        this.setInputState(errors, inputs);
+        this.setInputState(errors, inputs, form);
       });
 
-      form.addEventListener('validate', (e) => {
+      form.addEventListener('ac-validate', (e) => {
         const errors = validate(form, constraints) || {};
 
         if (0 === Object.keys(errors).length) {
-          this.setInputState({}, inputs);
+          this.setInputState({}, inputs, form);
           return;
         }
 
-        this.setInputState(errors, inputs);
+        this.setInputState(errors, inputs, form);
       });
 
       for (const input of inputs) {
         input.addEventListener('change', (e) => {
-          form.dispatchEvent(new Event('validate'));
+          input.setAttribute('ac-validate-changed', true);
+          form.dispatchEvent(new CustomEvent('ac-validate'));
         });
       }
     };
@@ -130,10 +140,9 @@ export default {
 
         this.bindForm(form, constraints);
       }
-
     };
-    this.ready = () => {
 
+    this.ready = () => {
     };
   }
 }
