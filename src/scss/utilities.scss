@@ -1,4 +1,5 @@
 $ac-spacing-na: 0;
+$ac-spacing-layout: 1.485714285714284rem;
 $ac-spacing-3xs: 0.14285714285714285rem;
 $ac-spacing-xxs: 0.2857142857142857rem;
 $ac-spacing-xs: 0.5714285714285714rem;
@@ -53,6 +54,7 @@ $ac-spacing-3xl: 6.857142857142857rem;
 
 @mixin ac-utilities {
   $spacing-sizes: (
+    'layout': $ac-spacing-layout,
     'na': $ac-spacing-na,
     '3xs': $ac-spacing-3xs,
     'xxs': $ac-spacing-xxs,

@@ -138,7 +138,7 @@
           }
 
           &:not(.plain) {
-            padding: 1.44rem $ac-spacing-md;
+            padding: $ac-spacing-layout $ac-spacing-md;
           }
 
           &.logo {
