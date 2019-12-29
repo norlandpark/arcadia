@@ -3,52 +3,156 @@
 $ac-grid-sizes: 'sm', 'md', 'lg', 'xl';
 
 @mixin grid-size-commons($size) {
-  .start-#{$size} {
+  $suffix: '';
+
+  @if $size != 'xs' {
+    $suffix: '-#{$size}';
+  }
+
+  .ac-display-inline#{$suffix} {
+    display: inline;
+  }
+
+  .ac-display-block#{$suffix} {
+    display: block;
+  }
+
+  .ac-display-contents#{$suffix} {
+    display: contents;
+  }
+
+  .ac-display-flex#{$suffix} {
+    display: flex;
+  }
+
+  .ac-display-grid#{$suffix} {
+    display: grid;
+  }
+
+  .ac-display-inline-block#{$suffix} {
+    display: inline-block;
+  }
+
+  .ac-display-inline-flex#{$suffix} {
+    display: inline-flex;
+  }
+
+  .ac-display-inline-grid#{$suffix} {
+    display: inline-grid;
+  }
+
+  .ac-display-inline-table#{$suffix} {
+    display: inline-table;
+  }
+
+  .ac-display-list-item#{$suffix} {
+    display: list-item;
+  }
+
+  .ac-display-run-in#{$suffix} {
+    display: run-in;
+  }
+
+  .ac-display-table#{$suffix} {
+    display: table;
+  }
+
+  .ac-display-table-caption#{$suffix} {
+    display: table-caption;
+  }
+
+  .ac-display-table-column-group#{$suffix} {
+    display: table-column-group;
+  }
+
+  .ac-display-table-header-group#{$suffix} {
+    display: table-header-group;
+  }
+
+  .ac-display-table-footer-group#{$suffix} {
+    display: table-footer-group;
+  }
+
+  .ac-display-table-row-group#{$suffix} {
+    display: table-row-group;
+  }
+
+  .ac-display-table-cell#{$suffix} {
+    display: table-cell;
+  }
+
+  .ac-display-table-column#{$suffix} {
+    display: table-column;
+  }
+
+  .ac-display-table-row#{$suffix} {
+    display: table-row;
+  }
+
+  .ac-display-none#{$suffix} {
+    display: none;
+  }
+
+  .ac-display-initial#{$suffix} {
+    display: initial;
+  }
+
+  .ac-display-inherit#{$suffix} {
+    display: inherit;
+  }
+
+  .ac-start#{$suffix} {
     justify-content: flex-start;
     text-align: start;
   }
 
-  .center-#{$size} {
+  .ac-center#{$suffix} {
     justify-content: center;
     text-align: center;
   }
 
-  .end-#{$size} {
+  .ac-end#{$suffix} {
     justify-content: flex-end;
     text-align: end;
   }
 
-  .top-#{$size} {
+  .ac-top#{$suffix} {
     align-items: flex-start;
   }
 
-  .middle-#{$size} {
+  .ac-middle#{$suffix} {
     align-items: center;
   }
 
-  .bottom-#{$size} {
+  .ac-bottom#{$suffix} {
     align-items: flex-end;
   }
 
-  .around-#{$size} {
+  .ac-around#{$suffix} {
     justify-content: space-around;
   }
 
-  .between-#{$size} {
+  .ac-between#{$suffix} {
     justify-content: space-between;
   }
 
-  .first-#{$size} {
+  .ac-first#{$suffix} {
     order: -1;
   }
 
-  .last-#{$size} {
+  .ac-last#{$suffix} {
     order: 1;
   }
 }
 
 @mixin grid-size-columns($size) {
-  .ac-col-#{$size} {
+  $suffix: '';
+
+  @if $size != 'xs' {
+    $suffix: '-#{$size}';
+  }
+
+  .ac-col#{$suffix} {
     flex-grow: 1;
     flex-basis: 0;
     max-width: 100%;
@@ -61,18 +165,18 @@ $ac-grid-sizes: 'sm', 'md', 'lg', 'xl';
   @for $i from 1 through $ac-grid-num-columns {
     $size-percentage: percentage(($i * 4.16666666667) / 100);
 
-    .ac-col-#{$size}-#{$i} {
+    .ac-col#{$suffix}-#{$i} {
       box-sizing: border-box;
       flex: 0 0 auto;
       flex-basis: $size-percentage;
       max-width: $size-percentage;
     }
 
-    .ac-col-#{$size}-offset-#{$i} {
+    .ac-col#{$suffix}-offset-#{$i} {
       margin-left: $size-percentage;
     }
 
-    .ac-col-#{$size}-push-#{$i} {
+    .ac-col#{$suffix}-push-#{$i} {
       margin-right: $size-percentage;
     }
   }

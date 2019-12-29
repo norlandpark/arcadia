@@ -51,7 +51,7 @@
             margin: 0;
 
             @include ac-mode-dark {
-              color: $ac-color-neptune;
+              color: $ac-color-neptune-tint-400;
             }
           }
         }

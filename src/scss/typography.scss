@@ -263,7 +263,7 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
     }
 
     @include ac-mode-dark {
-      color: $ac-color-neptune-tint-200;
+      color: $ac-color-neptune-tint-400;
     }
 
     &:hover {
@@ -272,7 +272,7 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
       color: $ac-color-neptune-shade-300;
 
       @include ac-mode-dark {
-        color: $ac-color-neptune;
+        color: $ac-color-neptune-tint-200;
       }
     }
   }
@@ -296,7 +296,7 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
     color: $ac-color-crimson;
 
     @include ac-mode-dark() {
-      color: $ac-color-crimson-tint-200;
+      color: $ac-color-crimson-tint-300;
     }
   }
 
@@ -322,7 +322,7 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
     padding-right: 2px;
 
     @include ac-mode-dark() {
-      color: $ac-color-crimson-tint-200;
+      color: $ac-color-crimson-tint-300;
       background: $ac-color-body-dark-bg-panel-secondary;
     }
 
