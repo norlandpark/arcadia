@@ -103,17 +103,14 @@ $ac-grid-sizes: 'sm', 'md', 'lg', 'xl';
 
   .ac-start#{$suffix} {
     justify-content: flex-start;
-    text-align: start;
   }
 
   .ac-center#{$suffix} {
     justify-content: center;
-    text-align: center;
   }
 
   .ac-end#{$suffix} {
     justify-content: flex-end;
-    text-align: end;
   }
 
   .ac-top#{$suffix} {
