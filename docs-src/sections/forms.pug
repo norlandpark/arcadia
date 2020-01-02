@@ -96,3 +96,15 @@ section#forms
         textarea.ac-input.lg
       code(data-lang="html"): :render-escape
         textarea.ac-input.block
+
+  div.element-doc
+    div.title
+      h5 Auto resizing textarea
+    div.about
+      p Vertically self sizing textarea input. Will adapt the height of the input match the content.
+    div.preview
+      div.item: textarea.ac-input.autosize
+    div.code-sample
+      h6 HTML
+      code(data-lang="html"): :render-escape
+        textarea.ac-input.autosize

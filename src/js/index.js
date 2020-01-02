@@ -2,12 +2,16 @@ import AcNavbar from './navbar.js';
 import AcDarkMode from './darkmode.js';
 import AcValidate from './validate.js';
 import AcSameWidth from './sameWidth.js';
+import AcHidModifier from './hidModifier.js';
+import AcTextareaAutosize from './textareaAutosize.js';
 
 const knownModules = {
   navbar: AcNavbar,
   darkMode: AcDarkMode,
   validate: AcValidate,
   sameWidth: AcSameWidth,
+  hidModifier: AcHidModifier,
+  textareaAutosize: AcTextareaAutosize,
 };
 
 export default function (context, options) {
@@ -29,6 +33,10 @@ export default function (context, options) {
   }
 
   this.init = () => {
+    if (!context.arcadia) {
+      context.arcadia = this;
+    }
+
     for (const instanceName in this.modules) {
       if (!this.modules.hasOwnProperty(instanceName)) {
         return;
