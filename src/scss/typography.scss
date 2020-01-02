@@ -1,6 +1,7 @@
 @import "mixins";
 @import "colors";
 @import "utilities";
+@import "scrollbars";
 
 // TODO: cleanup, extract variables etc.
 
@@ -306,6 +307,8 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
     font-family: $ac-font-family-mono;
     font-weight: normal;
     overflow: auto;
+
+    @include ac-scrollbars;
 
     &.wrap {
       white-space: pre-wrap;

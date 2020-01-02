@@ -1,8 +1,14 @@
 @import "properties";
 
 @mixin ac-mode-dark {
-  @at-root body.ac-mode-dark & {
-    @content;
+  @if '#{&}' == 'body' {
+    @at-root &.ac-mode-dark {
+      @content;
+    }
+  } @else {
+    @at-root body.ac-mode-dark & {
+      @content;
+    }
   }
 }
 

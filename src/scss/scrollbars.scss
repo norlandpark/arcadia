@@ -1,37 +1,43 @@
 @import "colors";
+@import "mixins";
 
+/**
+TODO: webkit specific styling should be removed once scrollbar-color is adopted
+and actually renders somewhat correctly.
+ */
 @mixin ac-scrollbars {
-  scrollbar-color: light;
+  $--background-light: lighten($ac-color-body-light-text-fg, 50%);
+  $--foreground-light: lighten($ac-color-body-light-text-fg, 70%);
+  $--background-dark: darken($ac-color-body-dark-text-bg, 5%);
+  $--foreground-dark: darken($ac-color-body-dark-text-bg, 12%);
 
   &::-webkit-scrollbar {
     width: 12px;
   }
 
   &::-webkit-scrollbar {
-    background-color: lighten($ac-color-body-light-text-fg, 70%);
+    background-color: $--background-light;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: lighten($ac-color-body-light-text-fg, 70%);
+    background-color: $--background-light;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: lighten($ac-color-body-light-text-fg, 50%);
+    background-color: $--foreground-light;
   }
 
   @include ac-mode-dark {
-    scrollbar-color: dark;
-
     &::-webkit-scrollbar {
-      background-color: darken($ac-color-body-dark-text-bg, 5%);
+      background-color: $--background-dark;
     }
 
     &::-webkit-scrollbar-track {
-      background-color: darken($ac-color-body-dark-text-bg, 5%);
+      background-color: $--background-dark;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: darken($ac-color-body-dark-text-bg, 10%);
+      background-color: $--foreground-dark;
     }
   }
 }
