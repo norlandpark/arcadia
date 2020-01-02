@@ -14,6 +14,7 @@
 @import "layouts";
 @import "account";
 @import "pricing";
+@import "scrollbars";
 
 @mixin ac-main {
   @at-root {
@@ -82,5 +83,6 @@
     @include ac-layouts();
     @include ac-account();
     @include ac-pricing();
+    @include ac-scrollbars();
   }
 }

@@ -1,0 +1,37 @@
+@import "colors";
+
+@mixin ac-scrollbars {
+  scrollbar-color: light;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: lighten($ac-color-body-light-text-fg, 70%);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: lighten($ac-color-body-light-text-fg, 70%);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($ac-color-body-light-text-fg, 50%);
+  }
+
+  @include ac-mode-dark {
+    scrollbar-color: dark;
+
+    &::-webkit-scrollbar {
+      background-color: darken($ac-color-body-dark-text-bg, 5%);
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: darken($ac-color-body-dark-text-bg, 5%);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: darken($ac-color-body-dark-text-bg, 10%);
+    }
+  }
+}
