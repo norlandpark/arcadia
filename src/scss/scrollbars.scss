@@ -6,8 +6,8 @@ TODO: webkit specific styling should be removed once scrollbar-color is adopted
 and actually renders somewhat correctly.
  */
 @mixin ac-scrollbars {
-  $--background-light: lighten($ac-color-body-light-text-fg, 50%);
-  $--foreground-light: lighten($ac-color-body-light-text-fg, 70%);
+  $--background-light: lighten($ac-color-body-light-text-fg, 70%);
+  $--foreground-light: lighten($ac-color-body-light-text-fg, 50%);
   $--background-dark: darken($ac-color-body-dark-text-bg, 5%);
   $--foreground-dark: darken($ac-color-body-dark-text-bg, 12%);
 
