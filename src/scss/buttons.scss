@@ -416,20 +416,6 @@
         text-decoration: underline;
       }
 
-      &.success {
-        color: $ac-color-gaia;
-        background: transparent;
-
-        &:hover {
-          text-decoration: underline;
-          color: $ac-color-gaia-shade-400;
-        }
-
-        &:active, &:focus {
-          outline: none;
-        }
-      }
-
       &.secondary {
         color: $ac-color-fjord;
         background: transparent;
@@ -483,6 +469,7 @@
         &:hover {
           text-decoration: underline;
           color: $ac-color-gaia-shade-400;
+          border: 0;
         }
 
         &:active, &:focus {
@@ -495,6 +482,7 @@
 
           &:hover {
             color: $ac-color-gaia-tint-200;
+            border: 0;
           }
 
           &:active, &:focus {
@@ -510,6 +498,7 @@
         &:hover {
           text-decoration: underline;
           color: $ac-color-apricot-shade-400;
+          border: 0;
         }
 
         &:active, &:focus {
@@ -522,6 +511,7 @@
 
           &:hover {
             color: $ac-color-apricot-tint-200;
+            border: 0;
           }
 
           &:active, &:focus {
@@ -537,6 +527,7 @@
         &:hover {
           text-decoration: underline;
           color: $ac-color-wolf-shade-400;
+          border: 0;
         }
 
         &:active, &:focus {
@@ -549,6 +540,7 @@
 
           &:hover {
             color: $ac-color-wolf-tint-200;
+            border: 0;
           }
 
           &:active, &:focus {
