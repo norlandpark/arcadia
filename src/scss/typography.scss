@@ -5,21 +5,7 @@
 
 // TODO: cleanup, extract variables etc.
 
-$ac-font-family-body: -apple-system,
-BlinkMacSystemFont,
-'segoe ui',
-roboto,
-oxygen-sans,
-ubuntu,
-cantarell,
-'helvetica neue',
-'arial',
-sans-serif,
-'apple color emoji',
-'segoe ui emoji',
-'segoe ui symbol' !default;
-
-$ac-font-family-title: 'open sans',
+$ac-font-family-body: 'SF Pro Text',
 -apple-system,
 BlinkMacSystemFont,
 'segoe ui',
@@ -34,52 +20,69 @@ sans-serif,
 'segoe ui emoji',
 'segoe ui symbol' !default;
 
-$ac-font-family-mono: 'source code pro',
+$ac-font-family-title: 'SF Pro Display',
+'open sans',
+-apple-system,
+BlinkMacSystemFont,
+'segoe ui',
+roboto,
+oxygen-sans,
+ubuntu,
+cantarell,
+'helvetica neue',
+'arial',
+sans-serif,
+'apple color emoji',
+'segoe ui emoji',
+'segoe ui symbol' !default;
+
+$ac-font-family-mono: 'SF Mono',
+'source code pro',
 consolas,
 'courier new',
 courier,
 monospace !default;
 
-$ac-font-size-body: 14px !default;
+$ac-font-size-body: 16px !default;
 $ac-font-size-body-line-height: 22px !default;
-$ac-heading-title-margin-mul: 1.5 !default;
-$ac-heading-title-padding-mul: 0.25 !default;
+$ac-heading-title-margin-mul: 1.0 !default;
+$ac-heading-title-padding-mul: 1.0 !default;
 
-$ac-heading-h1-font-size-large: 3.42921rem;
-$ac-heading-h1-line-height-large: 4.04317rem;
+$ac-heading-h1-font-size-large: 2.4em;
+$ac-heading-h1-line-height-large: 1.2;
 
 $ac-heading-h1-font-size: $ac-heading-h1-font-size-large * 0.7;
 $ac-heading-h1-line-height: $ac-heading-h1-line-height-large * 0.7;
 
-$ac-heading-h2-font-size-large: 2.28571rem;
-$ac-heading-h2-line-height-large: 3.03113rem;
+$ac-heading-h2-font-size-large: 1.8em;
+$ac-heading-h2-line-height-large: 1.2;
 
 $ac-heading-h2-font-size: $ac-heading-h2-font-size-large * 0.8;
 $ac-heading-h2-line-height: $ac-heading-h2-line-height-large * 0.8;
 
-$ac-heading-h3-font-size-large: 1.81428rem;
-$ac-heading-h3-line-height-large: 2.42857rem;
+$ac-heading-h3-font-size-large: 1.5em;
+$ac-heading-h3-line-height-large: 1.2;
 
-$ac-heading-h3-font-size: $ac-heading-h3-font-size-large * 0.8;
-$ac-heading-h3-line-height: $ac-heading-h3-line-height-large * 0.8;
+$ac-heading-h3-font-size: $ac-heading-h3-font-size-large * 0.9;
+$ac-heading-h3-line-height: $ac-heading-h3-line-height-large * 0.9;
 
-$ac-heading-h4-font-size-large: 1.57142rem;
-$ac-heading-h4-line-height-large: 2.14285rem;
+$ac-heading-h4-font-size-large: 1.2em;
+$ac-heading-h4-line-height-large: 1.2;
 
-$ac-heading-h4-font-size: $ac-heading-h4-font-size-large * 0.8;
-$ac-heading-h4-line-height: $ac-heading-h4-line-height-large * 0.8;
+$ac-heading-h4-font-size: $ac-heading-h4-font-size-large;
+$ac-heading-h4-line-height: $ac-heading-h4-line-height-large;
 
-$ac-heading-h5-font-size-large: 1.42857rem;
-$ac-heading-h5-line-height-large: 2.11285rem;
+$ac-heading-h5-font-size-large: 1.1em;
+$ac-heading-h5-line-height-large: 1.2;
 
-$ac-heading-h5-font-size: $ac-heading-h5-font-size-large * 0.8;
-$ac-heading-h5-line-height: $ac-heading-h5-line-height-large * 0.8;
+$ac-heading-h5-font-size: $ac-heading-h5-font-size-large;
+$ac-heading-h5-line-height: $ac-heading-h5-line-height-large;
 
-$ac-heading-h6-font-size-large: 1.14285rem;
-$ac-heading-h6-line-height-large: 1.57142rem;
+$ac-heading-h6-font-size-large: 1.0em;
+$ac-heading-h6-line-height-large: 1.2;
 
-$ac-heading-h6-font-size: $ac-heading-h6-font-size-large * 0.95;
-$ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
+$ac-heading-h6-font-size: $ac-heading-h6-font-size-large;
+$ac-heading-h6-line-height: $ac-heading-h6-line-height-large;
 
 @mixin ac-typography {
   .ac-font-title-primary {
@@ -96,10 +99,10 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    margin: 0;
     padding: 0;
     color: $ac-color-body-light-heading-text-fg;
     font-family: $ac-font-family-title;
+    margin: 1.5em 0 0.5em 0;
 
     @include ac-mode-dark {
       color: $ac-color-body-dark-heading-text-fg;
@@ -112,22 +115,33 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
     &.ac-title {
       border-bottom: 1px solid $ac-color-body-light-bg-panel-primary-border;
 
+      &:not(:only-child) {
+        margin-bottom: 1.5em * $ac-heading-title-margin-mul;
+        padding-bottom: 0.5em * $ac-heading-title-padding-mul;
+      }
+
       @include ac-mode-dark {
         border-bottom: 1px solid $ac-color-body-dark-bg-panel-primary-border;
       }
     }
+
+
   }
 
   h1 {
     font-weight: 300;
   }
 
-  h2, h3 {
-    font-weight: 600;
+  h2 {
+    font-weight: 400;
+  }
+
+  h3 {
+    font-weight: 500;
   }
 
   h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 600;
   }
 
   h1 {
@@ -139,15 +153,8 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
       line-height: $ac-heading-h1-line-height-large;
     }
 
-    @include ac-mrg-y(0.75em);
-
     &:first-child {
       margin-top: 0;
-    }
-
-    &.ac-title {
-      margin-bottom: 0.75em * $ac-heading-title-margin-mul;
-      padding-bottom: 0.75em * $ac-heading-title-padding-mul;
     }
   }
 
@@ -160,15 +167,8 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
       line-height: $ac-heading-h2-line-height-large;
     }
 
-    @include ac-mrg-y(0.5em);
-
     &:first-child {
       margin-top: 0;
-    }
-
-    &.ac-title {
-      margin-bottom: 0.5em * $ac-heading-title-margin-mul;
-      padding-bottom: 0.5em * $ac-heading-title-padding-mul;
     }
   }
 
@@ -181,15 +181,8 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
       line-height: $ac-heading-h3-line-height-large;
     }
 
-    @include ac-mrg-y(0.5em);
-
     &:first-child {
       margin-top: 0;
-    }
-
-    &.ac-title {
-      margin-bottom: 0.5em * $ac-heading-title-margin-mul;
-      padding-bottom: 0.5em * $ac-heading-title-padding-mul;
     }
   }
 
@@ -202,15 +195,8 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
       line-height: $ac-heading-h4-line-height-large;
     }
 
-    @include ac-mrg-y(0.5em);
-
     &:first-child {
       margin-top: 0;
-    }
-
-    &.ac-title {
-      margin-bottom: 0.5em * $ac-heading-title-margin-mul;
-      padding-bottom: 0.5em * $ac-heading-title-padding-mul;
     }
   }
 
@@ -223,15 +209,8 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
       line-height: $ac-heading-h5-line-height-large;
     }
 
-    @include ac-mrg-y(0.25em);
-
     &:first-child {
       margin-top: 0;
-    }
-
-    &.ac-title {
-      margin-bottom: 0.25em * $ac-heading-title-margin-mul;
-      padding-bottom: 0.25em * $ac-heading-title-padding-mul;
     }
   }
 
@@ -244,15 +223,8 @@ $ac-heading-h6-line-height: $ac-heading-h6-line-height-large * 0.95;
       line-height: $ac-heading-h6-line-height-large;
     }
 
-    @include ac-mrg-y(0.25em);
-
     &:first-child {
       margin-top: 0;
-    }
-
-    &.ac-title {
-      margin-bottom: 0.25em * $ac-heading-title-margin-mul;
-      padding-bottom: 0.25em * $ac-heading-title-padding-mul;
     }
   }
 
