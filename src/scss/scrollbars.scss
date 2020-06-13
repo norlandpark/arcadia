@@ -10,6 +10,7 @@ and actually renders somewhat correctly.
   $--foreground-light: lighten($ac-color-body-light-text-fg, 50%);
   $--background-dark: darken($ac-color-body-dark-text-bg, 5%);
   $--foreground-dark: darken($ac-color-body-dark-text-bg, 12%);
+  scrollbar-color: $--foreground-light $--background-light;
 
   &::-webkit-scrollbar {
     width: 12px;
@@ -28,6 +29,8 @@ and actually renders somewhat correctly.
   }
 
   @include ac-mode-dark {
+    scrollbar-color: $--foreground-dark $--background-dark;
+
     &::-webkit-scrollbar {
       background-color: $--background-dark;
     }
